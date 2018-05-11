@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:paddingTop="5dp" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="00-00"
+            android:textColor="@color/textlightgrey"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/date"
+            android:layout_below="@id/date"
+            android:layout_marginTop="5dp"
+            android:text="20:30"
+            android:textColor="@color/textlightgrey"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/biaoqian1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/time"
+            android:background="@drawable/cornerfulllinefull_greenline_whitefull"
+            android:paddingBottom="2dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="2dp"
+            android:text="周命中"
+            android:textColor="@color/textlightgreen"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/biaoqian2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/biaoqian1"
+            android:background="@drawable/cornerfulllinefull_greenline_whitefull"
+            android:paddingBottom="2dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="2dp"
+            android:text="周命中"
+            android:textColor="@color/textlightgreen"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/biaoqian2"
+            android:text="周命中"
+            android:textColor="@color/textlightgreen"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/money"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/time"
+            android:gravity="center_vertical"
+            android:minLines="2"
+            android:text=""
+            android:textColor="@color/textlightgrey"
+            android:textSize="14dp" />
+
+
+        <ImageView
+            android:id="@+id/tomatch"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginTop="3dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/tomatch"
+            android:layout_below="@id/content" />
+        <LinearLayout
+            android:id="@+id/match"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/tomatch"
+            android:layout_alignLeft="@id/content"
+            android:layout_below="@id/content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/matchkey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="南非杯"
+                android:textColor="@color/textlightgreen"
+                android:textSize="11dp" />
+
+            <TextView
+                android:id="@+id/gameinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/textlightgreen"
+                android:textSize="11dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignBottom="@id/match"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/match"
+            android:background="@drawable/cornerfullred"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="红"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:background="#E8E8E8" />
+
+</LinearLayout>

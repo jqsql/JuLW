@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wxq="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+     <com.liao310.www.widget.VerticalSwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:scrollbars="none" > 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/titlegreen" >
+
+                <TextView
+                    android:id="@+id/kefutx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_alignParentRight="true"
+                    android:text="客服"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp" />
+                <com.liao310.www.widget.ShapedImageView
+                    android:id="@+id/name_im"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:scaleType="centerCrop"
+                    wxq:shape_mode="circle"
+                    android:background="@drawable/defaultpic" />
+
+                <TextView
+                    android:id="@+id/name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name_im"
+                    android:layout_centerHorizontal="true"
+                    android:text="admin"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="10dp"
+                    android:text="金币:99"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/recharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/money"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/cornerfullorange"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="2dp"
+                    android:text="充值"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <com.liao310.www.widget.PersonalItemView
+                android:id="@+id/order"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                wxq:pname="我的购买"
+                wxq:pvalue=""
+                wxq:src="@drawable/order" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#DFDFDF" />
+
+            <com.liao310.www.widget.PersonalItemView
+                android:id="@+id/favourite"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                wxq:pname="我的收藏"
+                wxq:pvalue=""
+                wxq:src="@drawable/favourite" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#DFDFDF" />
+
+            <com.liao310.www.widget.PersonalItemView
+                android:id="@+id/send"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                wxq:pname="我的赠送"
+                wxq:pvalue=""
+                wxq:src="@drawable/send" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#DFDFDF" />
+
+            <com.liao310.www.widget.PersonalItemView
+                android:id="@+id/invitecode"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                wxq:pname="我的邀请码"
+                wxq:pvalue=""
+                wxq:src="@drawable/invite" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#DFDFDF" />
+
+            <com.liao310.www.widget.PersonalItemView
+                android:id="@+id/kefu"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                wxq:pname="专属客服"
+                wxq:pvalue=""
+                wxq:src="@drawable/kefu" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#DFDFDF" />
+
+            <com.liao310.www.widget.PersonalItemView
+                android:id="@+id/set"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                wxq:pname="设置"
+                wxq:pvalue=""
+                wxq:src="@drawable/set" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#DFDFDF" />
+        </LinearLayout>
+  </com.liao310.www.widget.VerticalSwipeRefreshLayout>
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:wxq="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+    <com.liao310.www.widget.ShapedImageView
+        android:id="@+id/Main_TuiJian_head"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/defaultpic"
+        android:scaleType="centerCrop"
+        wxq:shape_mode="circle"/>
+
+    <TextView
+        android:id="@+id/Main_TuiJian_Msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Main_TuiJian_head"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-10dp"
+        android:background="@drawable/shape_app_4"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:text="10中10"
+        android:textColor="@color/white"
+        android:textSize="11dp"/>
+
+    <TextView
+        android:id="@+id/Main_TuiJian_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Main_TuiJian_head"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="专家名称"
+        android:textColor="@color/white"
+        android:textSize="14dp"/>
+</RelativeLayout>
