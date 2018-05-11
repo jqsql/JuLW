@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "D:\\Android\\AndroidPro\\JuLiao1\\JuLiao\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
+        "outputFile": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 253
                 },
                 "from": {
-                    "file": "D:\\Android\\AndroidPro\\JuLiao1\\JuLiao\\src\\main\\res\\values-v11\\styles.xml",
+                    "file": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\values-v11\\styles.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,

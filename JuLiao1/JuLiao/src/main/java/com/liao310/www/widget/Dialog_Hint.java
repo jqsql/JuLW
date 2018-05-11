@@ -16,7 +16,7 @@ import com.liao310.www.R;
 /**
  * 描述：自定义dialog
  * 作者：贾强胜
- * 时间：2016.7.14
+ * 时间：2018.5.10
  */
 public class Dialog_Hint extends Dialog {
     //控件

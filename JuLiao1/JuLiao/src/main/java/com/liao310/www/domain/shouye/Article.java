@@ -20,6 +20,7 @@ public class Article  implements Serializable{
 	int art_type;//0精选，1竞彩，2竞猜
 	String  contenttx; //分析内容
 	boolean  isShow;//是否显示分析结果
+	boolean if_roback;//0不返，1返款
 	
 	
 	String uid  ;//专家id
@@ -66,6 +67,14 @@ public class Article  implements Serializable{
 	}
 	public void setYinglilv(String yinglilv) {
 		this.yinglilv = yinglilv;
+	}
+
+	public boolean isIf_roback() {
+		return if_roback;
+	}
+
+	public void setIf_roback(boolean if_roback) {
+		this.if_roback = if_roback;
 	}
 
 	public String getRid() {

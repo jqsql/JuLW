@@ -3,12 +3,12 @@
 
     <item
         is-multidex="true"
-        jar="D:\Android\AndroidStudio\gradle\m2repository\com\google\guava\guava\18.0\guava-18.0.jar"
+        jar="F:\GitPro\JuLW\JuLiao1\JuLiao\libs\jpush-android-3.1.2.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.3"
-        sha1="cce0823396aa693798f8882e64213b1772032b09">
-        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\10\guava-18.0_3ee3d9c1dbe9c7da2d6a70da71d7c357ed30c33f\classes.dex" />
+        sha1="58c972bc91dae7b05686353ea1a35881c01f7e23">
+        <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\2\jpush-android-3.1.2_173713ebc941301a565be67d8442214b9dd03614\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -21,30 +21,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\c9db195b5de18862a9fb9bbe574ebf72d5af3638\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.3"
-        sha1="9935891f23923f39d002087085d9696568a9f657">
-        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0c3c831e3ceca3595cde56add0d3e39200d1dfc2\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Administrator\.android\build-cache\844bf6fb477370168d4fc8fe7ca046a9d27b8296\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.3"
         sha1="2e92aa0163544a804a0b34f169ca61801770839a">
         <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0529a7e35ad070ab92e03cd326f4947a2b6ce013\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\65c24c5935e9b2abc800f47b3d1f1fcc186487c8\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.3"
-        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
-        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a7887abc614cbe9e3e0daae2836737eea49950ad\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -66,6 +48,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="F:\GitPro\JuLW\JuLiao1\JuLiao\libs\xUtils-3.2.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.3"
+        sha1="60a64f9fe24d179f9d98e70bdfb68416389ee764">
+        <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\2\xUtils-3.2.2_9fba79414bc68cd7609c49013a70ba4a39fcf603\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="D:\Android\AndroidPro\JuLiao1\JuLiao\libs\jpush-android-3.1.2.jar"
         jumboMode="true"
         optimize="true"
@@ -81,6 +72,168 @@
         revision="26.0.3"
         sha1="cce0823396aa693798f8882e64213b1772032b09">
         <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\pre-dexed\release\guava-18.0_3ee3d9c1dbe9c7da2d6a70da71d7c357ed30c33f.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Android\AndroidPro\JuLiao1\JuLiao\libs\jcore-android-1.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.3"
+        sha1="b03b2ddbf065222493c976e74e3612e0ea2a7a35">
+        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\2\jcore-android-1.2.0_15d067bc2e0800b10872cbb081d446c274e0779b\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3.1\ecb6e1f8e4b0e84c4b886c2f14a1500caf309757\gson-2.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\pre-dexed\release\gson-2.3.1_3d67bc6296728dce11d45e3fe02a4d0f0bf336e9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\cd36716511a4a791822bba9a7c95fdf267d24812\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\pre-dexed\release\classes_2d7a4e2c4f23d138f9317684c21b587cd464bbd2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\eb50992f6b429c6509e35debf7acf9eba38005fa\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\pre-dexed\release\classes_1728118083e14d5330c269a252d572d690d603c3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\c11ee1449b18b5dd0c9a2ac53b8fc78896ee1797\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\pre-dexed\release\classes_99d01d1d6d9f8588ff53610209789cf6f4455f90.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\e0c7749ca067e00eff4252885a7553cb4bf948dd\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.3"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0f9bac55f976268adf9d51d8d519d87c68a134b3\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\AndroidPro\JuLiao1\JuLiao\libs\xUtils-3.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="60a64f9fe24d179f9d98e70bdfb68416389ee764">
+        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\pre-dexed\release\xUtils-3.2.2_a702fa77c36c48f7e13b416a6eb3bf8cce5327e8.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\ebed558d338d7c697533cae353eb1a2924e9cc53\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.3"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e9337d1ea35bd507b822289b1228c2f8804a52c8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Android\AndroidPro\JuLiao1\JuLiao\libs\eventbus-2.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.3"
+        sha1="ddd166d01b3158d1c00576d29f7ed15c030df719">
+        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\2\eventbus-2.4.0_c5d5865504898847b4e4f52a7b6547cc62e94417\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\AndroidPro\JuLiao1\JuLiao\libs\jpush-android-3.1.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="58c972bc91dae7b05686353ea1a35881c01f7e23">
+        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\pre-dexed\release\jpush-android-3.1.2_b95fc827ca097b2a1263bd554e0ed66fb32d2581.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\GitPro\JuLW\JuLiao1\JuLiao\libs\eventbus-2.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.3"
+        sha1="ddd166d01b3158d1c00576d29f7ed15c030df719">
+        <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\2\eventbus-2.4.0_25a188574cf49e5a6a15492f937e889635d59589\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Android\AndroidPro\JuLiao1\JuLiao\libs\jsoup-1.7.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.3"
+        sha1="99351550d1fa2e8147319dbafd3f3a79d4f4c6e5">
+        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\2\jsoup-1.7.1_6aad9cc2e4db78eb4686e6ca10b77f2562e79111\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\SDK\AndroidStudioSDK\extras\android\m2repository\com\android\support\support-annotations\26.0.0-alpha1\support-annotations-26.0.0-alpha1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.3"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-26.0.0-alpha1_8fb679f85e545b8630f4643c69c31f39b3fa88da\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\GitPro\JuLW\JuLiao1\JuLiao\libs\jsoup-1.7.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.3"
+        sha1="99351550d1fa2e8147319dbafd3f3a79d4f4c6e5">
+        <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\2\jsoup-1.7.1_8020d126fc7b8735c89086ee4525448591996714\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Android\AndroidPro\JuLiao1\JuLiao\libs\libammsdk.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.3"
+        sha1="e8db000948e58e4ef6b7a1a54e92e7040e7037d5">
+        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\2\libammsdk_41ba29b779c597c4a055197b9c0d3b7fff237e2f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Android\AndroidStudio\gradle\m2repository\com\google\guava\guava\18.0\guava-18.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.3"
+        sha1="cce0823396aa693798f8882e64213b1772032b09">
+        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\10\guava-18.0_3ee3d9c1dbe9c7da2d6a70da71d7c357ed30c33f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\c9db195b5de18862a9fb9bbe574ebf72d5af3638\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.3"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0c3c831e3ceca3595cde56add0d3e39200d1dfc2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\65c24c5935e9b2abc800f47b3d1f1fcc186487c8\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.3"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a7887abc614cbe9e3e0daae2836737eea49950ad\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -120,48 +273,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="D:\Android\AndroidPro\JuLiao1\JuLiao\libs\jcore-android-1.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.3"
-        sha1="b03b2ddbf065222493c976e74e3612e0ea2a7a35">
-        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\2\jcore-android-1.2.0_15d067bc2e0800b10872cbb081d446c274e0779b\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3.1\ecb6e1f8e4b0e84c4b886c2f14a1500caf309757\gson-2.3.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.3"
-        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
-        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\pre-dexed\release\gson-2.3.1_3d67bc6296728dce11d45e3fe02a4d0f0bf336e9.jar" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Administrator\.android\build-cache\eb50992f6b429c6509e35debf7acf9eba38005fa\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.3"
         sha1="952944218ecedea1554a513dec0c14d570642843">
         <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1728118083e14d5330c269a252d572d690d603c3\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.android\build-cache\cd36716511a4a791822bba9a7c95fdf267d24812\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.3"
-        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
-        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\pre-dexed\release\classes_2d7a4e2c4f23d138f9317684c21b587cd464bbd2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.android\build-cache\eb50992f6b429c6509e35debf7acf9eba38005fa\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.3"
-        sha1="952944218ecedea1554a513dec0c14d570642843">
-        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\pre-dexed\release\classes_1728118083e14d5330c269a252d572d690d603c3.jar" />
     </item>
     <item
         is-multidex="true"
@@ -182,15 +299,6 @@
         <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\10\classes_2d7a4e2c4f23d138f9317684c21b587cd464bbd2\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.android\build-cache\c11ee1449b18b5dd0c9a2ac53b8fc78896ee1797\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.3"
-        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
-        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\pre-dexed\release\classes_99d01d1d6d9f8588ff53610209789cf6f4455f90.jar" />
-    </item>
-    <item
         is-multidex="true"
         jar="D:\Android\AndroidPro\JuLiao1\JuLiao\libs\xUtils-3.2.2.jar"
         jumboMode="true"
@@ -198,6 +306,15 @@
         revision="26.0.3"
         sha1="60a64f9fe24d179f9d98e70bdfb68416389ee764">
         <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\2\xUtils-3.2.2_a702fa77c36c48f7e13b416a6eb3bf8cce5327e8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\GitPro\JuLW\JuLiao1\JuLiao\libs\jcore-android-1.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.3"
+        sha1="b03b2ddbf065222493c976e74e3612e0ea2a7a35">
+        <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\2\jcore-android-1.2.0_207bb9e47b59902e8aaddd0f9588dc0df5eb0257\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -210,30 +327,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\e0c7749ca067e00eff4252885a7553cb4bf948dd\output\jars\classes.jar"
+        jar="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.3"
-        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
-        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0f9bac55f976268adf9d51d8d519d87c68a134b3\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Android\AndroidPro\JuLiao1\JuLiao\libs\xUtils-3.2.2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.3"
-        sha1="60a64f9fe24d179f9d98e70bdfb68416389ee764">
-        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\pre-dexed\release\xUtils-3.2.2_a702fa77c36c48f7e13b416a6eb3bf8cce5327e8.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\ebed558d338d7c697533cae353eb1a2924e9cc53\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.3"
-        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
-        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e9337d1ea35bd507b822289b1228c2f8804a52c8\classes.dex" />
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_32e2f815d98ea385ab71326da02338d6c0ea7518\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -246,21 +345,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="D:\Android\AndroidPro\JuLiao1\JuLiao\libs\eventbus-2.4.0.jar"
+        jar="F:\GitPro\JuLW\JuLiao1\JuLiao\libs\libammsdk.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.3"
-        sha1="ddd166d01b3158d1c00576d29f7ed15c030df719">
-        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\2\eventbus-2.4.0_c5d5865504898847b4e4f52a7b6547cc62e94417\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Android\AndroidPro\JuLiao1\JuLiao\libs\jpush-android-3.1.2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.3"
-        sha1="58c972bc91dae7b05686353ea1a35881c01f7e23">
-        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\pre-dexed\release\jpush-android-3.1.2_b95fc827ca097b2a1263bd554e0ed66fb32d2581.jar" />
+        sha1="e8db000948e58e4ef6b7a1a54e92e7040e7037d5">
+        <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\2\libammsdk_3371d9fc72110903a451ae3a19ab24fec64649a1\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -300,21 +390,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="D:\Android\AndroidPro\JuLiao1\JuLiao\libs\jsoup-1.7.1.jar"
+        jar="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.3"
-        sha1="99351550d1fa2e8147319dbafd3f3a79d4f4c6e5">
-        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\2\jsoup-1.7.1_6aad9cc2e4db78eb4686e6ca10b77f2562e79111\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\SDK\AndroidStudioSDK\extras\android\m2repository\com\android\support\support-annotations\26.0.0-alpha1\support-annotations-26.0.0-alpha1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.3"
-        sha1="023ee503b631f69511e335a061ea008f8da60f40">
-        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-26.0.0-alpha1_8fb679f85e545b8630f4643c69c31f39b3fa88da\classes.dex" />
+        sha1="20f7efcc39804777b479c29853fc725856512ae8">
+        <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_5998d517f050103068aa151d787d8060f6bea928\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -342,15 +423,6 @@
         revision="26.0.3"
         sha1="e176fd06c2ad5b50a2f5cb4de6000a83a7cb48f5">
         <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f762f79f5a7db73d0b48b22822cd198bc99fe63e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\Android\AndroidPro\JuLiao1\JuLiao\libs\libammsdk.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.3"
-        sha1="e8db000948e58e4ef6b7a1a54e92e7040e7037d5">
-        <dex dex="D:\Android\AndroidPro\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\2\libammsdk_41ba29b779c597c4a055197b9c0d3b7fff237e2f\classes.dex" />
     </item>
 
 </items>

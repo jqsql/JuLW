@@ -18,6 +18,7 @@ public class Match {
 	String  pankou_type; //盘口类型:亚洲大小盘，亚洲让分盘
 	String  wanfa;//足球：让球（单场），大小球       篮球：让分，大小分
 	String  pankou; //盘口
+	boolean if_roback;//0不返，1返款
 	
 	String  wanfa_num;//足球：让球数                       篮球：让分数，大小分数
 	String  lv1;//赔率（足球：主胜，篮球：胜，大分）
@@ -37,7 +38,15 @@ public class Match {
 	//5命中， 6未中，7 二中一-----竞彩
 
 	int recom_num;// 该比赛的推荐数
-	
+
+	public boolean isIf_roback() {
+		return if_roback;
+	}
+
+	public void setIf_roback(boolean if_roback) {
+		this.if_roback = if_roback;
+	}
+
 	public String getZhunamescore() {
 		return zhunamescore;
 	}
