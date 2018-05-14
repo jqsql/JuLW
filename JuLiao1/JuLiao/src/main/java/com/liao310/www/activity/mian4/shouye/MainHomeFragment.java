@@ -41,6 +41,7 @@ import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -101,8 +102,11 @@ public class MainHomeFragment extends Fragment implements OnClickListener {
      * --------------------Begin一部分修改----------------
      */
     private CollapsingToolbarLayout mCollapsingToolbarLayout;
+    private AppBarLayout mAppBarLayout;
+    private RelativeLayout mToolLayout;
     private RelativeLayout mNoctionLayout;
     private LinearLayout mIndicatorLayout;
+    private int ScroolFlag=0;//滑动状态标志：0：展开 1：缩放 2：中间状态
 
 
     /**
@@ -171,6 +175,8 @@ public class MainHomeFragment extends Fragment implements OnClickListener {
     public void initView(View view) {
         /******************************************/
         mCollapsingToolbarLayout = view.findViewById(R.id.CollapsingToolbarLayoutView);
+        mAppBarLayout = view.findViewById(R.id.AppBarLayout);
+        mToolLayout = view.findViewById(R.id.ToolLayout);
         mIndicatorLayout = view.findViewById(R.id.MainHome_IndicatorLayout);
         mNoctionLayout = view.findViewById(R.id.rl_news);
         mAdView = (ImageCycleView) view.findViewById(R.id.ad_view);
@@ -253,13 +259,41 @@ public class MainHomeFragment extends Fragment implements OnClickListener {
 
             }
         });
-        final ViewTreeObserver treeObserver = mIndicatorLayout.getViewTreeObserver();
+        mAppBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+            @Override
+            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+                if (verticalOffset == 0) {
+                    if (ScroolFlag != 0) {
+
+                    }
+                    ScroolFlag = 0;
+                } else if (Math.abs(verticalOffset) >= appBarLayout.getTotalScrollRange()) {
+                    if (ScroolFlag != 1) {
+
+                    }
+                    ScroolFlag = 1;
+                } else {
+                    if(verticalOffset<-100){
+                        mToolLayout.setVisibility(View.VISIBLE);
+                    }else {
+                        mToolLayout.setVisibility(View.GONE);
+                    }
+                    if (ScroolFlag != 2) {
+                        
+                    }
+                    ScroolFlag = 2;
+                }
+                Log.e("jqs=",verticalOffset+"==="+appBarLayout.isHovered()+"===="+appBarLayout.getTotalScrollRange());
+
+            }
+        });
+       /* final ViewTreeObserver treeObserver = mIndicatorLayout.getViewTreeObserver();
         treeObserver.addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
             @Override
             public void onScrollChanged() {
                 Log.e("CollapsingToolbarLayout", "执行了");
             }
-        });
+        });*/
     }
 
     @Override

@@ -1,18 +1,18 @@
 [
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout-v21\\notification_action.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout-v21\\notification_template_icon_group.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout-v21\\notification_template_custom_big.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout-v21\\notification_template_custom_big.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout-v21\\notification_action_tombstone.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout-v21\\notification_action_tombstone.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout-v21\\notification_template_icon_group.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout-v21\\notification_action.xml"
     }
 ]
