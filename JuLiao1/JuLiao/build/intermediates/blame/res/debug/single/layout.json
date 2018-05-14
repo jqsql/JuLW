@@ -32,24 +32,24 @@
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\jingcai1_item.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\jingcai1_item.xml"
-    },
-    {
         "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\renzheng_item.xml",
         "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\renzheng_item.xml"
+    },
+    {
+        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\jingcai1_item.xml",
+        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\jingcai1_item.xml"
     },
     {
         "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\main4_fragment_shouye.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\main4_fragment_shouye.xml"
-    },
-    {
         "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\main4_fragment_shouye.xml",
+        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\main4_fragment_shouye.xml"
     },
     {
         "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",

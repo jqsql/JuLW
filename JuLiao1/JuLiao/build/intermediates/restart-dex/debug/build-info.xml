@@ -6,23 +6,26 @@
     density="xxhdpi"
     format="10"
     plugin-version="2.3.0"
-    timestamp="1526288438686"
+    timestamp="1526290041022"
     token="-7107939516495703673"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="585" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="4" />
     <task
         name="verifier"
-        duration="0" />
+        duration="2" />
 
+    <artifact
+        location="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\split-apk\debug\slices\slice_5.apk"
+        type="SPLIT" />
     <artifact
         location="F:\GitPro\JuLW\JuLiao1\JuLiao\build\outputs\apk\JuLiao-debug.apk"
         type="SPLIT_MAIN" />
@@ -78,16 +81,19 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1526287422744"
+        timestamp="1526289695681"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            location="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1526288438686"
+        timestamp="1526290041022"
         verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
         <artifact
             location="F:\GitPro\JuLW\JuLiao1\JuLiao\build\outputs\apk\JuLiao-debug.apk"
             type="SPLIT_MAIN" />

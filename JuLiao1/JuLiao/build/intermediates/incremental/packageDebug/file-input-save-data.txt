@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon May 14 17:00:40 CST 2018
+#Mon May 14 17:27:24 CST 2018
 20.base=F\:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\resources-debug.ap_
 143.base=F\:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\resources-debug.ap_
 439.set=ANDROID_RESOURCE
