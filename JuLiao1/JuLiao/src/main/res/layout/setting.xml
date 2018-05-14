@@ -1,78 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:wxq="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+              xmlns:wxq="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/ListBackGround"
+              android:orientation="vertical">
 
-    <include layout="@layout/top" />
-
-    <com.liao310.www.widget.PersonalItemView
-        android:id="@+id/changepassword"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        wxq:pname="修改密码"
-        wxq:pvalue=""
-        wxq:src="@drawable/changepassword" />
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:background="#E8E8E8" />
-
-    <com.liao310.www.widget.PersonalItemView
-        android:id="@+id/aboutus"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        wxq:pname="关于我们"
-        wxq:pvalue=""
-        wxq:src="@drawable/aboutus" />
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:background="#E8E8E8" />
-
-    <com.liao310.www.widget.PersonalItemView
-        android:id="@+id/nowversion"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        wxq:pname="当前版本"
-        wxq:pvalue=""
-        wxq:src="@drawable/dangqian" />
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:background="#E8E8E8" />
+    <include layout="@layout/top"/>
 
     <LinearLayout
-        android:id="@+id/btn_exit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:background="#FFFFFF"
-        android:orientation="vertical" >
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_trap_4"
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:background="#E8E8E8" />
 
-        <TextView
+        <com.liao310.www.widget.PersonalItemView
+            android:id="@+id/aboutus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:gravity="center"
-            android:text="退出登录"
-            android:textColor="@color/textred"
-            android:textSize="16sp" />
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            wxq:pname="关于我们"
+            wxq:pvalue=""
+            wxq:src="@drawable/guanyu"/>
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="12dp"
-            android:background="#E8E8E8" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/BorderBlack"/>
+
+        <com.liao310.www.widget.PersonalItemView
+            android:id="@+id/changepassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            wxq:pname="修改密码"
+            wxq:pvalue=""
+            wxq:src="@drawable/xiugai"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/BorderBlack"/>
+
+        <com.liao310.www.widget.PersonalItemView
+            android:id="@+id/nowversion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            wxq:isHave="false"
+            wxq:pname="当前版本"
+            wxq:pvalue=""
+            wxq:src="@drawable/dangqian"/>
     </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        style="?attr/borderlessButtonStyle"
+        android:layout_margin="20dp"
+        android:background="@drawable/cornerfulllinefull_greenline_15nofull"
+        android:textColor="@color/BorderRed"
+        android:textSize="14dp"
+        android:text="退出登录"/>
 
 </LinearLayout>

@@ -58,8 +58,8 @@ public class MySendActivity extends BaseActivity {
 		View footer = LayoutInflater.from(_this).inflate(R.layout.mysend_footer, null);
 		listView.addFooterView(footer);
 		
-		String wxStr = "<html><font color=\"#666666\">赶快添加聚料客服微信"
-				+ "</font><font color=\"#43872F\">juliao310</font><font color=\"#666666\">来领取吧~</font></html>";
+		String wxStr = "<html><font color=\"#ffffff\">赶快添加聚料客服微信"
+				+ "</font><font color=\"#02DB84\">juliao310</font><font color=\"#ffffff\">来领取吧~</font></html>";
 	
 		wx = (TextView) footer.findViewById(R.id.towx);
 		wx.setText(Html.fromHtml(wxStr));

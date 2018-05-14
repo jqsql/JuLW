@@ -6,7 +6,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/mainback"
+        android:background="@color/ListBackGround"
         android:orientation="vertical" >
 
         <include layout="@layout/top" />
@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:text="手机号"
-                android:textColor="@color/textgrey"
+                android:textColor="@color/white"
                 android:textSize="16dp" />
 
             <EditText
@@ -40,7 +40,7 @@
                 android:maxLength="11"
                 android:maxLines="1"
                 android:singleLine="true"
-                android:textColorHint="@color/textlightlightgrey"
+                android:textColorHint="@color/whiteGrey"
                 android:textSize="16dp" >
             </EditText>
         </LinearLayout>
@@ -48,7 +48,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#E4E4E4" />
+            android:background="@color/BorderBlack" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -64,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:text="密    码"
-                android:textColor="@color/textgrey"
+                android:textColor="@color/white"
                 android:textSize="16dp" />
 
             <EditText
@@ -78,7 +78,7 @@
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:singleLine="true"
-                android:textColorHint="@color/textlightlightgrey"
+                android:textColorHint="@color/whiteGrey"
                 android:textSize="16dp" >
             </EditText>
         </LinearLayout>
@@ -86,7 +86,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#E4E4E4" />
+            android:background="@color/BorderBlack" />
 
         <TextView
             android:id="@+id/sign"
@@ -114,7 +114,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="找回密码"
-                android:textColor="@color/textgrey"
+                android:textColor="@color/white"
                 android:textSize="16dp" />
 
             <TextView
@@ -124,7 +124,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="注       册"
-                android:textColor="@color/textgrey"
+                android:textColor="@color/white"
                 android:textSize="16dp" />
         </LinearLayout>
     </LinearLayout>

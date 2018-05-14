@@ -1,43 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    android:gravity="center_horizontal"
-    android:orientation="vertical" >
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/shape_background_9"
+              android:layout_margin="40dp"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:padding="10dp"
+        android:padding="20dp"
         android:text="标题"
-        android:textColor="@color/black"
-        android:textSize="20dp" />
+        android:textColor="@color/BorderRed"
+        android:textSize="18dp"/>
 
     <TextView
         android:id="@+id/content"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:lineSpacingExtra="5dp"
         android:padding="10dp"
         android:text="有新版本更新"
-        android:textColor="@color/textgreen"
-        android:textSize="20dp" />
+        android:textColor="@color/white"
+        android:textSize="14dp"/>
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:background="#f0f0f0" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/BorderBlack"/>
 
     <LinearLayout
         android:id="@+id/button"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/cancle"
@@ -47,14 +49,16 @@
             android:gravity="center"
             android:padding="15dp"
             android:text="取 消"
-            android:textColor="@color/textgrey"
-            android:textSize="20dp" />
+            android:textColor="@color/white"
+            android:textSize="16dp"/>
 
-        <TextView
+        <View
             android:id="@+id/line"
-            android:layout_width="1dp"
+            android:layout_width="0.5dp"
             android:layout_height="match_parent"
-            android:background="#f0f0f0" />
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/BorderBlack"/>
 
         <TextView
             android:id="@+id/sure"
@@ -64,8 +68,8 @@
             android:gravity="center"
             android:padding="15dp"
             android:text="确定"
-            android:textColor="@color/textgrey"
-            android:textSize="20dp" />
+            android:textColor="@color/textgreen"
+            android:textSize="16dp"/>
     </LinearLayout>
 
 </LinearLayout>

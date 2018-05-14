@@ -10,7 +10,7 @@
     <item android:top="1dp" android:bottom="1dp" android:left="0dp" android:right="0dp">
         <shape>
             <!--中间背景填充色-->
-            <solid android:color="@color/mainback"/>
+            <solid android:color="@color/BorderBlack"/>
         </shape>
 
     </item>

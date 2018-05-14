@@ -10,6 +10,7 @@ import com.liao310.www.net.ServiceZhuanJia;
 import com.liao310.www.net.https.ServiceABase.CallBack;
 import com.liao310.www.utils.StatusBarColor;
 import com.liao310.www.utils.ToastUtils;
+import com.liao310.www.widget.Dialog_Pay;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -19,6 +20,7 @@ import android.content.IntentFilter;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -38,6 +40,7 @@ public class BaseActivity extends FragmentActivity {
 	private IntentFilter mFilter = new IntentFilter();
 	AlertDialog alertDialog;
 	String imei = "";//设备号
+	Dialog_Pay dialog_pay;
 	@Override
 	protected void onCreate(Bundle bundle) {
 		super.onCreate(bundle);
@@ -134,7 +137,8 @@ public class BaseActivity extends FragmentActivity {
 				// TODO 自动生成的方法存根
 				if(t!=null) {
 					if("未购买".equals(t.getData())) {
-						dialog("竞猜详情","待支付"+art.getPrice()+"金币","取消",true,"去支付",event);
+						//dialog("竞猜详情","待支付"+art.getPrice()+"金币","取消",true,"去支付",event);
+						dialog("竞猜详情",art.getPrice()+"","取消",true,"去支付",event);
 					}else {
 						dialog("竞猜详情","推荐："+t.getData(),"",false,"确定",event);
 					}
@@ -148,54 +152,72 @@ public class BaseActivity extends FragmentActivity {
 		});
 	}
 	public void dialog(String  titleStr,String  contentStr,String cancleStr,boolean cancleShow,String sureStr,final String event) {
-		if(alertDialog==null) {
-			alertDialog = new AlertDialog.Builder(this).create();
-			alertDialog.setCancelable(false);
-		}
-		alertDialog.show();
-		Window window = alertDialog.getWindow();
-		window.setContentView(R.layout.dialog);
-		TextView title = (TextView) window.findViewById(R.id.title);
-		TextView content = (TextView) window.findViewById(R.id.content);
-		TextView cancle = (TextView) window.findViewById(R.id.cancle);
-		TextView line = (TextView) window.findViewById(R.id.line);		
-		TextView sure = (TextView) window.findViewById(R.id.sure);
-		title.setText(titleStr);
-		content.setText(contentStr);
-		sure.setText(sureStr);
-		if(cancleShow) {
-			cancle.setText(cancleStr);	
-			cancle.setVisibility(View.VISIBLE);
-			line.setVisibility(View.VISIBLE);	
-			cancle.setOnClickListener(new View.OnClickListener() {
+		if("去支付".equals(sureStr)){
+			dialog_pay=new Dialog_Pay(this, contentStr, new View.OnClickListener() {
 				@Override
-				public void onClick(View v) {
-					alertDialog.dismiss();
-					alertDialog.cancel();
-				}
-			});
-			sure.setOnClickListener(new View.OnClickListener() {
-				@Override
-				public void onClick(View v) {
-					alertDialog.dismiss();
-					alertDialog.cancel();
-					if(TextUtils.isEmpty(event)) {
+				public void onClick(View view) {
+					dialog_pay.dismiss();
+					if (TextUtils.isEmpty(event)) {
 						dialogToDo();
-					}else {
+					} else {
 						EventBus.getDefault().post("dialogToDo");
 					}
 				}
 			});
+			dialog_pay.dismiss();
 		}else {
-			cancle.setVisibility(View.GONE);
-			line.setVisibility(View.GONE);
-			sure.setOnClickListener(new View.OnClickListener() {
-				@Override
-				public void onClick(View v) {
-					alertDialog.dismiss();
-					alertDialog.cancel();
-				}
-			});
+
+			if (alertDialog == null) {
+				alertDialog = new AlertDialog.Builder(this).create();
+				alertDialog.setCancelable(false);
+			}
+			alertDialog.show();
+			Window window = alertDialog.getWindow();
+			window.setContentView(R.layout.dialog);
+			//去黑角
+			window.setBackgroundDrawable(new BitmapDrawable());
+			TextView title = (TextView) window.findViewById(R.id.title);
+			TextView content = (TextView) window.findViewById(R.id.content);
+			TextView cancle = (TextView) window.findViewById(R.id.cancle);
+			View line =  window.findViewById(R.id.line);
+			TextView sure = (TextView) window.findViewById(R.id.sure);
+			title.setText(titleStr);
+			content.setText(contentStr);
+			sure.setText(sureStr);
+			if (cancleShow) {
+				cancle.setText(cancleStr);
+				cancle.setVisibility(View.VISIBLE);
+				line.setVisibility(View.VISIBLE);
+				cancle.setOnClickListener(new View.OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						alertDialog.dismiss();
+						alertDialog.cancel();
+					}
+				});
+				sure.setOnClickListener(new View.OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						alertDialog.dismiss();
+						alertDialog.cancel();
+						if (TextUtils.isEmpty(event)) {
+							dialogToDo();
+						} else {
+							EventBus.getDefault().post("dialogToDo");
+						}
+					}
+				});
+			} else {
+				cancle.setVisibility(View.GONE);
+				line.setVisibility(View.GONE);
+				sure.setOnClickListener(new View.OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						alertDialog.dismiss();
+						alertDialog.cancel();
+					}
+				});
+			}
 		}
 	}
 	public void dialogToDo(){}

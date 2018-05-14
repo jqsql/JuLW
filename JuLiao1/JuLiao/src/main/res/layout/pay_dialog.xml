@@ -1,15 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
+              android:layout_width="wrap_content"
               android:layout_height="wrap_content"
+              android:layout_margin="35dp"
               android:background="@drawable/shape_background_4"
-              android:orientation="vertical"
-              android:layout_margin="20dp">
+              android:orientation="vertical">
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@drawable/shape_background_4"
+        android:layout_height="130dp"
+        android:scaleType="centerCrop"
         android:src="@drawable/top_backgroud"/>
+
+    <TextView
+        android:id="@+id/ToPay_ToPayGold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="查看: 0金币"
+        android:textColor="@color/white"
+        android:textSize="14dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/ToPay_HavingGoldText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="余额: "
+            android:textColor="@color/white"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:id="@+id/ToPay_ReadCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shape_yellow_4"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:text="阅读卡"
+            android:textColor="@color/black"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/ToPay_AddGold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/ToPay_ReadCard"
+            android:background="@drawable/shape_app_4"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:text="加金币"
+            android:textColor="@color/black"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/ToPay_HavingGold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/ToPay_AddGold"
+            android:layout_toRightOf="@id/ToPay_HavingGoldText"
+            android:text="0金币"
+            android:textColor="@color/textgreen"
+            android:textSize="14dp"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/ToPay_Cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="14dp"/>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/ToPay_ToPay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="支付查看"
+            android:textColor="@color/textgreen"
+            android:textSize="14dp"/>
+    </LinearLayout>
 
 </LinearLayout>

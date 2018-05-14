@@ -15,6 +15,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import de.greenrobot.event.EventBus;
@@ -25,7 +26,7 @@ public class SettingActivity extends BaseActivity  implements OnClickListener{
 	private TextView title;
 	private SettingActivity _this;
 	private PersonalItemView changePassword,aboutUs,nowversion;
-	private View btn_exit;
+	private Button btn_exit;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -74,7 +75,7 @@ public class SettingActivity extends BaseActivity  implements OnClickListener{
 			startActivity(new Intent(_this, AboutUsActivity.class));
 			break;
 		case R.id.btn_exit:
-			dialog("温馨提示","确认退出登录？","取消",true,"确定","");
+			dialog("温馨提示","您确认退出登录吗？","取消",true,"确定","");
 			break;
 		}
 	}

@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:text="充值送解锁卡优惠活动开始啦！"
-        android:textColor="@color/textlightgrey"
+        android:textColor="@color/white"
         android:textSize="16dp" 
         android:layout_marginTop="8dp"/>
     <TextView
@@ -17,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:textColor="@color/textlightgrey"
+        android:textColor="@color/white"
         android:text="赶快添加聚料客服微信juliao310来领取吧~"
         android:textSize="16dp" 
         android:layout_marginTop="28dp"/>
@@ -27,6 +27,6 @@
         android:gravity="center_vertical"
         android:text="凡充值后联系您的专属客服，均有好礼相送"
         android:textSize="16dp" 
-        android:textColor="@color/textlightgrey"
+        android:textColor="@color/white"
         android:layout_marginTop="28dp"/>
 </LinearLayout>

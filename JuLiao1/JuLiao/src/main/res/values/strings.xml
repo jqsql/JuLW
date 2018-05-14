@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">聚料</string>
+    <string name="Pay_HintText">1.￥1可获取金币，金币可用于购买推荐文章和擂台竞猜等\n2.资充值成功后，只能用于购买，不可体现\n3.充值遇到任何问题，可进入个人中心联系在线客服\n
+    </string>
 </resources>

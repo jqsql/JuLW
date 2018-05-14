@@ -151,7 +151,7 @@
                     android:paddingBottom="5dp"
                     android:paddingTop="5dp"
                     android:text="南非杯南非杯南非杯南非杯南非杯南非杯南非杯南非杯"
-                    android:textColor="@color/textlightgrey"
+                    android:textColor="@color/white"
                     android:textSize="14dp"
                     android:visibility="gone"/>
 
@@ -254,7 +254,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/bottom"
+                android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
                 android:gravity="right"
                 android:orientation="vertical">

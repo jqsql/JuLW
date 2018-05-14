@@ -15,6 +15,7 @@ import com.liao310.www.domain.version.ErrorMsg;
 import com.liao310.www.net.ServiceMatch;
 import com.liao310.www.net.https.ServiceABase.CallBack;
 import com.liao310.www.utils.PreferenceUtil;
+import com.liao310.www.utils.StatusBarColor;
 import com.liao310.www.utils.ToastUtils;
 import com.liao310.www.widget.RefreshListView;
 import com.liao310.www.widget.RefreshListView.OnRefreshListener;
@@ -31,7 +32,7 @@ public class MatchDetailActivity extends BaseActivity{
 	public static final int LOGIN_PAY = 1;
 	private MatchDetailActivity _this;
 	private ImageView back;
-	private TextView title,name;
+	private TextView title,name1,name2;
 	private RefreshListView refreshListView;
 	private ArticleListAdapter myFavouriteAdapter = null;
 
@@ -44,7 +45,8 @@ public class MatchDetailActivity extends BaseActivity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.myfavourite);
+		setContentView(R.layout.myfavourite_new);
+		StatusBarColor.setStatusBar(this);//修改状态栏颜色
 		_this = this;
 		aid = getIntent().getStringExtra("aid");
 		cid = getIntent().getIntExtra("cid",-1);
@@ -61,11 +63,9 @@ public class MatchDetailActivity extends BaseActivity{
 				_this.finish();
 			}
 		});
-		findViewById(R.id.tv_head_title).setVisibility(View.GONE);
 		title =(TextView) findViewById(R.id.tv_head_title2);
-		title.setVisibility(View.VISIBLE);
-		name =(TextView) findViewById(R.id.name);
-		name.setVisibility(View.VISIBLE);
+		name1 =(TextView) findViewById(R.id.name_new1);
+		name2 =(TextView) findViewById(R.id.name_new2);
 
 		refreshListView = (RefreshListView) findViewById(R.id.rl_listview);
 		myFavouriteAdapter = new ArticleListAdapter(_this,1,1);
@@ -178,7 +178,8 @@ public class MatchDetailActivity extends BaseActivity{
 	}
 	public void setMatch(Match match) {
 		title.setText(match.getMatchKey()+"   "+match.getLs_cname()+"   "+match.getSc_time());
-		name.setText(match.getZhuname()+"  VS  "+match.getKename());
+		name1.setText(match.getZhuname());
+		name2.setText(match.getKename());
 	}
 	public synchronized void dodata(MatchDetailBackBack t,boolean isRefresh){
 		if(isRefresh){

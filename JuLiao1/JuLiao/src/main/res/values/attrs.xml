@@ -9,6 +9,7 @@
         <attr name="pname" format="string" />
         <attr name="pvalue" format="string" />
         <attr name="src" format="reference"/>
+        <attr name="isHave" format="boolean"/>
 
 
     </declare-styleable>

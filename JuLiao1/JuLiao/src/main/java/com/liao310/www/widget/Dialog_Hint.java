@@ -25,8 +25,6 @@ public class Dialog_Hint extends Dialog {
     //上下文
     Context mContext;
     String title,content;
-    View.OnClickListener mListener;
-    String type;
     //隐藏判断
     boolean isShow=true;
 
@@ -40,12 +38,11 @@ public class Dialog_Hint extends Dialog {
         this.title=title;
         this.content=content;
     }
-    public Dialog_Hint(Context context, String title,String content, View.OnClickListener itemsOnClick) {
+    public Dialog_Hint(Context context, String title,boolean isShow) {
         super(context, 0);
         mContext=context;
         this.title=title;
-        this.content=content;
-        mListener=itemsOnClick;
+        this.isShow=isShow;
     }
 
     @Override
@@ -53,7 +50,7 @@ public class Dialog_Hint extends Dialog {
         super.onCreate(savedInstanceState);
         //绑定自定义布局
         this.setContentView(R.layout.hint_dialog);
-        this.setCancelable(true);// flase设置点击屏幕Dialog不消失
+        this.setCancelable(isShow);// flase设置点击屏幕Dialog不消失
         //去黑角
         getWindow().setBackgroundDrawable(new BitmapDrawable());
         initView();
@@ -68,7 +65,11 @@ public class Dialog_Hint extends Dialog {
         mTitle= findViewById(R.id.Hint_Dialog_Title);
         mContent=  findViewById(R.id.Hint_Dialog_Content);
         mTitle.setText(title);
-        mContent.setText(content);
+        if(!isShow){
+            mContent.setVisibility(View.GONE);
+        }else {
+            mContent.setText(content);
+        }
     }
 
     /**

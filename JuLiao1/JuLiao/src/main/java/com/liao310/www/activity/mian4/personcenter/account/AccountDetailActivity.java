@@ -81,7 +81,7 @@ public class AccountDetailActivity  extends BaseActivity{
 		public void onClick(View v) {
 			mPager.setCurrentItem(index);
 		}
-	};
+	}
 	private void setFragment(){
 		if(savedInstanceState != null){
 			xfFragment = (AccountFragment) getSupportFragmentManager().getFragment(
@@ -129,14 +129,14 @@ public class AccountDetailActivity  extends BaseActivity{
 		case 0:
 			if (currIndex == 1) {
 				animation = new TranslateAnimation(position_one, 0, 0, 0);
-				chongzhi.setTextColor(_this.getResources().getColor(R.color.textlightgrey));
+				chongzhi.setTextColor(_this.getResources().getColor(R.color.white));
 			}   
 			xiaofei.setTextColor(_this.getResources().getColor(R.color.textgreen));
 			break;
 		case 1:
 			if (currIndex == 0) {
 				animation = new TranslateAnimation(0, position_one, 0, 0);
-				xiaofei.setTextColor(_this.getResources().getColor(R.color.textlightgrey));
+				xiaofei.setTextColor(_this.getResources().getColor(R.color.white));
 			}
 			chongzhi.setTextColor(_this.getResources().getColor(R.color.textgreen));
 			break;

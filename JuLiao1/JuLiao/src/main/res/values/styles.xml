@@ -21,14 +21,13 @@
 
     <style name="payMoney_tvback_style01">
         <item name="android:background">@drawable/cornerfulllinefull_greenline_whitefull</item>
-        <item name="android:paddingBottom">6dp</item>
+        <item name="android:padding">6dp</item>
         <item name="android:paddingTop">6dp</item>
     </style>
 
     <style name="payMoney_tvback_style02">
-        <item name="android:background">@drawable/cornerfullgreen</item>
-        <item name="android:paddingBottom">6dp</item>
-        <item name="android:paddingTop">6dp</item>
+        <item name="android:background">@drawable/shape_trap_4</item>
+        <item name="android:padding">12dp</item>
     </style>
  <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->

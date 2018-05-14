@@ -48,20 +48,18 @@ public class ReChargeActivity  extends BaseActivity implements OnClickListener {
 	private ImageView back;
 	private TextView title,accountDetail;
 	private View value1,value2,value3,value4,value5,value6;
-	private TextView value1_0,value2_0,value3_0,value4_0,value5_0,value6_0;
-	private TextView value1_1,value2_1,value3_1,value4_1,value5_1,value6_1;
-	private TextView value1_2,value2_2,value3_2,value4_2,value5_2,value6_2;
+	private ImageView mCheckImg1,mCheckImg2,mCheckImg3,mCheckImg4,mCheckImg5,mCheckImg6;
 	private View zfb,wx;
 	private ImageView zfbIm,wxIm;
-	private TextView notice;
+	//private TextView notice;
 	private TextView sure;
 	private int money = 8,moneyType = 1,payway = 1;//0支付宝，1微信
 
-	String str1 = "金币主要用于购买比赛分析文章，金币购买后不可提现，不可退款，如有问题请咨询";
+	/*String str1 = "金币主要用于购买比赛分析文章，金币购买后不可提现，不可退款，如有问题请咨询";
 	String str2 = "在线客服";
 	String str3 = "或拨打";
 	String str4 = "客服热线";
-	String str5 = "。";
+	String str5 = "。";*/
 	@SuppressLint("HandlerLeak")
 	private Handler mHandler = new Handler() {
 		public void handleMessage(Message msg) {
@@ -105,39 +103,27 @@ public class ReChargeActivity  extends BaseActivity implements OnClickListener {
 		accountDetail.setOnClickListener(this);
 
 		value1 = findViewById(R.id.tv_value1);
-		value1_0 = (TextView) findViewById(R.id.tv_value1_0);
-		value1_1 = (TextView) findViewById(R.id.tv_value1_1);
-		value1_2 = (TextView) findViewById(R.id.tv_value1_2);
+		mCheckImg1=findViewById(R.id.tv_value_img1);
 		value1.setOnClickListener(this);
 
 		value2 = findViewById(R.id.tv_value2);
-		value2_0 = (TextView) findViewById(R.id.tv_value2_0);
-		value2_1 = (TextView) findViewById(R.id.tv_value2_1);
-		value2_2 = (TextView) findViewById(R.id.tv_value2_2);
+		mCheckImg2=findViewById(R.id.tv_value_img2);
 		value2.setOnClickListener(this);
 
 		value3 = findViewById(R.id.tv_value3);
-		value3_0 = (TextView) findViewById(R.id.tv_value3_0);
-		value3_1 = (TextView) findViewById(R.id.tv_value3_1);
-		value3_2 = (TextView) findViewById(R.id.tv_value3_2);
+		mCheckImg3=findViewById(R.id.tv_value_img3);
 		value3.setOnClickListener(this);
 
 		value4 = findViewById(R.id.tv_value4);
-		value4_0 = (TextView) findViewById(R.id.tv_value4_0);
-		value4_1 = (TextView) findViewById(R.id.tv_value4_1);
-		value4_2 = (TextView) findViewById(R.id.tv_value4_2);
+		mCheckImg4=findViewById(R.id.tv_value_img4);
 		value4.setOnClickListener(this);
 
 		value5 = findViewById(R.id.tv_value5);
-		value5_0 = (TextView) findViewById(R.id.tv_value5_0);
-		value5_1 = (TextView) findViewById(R.id.tv_value5_1);
-		value5_2 = (TextView) findViewById(R.id.tv_value5_2);
+		mCheckImg5=findViewById(R.id.tv_value_img5);
 		value5.setOnClickListener(this);
 
 		value6 = findViewById(R.id.tv_value6);
-		value6_0 = (TextView) findViewById(R.id.tv_value6_0);
-		value6_1 = (TextView) findViewById(R.id.tv_value6_1);
-		value6_2 = (TextView) findViewById(R.id.tv_value6_2);
+		mCheckImg6=findViewById(R.id.tv_value_img6);
 		value6.setOnClickListener(this);
 
 		zfb = findViewById(R.id.zfb);
@@ -151,7 +137,7 @@ public class ReChargeActivity  extends BaseActivity implements OnClickListener {
 		sure.setOnClickListener(this);
 
 
-		notice = (TextView) findViewById(R.id.notice);
+		/*notice = (TextView) findViewById(R.id.notice);
 
 		SpannableStringBuilder spannableString = new SpannableStringBuilder();
 		spannableString.append(str1);
@@ -196,7 +182,7 @@ public class ReChargeActivity  extends BaseActivity implements OnClickListener {
 		spannableString.setSpan(clickableSpanPhone,str1.length()+str2.length()+str3.length(),str1.length()+str2.length()+str3.length()+str4.length(), Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
 		notice.setText(spannableString);
 		notice.setMovementMethod(LinkMovementMethod.getInstance()); 
-		notice.setHighlightColor(getResources().getColor(R.color.touming));//去掉点击后的背景颜色为透明  
+		notice.setHighlightColor(getResources().getColor(R.color.touming));//去掉点击后的背景颜色为透明 */
 	}
 	@Override
 	public void onClick(View v) {
@@ -310,99 +296,41 @@ public class ReChargeActivity  extends BaseActivity implements OnClickListener {
 		}
 	}
 	protected void resetImgs(int rank) {
-		int right1 = value1.getPaddingRight();  
-		int top1 = value1.getPaddingTop();  
-		int bottom1 = value1.getPaddingBottom();  
-		int left1 = value1.getPaddingLeft();
+		mCheckImg1.setImageResource(R.drawable.useaccountno);
+		mCheckImg2.setImageResource(R.drawable.useaccountno);
+		mCheckImg3.setImageResource(R.drawable.useaccountno);
+		mCheckImg4.setImageResource(R.drawable.useaccountno);
+		mCheckImg5.setImageResource(R.drawable.useaccountno);
+		mCheckImg6.setImageResource(R.drawable.useaccountno);
 
-
-		value1.setBackgroundResource(R.drawable.cornerfulllinefull_greenline_whitefull);
-		value1.setPadding(left1,top1,right1,bottom1); 
-		value1_0.setTextColor(getResources().getColor(R.color.textgreen));
-		value1_1.setTextColor(getResources().getColor(R.color.textgreen));
-		value1_2.setTextColor(getResources().getColor(R.color.textgreen));
-
-		value2.setBackgroundResource(R.drawable.cornerfulllinefull_greenline_whitefull);
-		value2.setPadding(left1,top1,right1,bottom1); 
-		value2_0.setTextColor(getResources().getColor(R.color.textgreen));
-		value2_1.setTextColor(getResources().getColor(R.color.textgreen));
-		value2_2.setTextColor(getResources().getColor(R.color.textgreen));
-
-		value3.setBackgroundResource(R.drawable.cornerfulllinefull_greenline_whitefull);
-		value3.setPadding(left1,top1,right1,bottom1); 
-		value3_0.setTextColor(getResources().getColor(R.color.textgreen));
-		value3_1.setTextColor(getResources().getColor(R.color.textgreen));
-		value3_2.setTextColor(getResources().getColor(R.color.textgreen));
-
-		value4.setBackgroundResource(R.drawable.cornerfulllinefull_greenline_whitefull);
-		value4.setPadding(left1,top1,right1,bottom1); 
-		value4_0.setTextColor(getResources().getColor(R.color.textgreen));
-		value4_1.setTextColor(getResources().getColor(R.color.textgreen));
-		value4_2.setTextColor(getResources().getColor(R.color.textgreen));
-
-		value5.setBackgroundResource(R.drawable.cornerfulllinefull_greenline_whitefull);
-		value5.setPadding(left1,top1,right1,bottom1); 
-		value5_0.setTextColor(getResources().getColor(R.color.textgreen));
-		value5_1.setTextColor(getResources().getColor(R.color.textgreen));
-		value5_2.setTextColor(getResources().getColor(R.color.textgreen));
-
-		value6.setBackgroundResource(R.drawable.cornerfulllinefull_greenline_whitefull);
-		value6.setPadding(left1,top1,right1,bottom1); ;
-		value6_0.setTextColor(getResources().getColor(R.color.textgreen));
-		value6_1.setTextColor(getResources().getColor(R.color.textgreen));
-		value6_2.setTextColor(getResources().getColor(R.color.textgreen));
 		switch (rank) {	
 		case 1:
-			value1.setBackgroundResource(R.drawable.cornerfullgreen);
-			value1.setPadding(left1,top1,right1,bottom1); 
-			value1_0.setTextColor(getResources().getColor(R.color.white));
-			value1_1.setTextColor(getResources().getColor(R.color.white));
-			value1_2.setTextColor(getResources().getColor(R.color.white));
+			mCheckImg1.setImageResource(R.drawable.useaccount);
 			money = 8;
 			moneyType = 1;
 			break;
 		case 2:
-			value2.setBackgroundResource(R.drawable.cornerfullgreen);
-			value2.setPadding(left1,top1,right1,bottom1); 
-			value2_0.setTextColor(getResources().getColor(R.color.white));
-			value2_1.setTextColor(getResources().getColor(R.color.white));
-			value2_2.setTextColor(getResources().getColor(R.color.white));
+			mCheckImg2.setImageResource(R.drawable.useaccount);
 			money = 18;
 			moneyType = 2;
 			break;
-		case 3: 
-			value3.setBackgroundResource(R.drawable.cornerfullgreen);
-			value3.setPadding(left1,top1,right1,bottom1);
-			value3_0.setTextColor(getResources().getColor(R.color.white));
-			value3_1.setTextColor(getResources().getColor(R.color.white));
-			value3_2.setTextColor(getResources().getColor(R.color.white));
+		case 3:
+			mCheckImg3.setImageResource(R.drawable.useaccount);
 			money = 28;
 			moneyType = 3;
 			break;
 		case 4:
-			value4.setBackgroundResource(R.drawable.cornerfullgreen);
-			value4.setPadding(left1,top1,right1,bottom1); 
-			value4_0.setTextColor(getResources().getColor(R.color.white));
-			value4_1.setTextColor(getResources().getColor(R.color.white));
-			value4_2.setTextColor(getResources().getColor(R.color.white));
+			mCheckImg4.setImageResource(R.drawable.useaccount);
 			money = 58;
 			moneyType = 4;
 			break;
 		case 5:
-			value5.setBackgroundResource(R.drawable.cornerfullgreen);
-			value5.setPadding(left1,top1,right1,bottom1); 
-			value5_0.setTextColor(getResources().getColor(R.color.white));
-			value5_1.setTextColor(getResources().getColor(R.color.white));
-			value5_2.setTextColor(getResources().getColor(R.color.white));
+			mCheckImg5.setImageResource(R.drawable.useaccount);
 			money = 88;
 			moneyType = 5;
 			break;
 		case 6:
-			value6.setBackgroundResource(R.drawable.cornerfullgreen);
-			value6.setPadding(left1,top1,right1,bottom1); 
-			value6_0.setTextColor(getResources().getColor(R.color.white));
-			value6_1.setTextColor(getResources().getColor(R.color.white));
-			value6_2.setTextColor(getResources().getColor(R.color.white));
+			mCheckImg6.setImageResource(R.drawable.useaccount);
 			money = 188;
 			moneyType = 13;
 			break;

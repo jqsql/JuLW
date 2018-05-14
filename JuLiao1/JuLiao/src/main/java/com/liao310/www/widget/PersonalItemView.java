@@ -21,6 +21,7 @@ public class PersonalItemView extends RelativeLayout {
 	String name;
 	String value;
 	private Drawable drawable;
+	private boolean isHave;
 
 	public PersonalItemView(Context context, AttributeSet attrs) {
 		super(context, attrs);
@@ -33,6 +34,7 @@ public class PersonalItemView extends RelativeLayout {
 		value = a.getString(R.styleable.PersonalItemView_pvalue);
 
 		drawable = a.getDrawable(R.styleable.PersonalItemView_src);
+		isHave = a.getBoolean(R.styleable.PersonalItemView_isHave,true);
 
 		a.recycle();
 		// this.setBackgroundResource(R.drawable.list_selector);
@@ -59,6 +61,11 @@ public class PersonalItemView extends RelativeLayout {
 		itemTitle.setText(name);
 		itemValue.setText(value);
 		imageView.setImageDrawable(drawable); // 注意吧 ！！
+		if(isHave){
+			imageIn.setVisibility(VISIBLE);
+		}else {
+			imageIn.setVisibility(GONE);
+		}
 	}
 
 	public void setResource(int drawable, String titleString) {

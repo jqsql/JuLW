@@ -16,8 +16,10 @@
     <color name="whiteGrey">#949594</color>
     <color name="touming">#00ffffff</color>
     <color name="HintBack">#81838e</color>
+    <color name="BorderBlack">#495954</color>
     <color name="ListBackGround">#41534D</color>
     <color name="Transparency15">#21000000</color>
+    <color name="Transparency70">#B3000000</color>
     <color name="Yellow">#F0CC31</color>
     <color name="BorderRed">#FF6060</color>
 </resources>
