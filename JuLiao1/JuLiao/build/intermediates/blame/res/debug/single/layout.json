@@ -1,442 +1,451 @@
 [
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_navigation_item.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\8bdbcbcb3f54a4622110a7cabd5c5b0f2c6674c4\\output\\res\\layout\\design_bottom_navigation_item.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\notification_template_media.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_search_view.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\zhuanjia_complex_item.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\zhuanjia_complex_item.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\pay.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\pay.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\updatedialog.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\updatedialog.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\8bdbcbcb3f54a4622110a7cabd5c5b0f2c6674c4\\output\\res\\layout\\design_navigation_item_subheader.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\zhuanjia_jc1_item.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\zhuanjia_jc1_item.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_popup_menu_item_layout.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\jingcai1_item.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\jingcai1_item.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\hint_dialog.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\hint_dialog.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\articledetail_jx.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\articledetail_jx.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_list_menu_item_radio.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\notification_action_tombstone.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_action_mode_bar.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\zhuanjia_jc3_new_item.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\zhuanjia_jc3_new_item.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\jingcai1_item.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\jingcai1_item.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_header_item_layout.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_popup_menu_header_item_layout.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\renzheng_item.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\renzheng_item.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\97e4c52fa202e61e0d0ab16fa439c3540874e5a0\\output\\res\\layout\\design_navigation_menu_item.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\webactivity.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\webactivity.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\main4_fragment_shouye.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\main4_fragment_shouye.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\97e4c52fa202e61e0d0ab16fa439c3540874e5a0\\output\\res\\layout\\design_navigation_item_header.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\notification_template_media.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\dialog.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\dialog.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\8bdbcbcb3f54a4622110a7cabd5c5b0f2c6674c4\\output\\res\\layout\\design_layout_tab_text.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\mysend.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\mysend.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\97e4c52fa202e61e0d0ab16fa439c3540874e5a0\\output\\res\\layout\\design_layout_snackbar_include.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\match_item.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\match_item.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\jpush_webview_layout.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\jpush_webview_layout.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\zhuanjia_jc1_item.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\zhuanjia_jc1_item.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\97e4c52fa202e61e0d0ab16fa439c3540874e5a0\\output\\res\\layout\\design_menu_item_action_area.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_expanded_menu_layout.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\select_dialog_multichoice_material.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\mysend_footer.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\mysend_footer.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_search_view.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_header_item_layout.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_popup_menu_header_item_layout.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\ball_fragment.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\ball_fragment.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\8bdbcbcb3f54a4622110a7cabd5c5b0f2c6674c4\\output\\res\\layout\\design_navigation_menu_item.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\zhuanjia_jx_item.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\zhuanjia_jx_item.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\tuijian_item_gridview.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\tuijian_item_gridview.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\notification_template_icon_group.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\8bdbcbcb3f54a4622110a7cabd5c5b0f2c6674c4\\output\\res\\layout\\design_layout_snackbar.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\find_pwd.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\find_pwd.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_activity_chooser_view.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\notification_template_icon_group.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\refresh_listview_footer.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\refresh_listview_footer.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\8bdbcbcb3f54a4622110a7cabd5c5b0f2c6674c4\\output\\res\\layout\\design_navigation_item_header.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\notification_action.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\select_dialog_multichoice_material.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\mysend_item.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\mysend_item.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_list_menu_item_icon.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\main4_fragment_personal.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\main4_fragment_personal.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_screen_toolbar.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\kefu.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\kefu.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\zhuanjia_simple_item.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\zhuanjia_simple_item.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_action_menu_layout.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\renzheng_item.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\renzheng_item.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\select_dialog_singlechoice_material.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\ad_cycle_view.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\ad_cycle_view.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\matchbase_item.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\matchbase_item.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_title_material.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_alert_dialog_title_material.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\dialog.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\dialog.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_alert_dialog_material.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\webactivity.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\webactivity.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\97e4c52fa202e61e0d0ab16fa439c3540874e5a0\\output\\res\\layout\\design_navigation_menu.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_list_menu_item_checkbox.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_screen_content_include.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\register.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\register.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\main4_fragment_zhuanjia.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\main4_fragment_zhuanjia.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\zhuanjia_jx_item.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\zhuanjia_jx_item.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\account_item.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\account_item.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\recharge.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\recharge.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\ball_fragment.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\ball_fragment.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\top.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\top.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\8bdbcbcb3f54a4622110a7cabd5c5b0f2c6674c4\\output\\res\\layout\\design_navigation_menu.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\jpush_popwin_layout.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\jpush_popwin_layout.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_list_menu_item_layout.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\8bdbcbcb3f54a4622110a7cabd5c5b0f2c6674c4\\output\\res\\layout\\design_layout_tab_icon.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\zhuanjiafouced.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\zhuanjiafouced.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\personal_item_view.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\personal_item_view.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\main4_fragment_shouye.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\main4_fragment_shouye.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_screen_toolbar.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\refresh_header.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\refresh_header.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\main_gridview.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\main_gridview.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\myfavourite_item.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\myfavourite_item.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\articledetail_jc.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\articledetail_jc.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_action_mode_close_item_material.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\notification_template_part_chronometer.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\pay.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\pay.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\notification_template_lines_media.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\select_dialog_item_material.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\zhuanjia_jc3_item.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\zhuanjia_jc3_item.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\mysend_item.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\mysend_item.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\articledetail.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\articledetail.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_title_material.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_alert_dialog_title_material.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\find_pwd.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\find_pwd.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\zhuanjia_item.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\zhuanjia_item.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\activity_splash.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\activity_splash.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_action_menu_item_layout.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\97e4c52fa202e61e0d0ab16fa439c3540874e5a0\\output\\res\\layout\\design_navigation_item.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\8bdbcbcb3f54a4622110a7cabd5c5b0f2c6674c4\\output\\res\\layout\\design_navigation_item.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\notification_template_part_time.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_select_dialog_material.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\97e4c52fa202e61e0d0ab16fa439c3540874e5a0\\output\\res\\layout\\design_layout_tab_icon.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\activity_splash.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\activity_splash.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\newregister.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\newregister.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media_custom.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\notification_template_media_custom.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\zhuanjia_simple_item.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\zhuanjia_simple_item.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\97e4c52fa202e61e0d0ab16fa439c3540874e5a0\\output\\res\\layout\\design_bottom_sheet_dialog.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media_custom.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\notification_template_media_custom.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\setting.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\setting.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\zhuanjiafouced.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\zhuanjiafouced.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\mysend.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\mysend.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\changepassword.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\changepassword.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_expanded_menu_layout.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\select_dialog_item_material.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\personal_item_view.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\personal_item_view.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\myfavourite.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\myfavourite.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\main4_fragment_shouye_item.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\main4_fragment_shouye_item.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\login.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\login.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\articledetail.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\articledetail.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_screen_content_include.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_text_input_password_icon.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\97e4c52fa202e61e0d0ab16fa439c3540874e5a0\\output\\res\\layout\\design_text_input_password_icon.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_activity_chooser_view.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_screen_simple.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\mysend_footer.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\mysend_footer.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\refresh_listview_footer.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\refresh_listview_footer.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\aboutus.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\aboutus.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\main4_fragment_shouye_item.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\main4_fragment_shouye_item.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\zhuanjia_jx_new_item.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\zhuanjia_jx_new_item.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\setting.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\setting.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\newregister.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\newregister.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_alert_dialog_material.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\zhuanjia_item.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\zhuanjia_item.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\login.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\login.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\account_item.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\account_item.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\notification_template_custom_big.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\jpush_webview_layout.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\jpush_webview_layout.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\changepassword.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\changepassword.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\jpush_popwin_layout.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\jpush_popwin_layout.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\kefu.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\kefu.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\matchbase_item.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\matchbase_item.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\main4_fragment_personal.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\main4_fragment_personal.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\updatedialog.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\updatedialog.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\zhuanjia_jc3_item.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\zhuanjia_jc3_item.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_action_bar_title_item.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_action_bar_up_container.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\pay_dialog.xml",
         "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\pay_dialog.xml"
     },
     {
         "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\8bdbcbcb3f54a4622110a7cabd5c5b0f2c6674c4\\output\\res\\layout\\design_menu_item_action_area.xml"
+=======
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_navigation_item.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\97e4c52fa202e61e0d0ab16fa439c3540874e5a0\\output\\res\\layout\\design_bottom_navigation_item.xml"
+>>>>>>> af0ec48d495d7e5c09d0bf3c93dd92bae92aff9b
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\top.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\top.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\zhuanjia_complex_item.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\zhuanjia_complex_item.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_separator.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\8bdbcbcb3f54a4622110a7cabd5c5b0f2c6674c4\\output\\res\\layout\\design_navigation_item_separator.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\myfavourite.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\myfavourite.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\notification_action.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_dialog_title_material.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\notification_template_part_time.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\main4_fragment_zhuanjia.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\main4_fragment_zhuanjia.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action_tombstone.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\notification_action_tombstone.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\notification_template_lines_media.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\main4_fragment_match.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\main4_fragment_match.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\order_item.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\order_item.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\articledetail_jx.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\articledetail_jx.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_action_menu_item_layout.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\tuijian_item_gridview.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\tuijian_item_gridview.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\zhuanjia_jc3_new_item.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\zhuanjia_jc3_new_item.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\97e4c52fa202e61e0d0ab16fa439c3540874e5a0\\output\\res\\layout\\design_layout_snackbar.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\zhuanjia_jx_new_item.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\zhuanjia_jx_new_item.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\hint_dialog.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\hint_dialog.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\8bdbcbcb3f54a4622110a7cabd5c5b0f2c6674c4\\output\\res\\layout\\design_bottom_sheet_dialog.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\97e4c52fa202e61e0d0ab16fa439c3540874e5a0\\output\\res\\layout\\design_layout_tab_text.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\order_item.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\order_item.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\pay_dialog.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\pay_dialog.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\recharge.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\recharge.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\ad_cycle_view.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\ad_cycle_view.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\zhuanjia_detail.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\zhuanjia_detail.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\zhuanjia_detail.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\zhuanjia_detail.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_custom_big.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\notification_template_custom_big.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\97e4c52fa202e61e0d0ab16fa439c3540874e5a0\\output\\res\\layout\\design_navigation_item_subheader.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\layout\\abc_dialog_title_material.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\refresh_header.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\refresh_header.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_text_input_password_icon.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\8bdbcbcb3f54a4622110a7cabd5c5b0f2c6674c4\\output\\res\\layout\\design_text_input_password_icon.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_separator.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\97e4c52fa202e61e0d0ab16fa439c3540874e5a0\\output\\res\\layout\\design_navigation_item_separator.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\aboutus.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\aboutus.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
+        "source": "C:\\Users\\qiangsheng\\.android\\build-cache\\29f348e00f43fd34fd7af01134f0d5a8820bf185\\output\\res\\layout\\abc_screen_simple.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\main_gridview.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\main_gridview.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\match_item.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\match_item.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\articledetail_jc.xml",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\articledetail_jc.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\main4_fragment_match.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\main4_fragment_match.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\8bdbcbcb3f54a4622110a7cabd5c5b0f2c6674c4\\output\\res\\layout\\design_layout_snackbar_include.xml"
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\myfavourite_item.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\myfavourite_item.xml"
+    },
+    {
+        "merged": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\layout\\register.xml",
+        "source": "F:\\GitHubPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\layout\\register.xml"
     }
 ]
