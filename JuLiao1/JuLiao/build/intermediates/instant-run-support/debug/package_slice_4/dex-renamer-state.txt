@@ -1,4 +1,0 @@
-#Fri May 11 14:34:58 CST 2018
-base.0=F\:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_4
-renamed.0=classes.dex
-file.0=F\:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_4\\classes.dex

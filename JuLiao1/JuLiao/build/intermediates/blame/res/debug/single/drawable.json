@@ -1,11 +1,11 @@
 [
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\drawable\\abc_ratingbar_small_material.xml"
-    },
-    {
         "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\drawable\\cornerfullgreen15dp.xml",
         "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\drawable\\cornerfullgreen15dp.xml"
+    },
+    {
+        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\drawable\\abc_ratingbar_small_material.xml"
     },
     {
         "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\drawable\\linexu.xml",

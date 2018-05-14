@@ -56,12 +56,12 @@
         "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\drawable-xhdpi\\zhuanjia01.png"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\xiaoxi.png",
-        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\drawable-xhdpi\\xiaoxi.png"
-    },
-    {
         "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\fan.png",
         "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\drawable-xhdpi\\fan.png"
+    },
+    {
+        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\xiaoxi.png",
+        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\drawable-xhdpi\\xiaoxi.png"
     },
     {
         "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\shouye01.png",
