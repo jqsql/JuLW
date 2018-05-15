@@ -18,6 +18,8 @@
     <color name="HintBack">#81838e</color>
     <color name="BorderBlack">#495954</color>
     <color name="ListBackGround">#41534D</color>
+    <color name="BgTransparency15">#566963</color>
+    <color name="EndTransparency15">#3b4c47</color>
     <color name="Transparency15">#21000000</color>
     <color name="Transparency70">#B3000000</color>
     <color name="Yellow">#F0CC31</color>

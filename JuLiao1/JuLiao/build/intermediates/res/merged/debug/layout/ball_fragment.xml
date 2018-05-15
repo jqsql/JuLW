@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="@color/mainback"
               android:orientation="vertical">
 
 
@@ -10,6 +9,7 @@
             android:id="@+id/linearLayout1"
             android:layout_width="match_parent"
             android:layout_height="28dp"
+            android:background="@color/mainback"
             android:orientation="horizontal">
 
             <TextView
@@ -114,7 +114,6 @@
                 android:id="@+id/rl_listview"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/ListBackGround"
                 android:cacheColorHint="@null"
                 android:divider="@null"
                 android:overScrollMode="never"
@@ -125,7 +124,6 @@
                 android:id="@+id/rl_listview2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/ListBackGround"
                 android:cacheColorHint="@null"
                 android:overScrollMode="never"
                 android:divider="@null"

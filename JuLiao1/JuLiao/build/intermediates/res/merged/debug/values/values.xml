@@ -12,8 +12,10 @@
     <bool name="abc_config_closeDialogWhenTouchOutside">true</bool>
     <bool name="abc_config_showMenuShortcutsWhenKeyboardPresent">false</bool>
     <color name="APPColor">#3C3E3B</color>
+    <color name="BgTransparency15">#566963</color>
     <color name="BorderBlack">#495954</color>
     <color name="BorderRed">#FF6060</color>
+    <color name="EndTransparency15">#3b4c47</color>
     <color name="HintBack">#81838e</color>
     <color name="ListBackGround">#41534D</color>
     <color name="Transparency15">#21000000</color>
@@ -656,11 +658,11 @@
         <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
     </style>
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
-        <!-- API 11 theme customizations can go here. -->
-        <item name="android:windowBackground">@color/mainback</item>
+        
+        <item name="android:windowBackground">@drawable/bg_gradual_change</item>
     </style>
     <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        
     </style>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>

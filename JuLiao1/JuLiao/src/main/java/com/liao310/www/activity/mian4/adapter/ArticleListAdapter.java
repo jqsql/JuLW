@@ -113,9 +113,6 @@ public class ArticleListAdapter extends BaseAdapter {
                     holder.gamename1 = (TextView) convertView.findViewById(R.id.gamename1);
                     holder.hostteamname1 = (TextView) convertView.findViewById(R.id.hostteamname1);
                     holder.gustteamname1 = (TextView) convertView.findViewById(R.id.gustteamname1);
-                    holder.gamename1 = (TextView) convertView.findViewById(R.id.gamename1);
-                    holder.hostteamname1 = (TextView) convertView.findViewById(R.id.hostteamname1);
-                    holder.gustteamname1 = (TextView) convertView.findViewById(R.id.gustteamname1);
                     holder.wanfa = (TextView) convertView.findViewById(R.id.wanfa);
                     holder.pankou = (TextView) convertView.findViewById(R.id.pankou);
                     holder.yingban = (TextView) convertView.findViewById(R.id.yingban);

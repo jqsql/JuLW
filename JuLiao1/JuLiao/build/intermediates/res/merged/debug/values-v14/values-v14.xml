@@ -2,7 +2,7 @@
 <resources>
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- API 14 theme customizations can go here. -->
-        <item name="android:windowBackground">@color/mainback</item>
+        <item name="android:windowBackground">@drawable/bg_gradual_change</item>
     </style>
     <style name="Base.TextAppearance.AppCompat.Button">
         <item name="android:textSize">@dimen/abc_text_size_button_material</item>

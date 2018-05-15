@@ -1,4 +1,4 @@
-#Mon May 14 17:27:24 CST 2018
+#Tue May 15 13:31:14 CST 2018
 base.0=F\:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_32e2f815d98ea385ab71326da02338d6c0ea7518
 renamed.1=classes2.dex
 renamed.0=classes.dex

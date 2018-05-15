@@ -27,6 +27,7 @@
         android:id="@+id/ll_bottom"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:background="@color/mainback"
         android:gravity="center"
         android:orientation="horizontal"
         android:weightSum="4" >

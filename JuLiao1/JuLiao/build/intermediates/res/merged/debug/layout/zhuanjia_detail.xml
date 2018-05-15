@@ -124,6 +124,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/mainback"
         android:orientation="vertical"
         android:gravity="right">
         <TextView
@@ -137,7 +138,8 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/mainback">
 
         <LinearLayout
             android:id="@+id/lv1view"
@@ -351,7 +353,6 @@
         android:id="@+id/rl_listview"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
-        android:background="@color/ListBackGround"
         android:cacheColorHint="@null"
         android:divider="@null"
         android:dividerHeight="0dip"

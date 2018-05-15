@@ -3,6 +3,7 @@ package com.liao310.www;
 import com.liao310.www.activity.mian4.match.MatchMainNewFragment;
 import com.liao310.www.activity.mian4.personcenter.MainPersonalCenterFragment;
 import com.liao310.www.activity.mian4.shouye.MainHomeFragment;
+import com.liao310.www.activity.mian4.shouye.MainHomeNewFragment;
 import com.liao310.www.activity.mian4.zhuanjia.ZhuanJiaMainFragment;
 import com.liao310.www.activity.mian4.zhuanjia.ZhuanJiaMainNewFragment;
 import com.liao310.www.base.BaseActivity;
@@ -26,7 +27,7 @@ public class MainActivity extends BaseActivity implements OnClickListener{
 	private ImageView shouye_im,zhuanjia_im,bisai_im,wode_im;
 	private TextView shouye_tv,zhuanjia_tv,bisai_tv,wode_tv;
 
-	private MainHomeFragment mTab01;
+	private MainHomeNewFragment mTab01;
 	private ZhuanJiaMainNewFragment mTab02;
 	private MatchMainNewFragment mTab03;
 	private MainPersonalCenterFragment mTab04;
@@ -135,13 +136,13 @@ public class MainActivity extends BaseActivity implements OnClickListener{
 			StatusBarColor.setStatusBar(this);//修改状态栏颜色
 			if (mTab01 == null) {
 				if(savedInstanceState != null){
-					mTab01 = (MainHomeFragment) fm.findFragmentByTag("MainHomeFragment");  
+					mTab01 = (MainHomeNewFragment) fm.findFragmentByTag("MainHomeFragment");
 					if (mTab01 == null) {
-						mTab01 = new MainHomeFragment();
+						mTab01 = new MainHomeNewFragment();
 						transaction.add(R.id.id_content, mTab01,"MainHomeFragment");											
 					}
 				}else{
-					mTab01 = new MainHomeFragment();
+					mTab01 = new MainHomeNewFragment();
 					transaction.add(R.id.id_content, mTab01,"MainHomeFragment");
 				}
 			} else {
@@ -211,7 +212,7 @@ public class MainActivity extends BaseActivity implements OnClickListener{
 			transaction.hide(mTab01);
 		}else{
 			if(savedInstanceState != null){
-				mTab01 = (MainHomeFragment) fm.findFragmentByTag("MainHomeFragment");  
+				mTab01 = (MainHomeNewFragment) fm.findFragmentByTag("MainHomeFragment");
 				if (mTab01 != null) {
 					transaction.hide(mTab01);											
 				}

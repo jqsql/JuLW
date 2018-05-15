@@ -6,7 +6,7 @@
     -->
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
         <!-- API 11 theme customizations can go here. -->
-        <item name="android:windowBackground">@color/mainback</item>
+        <item name="android:windowBackground">@drawable/bg_gradual_change</item>
     </style>
 
 </resources>

@@ -9,7 +9,7 @@
         android:id="@+id/AppBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@null">
+        android:background="@color/mainback">
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/CollapsingToolbarLayoutView"
             android:layout_width="match_parent"
@@ -246,6 +246,7 @@
                 android:id="@+id/linearLayout1"
                 android:layout_width="match_parent"
                 android:layout_height="28dp"
+                android:background="@color/mainback"
                 android:orientation="horizontal">
 
                 <TextView
@@ -354,7 +355,6 @@
         android:id="@+id/rl_listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/ListBackGround"
         android:cacheColorHint="@null"
         android:divider="@null"
         android:overScrollMode="never"

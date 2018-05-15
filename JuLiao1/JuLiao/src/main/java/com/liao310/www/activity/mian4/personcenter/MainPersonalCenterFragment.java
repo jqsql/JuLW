@@ -26,11 +26,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Date;
+
 import de.greenrobot.event.EventBus;
 
 public class MainPersonalCenterFragment extends Fragment implements OnClickListener, SwipeRefreshLayout.OnRefreshListener {
     private ImageView namePic;
-    private TextView name;
+    private TextView name,welcome;
     private PersonalItemView order, favourite, send, invitecode, kefu, set, money, recharge, kefutx, recharge_List;
     private VerticalSwipeRefreshLayout mSwipeLayout;
 
@@ -39,38 +41,40 @@ public class MainPersonalCenterFragment extends Fragment implements OnClickListe
         View view = inflater.inflate(R.layout.main4_fragment_personal, container, false);
         EventBus.getDefault().register(this);
         initView(view);
+        getDate();//根据时间判断内容
         updateUserInfo();
         return view;
     }
 
     private void initView(View view) {
-        mSwipeLayout = (VerticalSwipeRefreshLayout) view.findViewById(R.id.swipe_container);
+        welcome=view.findViewById(R.id.name_tv_welcome);
+        mSwipeLayout =  view.findViewById(R.id.swipe_container);
         mSwipeLayout.setOnRefreshListener(this);
 
         kefutx = view.findViewById(R.id.kefutx);
         kefutx.setOnClickListener(this);
 
-        namePic = (ImageView) view.findViewById(R.id.name_im);
+        namePic =  view.findViewById(R.id.name_im);
         namePic.setOnClickListener(this);
-        name = (TextView) view.findViewById(R.id.name_tv);
+        name = view.findViewById(R.id.name_tv);
         money = view.findViewById(R.id.money);
         recharge = view.findViewById(R.id.recharge);
         recharge.setOnClickListener(this);
         recharge_List = view.findViewById(R.id.recharge_List);
         recharge_List.setOnClickListener(this);
 
-        order = (PersonalItemView) view.findViewById(R.id.order);
+        order =  view.findViewById(R.id.order);
         order.setOnClickListener(this);
-        favourite = (PersonalItemView) view.findViewById(R.id.favourite);
+        favourite =  view.findViewById(R.id.favourite);
         favourite.setOnClickListener(this);
-        send = (PersonalItemView) view.findViewById(R.id.send);
+        send =  view.findViewById(R.id.send);
         send.setOnClickListener(this);
-        invitecode = (PersonalItemView) view.findViewById(R.id.invitecode);
+        invitecode =  view.findViewById(R.id.invitecode);
         invitecode.setOnClickListener(this);
 
-        kefu = (PersonalItemView) view.findViewById(R.id.kefu);
+        kefu =  view.findViewById(R.id.kefu);
         kefu.setOnClickListener(this);
-        set = (PersonalItemView) view.findViewById(R.id.set);
+        set =  view.findViewById(R.id.set);
         set.setOnClickListener(this);
 
     }
@@ -188,5 +192,19 @@ public class MainPersonalCenterFragment extends Fragment implements OnClickListe
                 mSwipeLayout.setRefreshing(false);
             }
         }, 3000); // 5秒后发送消息，停止刷新
+    }
+
+    private void getDate(){
+        Date d = new Date();
+        if(d.getHours()<11){
+            welcome.setText("尊敬的会员，上午好！");
+        }else if(d.getHours()<13){
+            welcome.setText("尊敬的会员，中午好！");
+        }else if(d.getHours()<18){
+            welcome.setText("尊敬的会员，下午好！");
+        }else if(d.getHours()<24){
+            welcome.setText("尊敬的会员，晚上好！");
+        }
+
     }
 }
