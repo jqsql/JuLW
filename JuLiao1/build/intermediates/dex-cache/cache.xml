@@ -11,13 +11,22 @@
         <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\2\jpush-android-3.1.2_173713ebc941301a565be67d8442214b9dd03614\classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="F:\GitPro\JuLW\JuLiao1\JuLiao\libs\xUtils-3.2.2.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="F:\GitPro\JuLW\JuLiao1\JuLiao\libs\jsoup-1.7.1.jar"
+        jumboMode="false"
         optimize="true"
         revision="26.0.3"
-        sha1="60a64f9fe24d179f9d98e70bdfb68416389ee764">
-        <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\2\xUtils-3.2.2_9fba79414bc68cd7609c49013a70ba4a39fcf603\classes.dex" />
+        sha1="99351550d1fa2e8147319dbafd3f3a79d4f4c6e5">
+        <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\pre-dexed\release\jsoup-1.7.1_8020d126fc7b8735c89086ee4525448591996714.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\GitPro\JuLW\JuLiao1\JuLiao\libs\jpush-android-3.1.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="58c972bc91dae7b05686353ea1a35881c01f7e23">
+        <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\pre-dexed\release\jpush-android-3.1.2_173713ebc941301a565be67d8442214b9dd03614.jar" />
     </item>
     <item
         is-multidex="true"
@@ -29,6 +38,33 @@
         <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\2\jcore-android-1.2.0_207bb9e47b59902e8aaddd0f9588dc0df5eb0257\classes.dex" />
     </item>
     <item
+        is-multidex="false"
+        jar="F:\GitPro\JuLW\JuLiao1\JuLiao\libs\jcore-android-1.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="b03b2ddbf065222493c976e74e3612e0ea2a7a35">
+        <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\pre-dexed\release\jcore-android-1.2.0_207bb9e47b59902e8aaddd0f9588dc0df5eb0257.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\GitPro\JuLW\JuLiao1\JuLiao\libs\xUtils-3.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="60a64f9fe24d179f9d98e70bdfb68416389ee764">
+        <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\pre-dexed\release\xUtils-3.2.2_9fba79414bc68cd7609c49013a70ba4a39fcf603.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\GitPro\JuLW\JuLiao1\JuLiao\libs\xUtils-3.2.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.3"
+        sha1="60a64f9fe24d179f9d98e70bdfb68416389ee764">
+        <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\2\xUtils-3.2.2_9fba79414bc68cd7609c49013a70ba4a39fcf603\classes.dex" />
+    </item>
+    <item
         is-multidex="true"
         jar="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
@@ -38,6 +74,15 @@
         <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_32e2f815d98ea385ab71326da02338d6c0ea7518\classes.dex" />
     </item>
     <item
+        is-multidex="false"
+        jar="F:\GitPro\JuLW\JuLiao1\JuLiao\libs\eventbus-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="ddd166d01b3158d1c00576d29f7ed15c030df719">
+        <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\pre-dexed\release\eventbus-2.4.0_25a188574cf49e5a6a15492f937e889635d59589.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="F:\GitPro\JuLW\JuLiao1\JuLiao\libs\libammsdk.jar"
         jumboMode="true"
@@ -45,6 +90,15 @@
         revision="26.0.3"
         sha1="e8db000948e58e4ef6b7a1a54e92e7040e7037d5">
         <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\2\libammsdk_3371d9fc72110903a451ae3a19ab24fec64649a1\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\GitPro\JuLW\JuLiao1\JuLiao\libs\libammsdk.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="e8db000948e58e4ef6b7a1a54e92e7040e7037d5">
+        <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\pre-dexed\release\libammsdk_3371d9fc72110903a451ae3a19ab24fec64649a1.jar" />
     </item>
     <item
         is-multidex="true"
@@ -61,7 +115,7 @@
         jumboMode="true"
         optimize="true"
         revision="26.0.3"
-        sha1="f3ac5a2e265e68ff88fee62434c52c8dd2feaca3">
+        sha1="136ca81025b08f66901d4374638ac5ddf9cdb057">
         <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_5998d517f050103068aa151d787d8060f6bea928\classes.dex" />
     </item>
     <item

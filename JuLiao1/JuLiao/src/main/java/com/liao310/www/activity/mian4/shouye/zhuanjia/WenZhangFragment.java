@@ -67,7 +67,7 @@ public class WenZhangFragment extends Fragment  {
 						intent.putExtra("rid", art.getRid());
 						startActivity(intent);
 					}else {
-						_this.toGetJC1Result(art,"dialogToDo");
+						_this.toGetJC1Result(art.getRid(),art.getPrice(),"dialogToDo");
 					}
 				}
 			}

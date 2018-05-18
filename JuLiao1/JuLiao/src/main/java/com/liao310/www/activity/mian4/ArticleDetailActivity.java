@@ -698,7 +698,7 @@ public class ArticleDetailActivity extends BaseActivity {
     }
 
     public void dialogToDo() {
-        ServicePay.getInstance().pay(_this, rid, card.getMoney(), 4,
+        ServicePay.getInstance().pay(_this, rid, 1,
                 new CallBack<PayBack>() {
                     @Override
                     public void onSuccess(PayBack t) {

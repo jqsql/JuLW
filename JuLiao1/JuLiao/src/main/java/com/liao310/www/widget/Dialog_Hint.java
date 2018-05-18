@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -92,5 +93,15 @@ public class Dialog_Hint extends Dialog {
         getWindow().getDecorView().setPadding(0, 0, 0, 0);
 
         getWindow().setAttributes(layoutParams);
+    }
+    public Dialog_Hint showShort(){
+        show();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                dismiss();
+            }
+        },1000);
+        return this;
     }
 }

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:wxq="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        app:cardBackgroundColor="@color/touming"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_gradual_change"
+            android:padding="10dp">
+
+
+            <com.liao310.www.widget.ShapedImageView
+                android:id="@+id/head"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/defaultpic"
+                android:scaleType="centerCrop"
+                wxq:shape_mode="circle"/>
+
+            <RelativeLayout
+                android:id="@+id/view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/head">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="竞进球彩人"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"/>
+
+                <TextView
+                    android:id="@+id/money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="竞进球彩人"
+                    android:textColor="@color/textgreen"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/yingban"
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/money"
+                    android:layout_marginTop="10dp"
+                    android:text="赢半"
+                    android:textColor="@color/textred"
+                    android:textSize="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@id/yingban"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/gamename"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/hostteamname1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="切尔西"
+                            android:textColor="@color/white"
+                            android:textSize="14dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:text="VS"
+                            android:textColor="@color/white"
+                            android:textSize="14dp"/>
+
+                        <TextView
+                            android:id="@+id/gustteamname1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="切尔西"
+                            android:textColor="@color/white"
+                            android:textSize="14dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/endtime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="03-20 11:30"
+                            android:textColor="@color/whiteGrey"
+                            android:textSize="12dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp"
+                            android:text="|"
+                            android:textColor="@color/whiteGrey"
+                            android:textSize="12dp"/>
+
+                        <TextView
+                            android:id="@+id/wanfa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="大小球"
+                            android:textColor="@color/whiteGrey"
+                            android:textSize="12dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp"
+                            android:text="|"
+                            android:textColor="@color/whiteGrey"
+                            android:textSize="12dp"/>
+
+                        <TextView
+                            android:id="@+id/pankou"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2.75"
+                            android:textColor="@color/whiteGrey"
+                            android:textSize="12dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp"
+                            android:text="|"
+                            android:textColor="@color/whiteGrey"
+                            android:textSize="12dp"/>
+
+                        <TextView
+                            android:id="@+id/gamename1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="英超"
+                            android:textColor="@color/whiteGrey"
+                            android:textSize="12dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

@@ -7,12 +7,14 @@ import com.liao310.www.activity.login.LoginActivity;
 import com.liao310.www.activity.mian4.ArticleDetailActivity;
 import com.liao310.www.activity.pay.PayActivity;
 import com.liao310.www.base.BaseActivity;
+import com.liao310.www.domain.pay.PayBack;
 import com.liao310.www.domain.shouye.ArticalJCBack;
 import com.liao310.www.domain.shouye.Article;
 import com.liao310.www.domain.version.ErrorMsg;
 import com.liao310.www.domain.zhuanjia.FouceBack;
 import com.liao310.www.domain.zhuanjia.ZhuanJia;
 import com.liao310.www.domain.zhuanjia.ZhuanJiaDetailBackBack;
+import com.liao310.www.net.ServicePay;
 import com.liao310.www.net.ServiceZhuanJia;
 import com.liao310.www.net.https.ServiceABase.CallBack;
 import com.liao310.www.net.https.xUtilsImageUtils;
@@ -24,6 +26,7 @@ import com.liao310.www.widget.RefreshListView.OnRefreshListener;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -49,6 +52,7 @@ public class ZhuanJiaDetailActivity extends BaseActivity {
 	private RefreshListView refreshListView;
 	private ZhuanJiaDetailListAdapter myListAdapter = null;
 	private int more = 1;
+	private int payType=0;//支付方式,默认余额方式
 	Article art;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -119,11 +123,15 @@ public class ZhuanJiaDetailActivity extends BaseActivity {
 				if(articles!=null&&position<articles.size()&&position>=0){
 					art = articles.get(position);
 					if(art.getArt_type()!=2) {
-						Intent intent = new Intent(_this,ArticleDetailActivity.class);
-						intent.putExtra("rid", art.getRid() );
-						startActivity(intent);
+						_this.getArticledetail(art.getRid(),art.getPrice(), "");
 					}else {
-						toGetJC1Result(art,"");
+						if (!PreferenceUtil.getBoolean(_this,"hasLogin")) {
+							Intent intentLogin = new Intent(_this, LoginActivity.class);
+							intentLogin.putExtra("requestName", "intentLogin");
+							startActivityForResult(intentLogin,LOGIN_PAY);
+						}else {
+							toGetJC1Result(art.getRid(), art.getPrice(), "");
+						}
 					}
 				}
 			}
@@ -352,7 +360,7 @@ public class ZhuanJiaDetailActivity extends BaseActivity {
 			}
 		}
 	}
-	public void dialogToDo() {
+	/*public void dialogToDo() {
 		if (!PreferenceUtil.getBoolean(_this,"hasLogin")) {
 			Intent intentLogin = new Intent(_this, LoginActivity.class); 
 			intentLogin.putExtra("requestName", "intentLogin");
@@ -364,5 +372,40 @@ public class ZhuanJiaDetailActivity extends BaseActivity {
 			intentPay.putExtra("prize", art.getPrice());
 			startActivity(intentPay);
 		}	
+	}*/
+
+	public void dialogToDo() {
+		ServicePay.getInstance().pay(_this, art.getRid(), payType,
+				new CallBack<PayBack>() {
+					@Override
+					public void onSuccess(PayBack t) {
+						// TODO 自动生成的方法存根
+						final Dialog_Hint dialog_hint=new Dialog_Hint(_this,"购买成功",false);
+						dialog_hint.show();
+						new Handler().postDelayed(new Runnable() {
+							@Override
+							public void run() {
+								dialog_hint.dismiss();
+								if(art.getArt_type()!=2) {
+									Intent intent = new Intent(_this, ArticleDetailActivity.class);
+									intent.putExtra("rid", art.getRid());
+									startActivity(intent);
+								}else {
+									toGetJC1Result(art.getRid(), art.getPrice(), "");
+								}
+							}
+						},1000);
+					}
+
+					@Override
+					public void onFailure(ErrorMsg errorMessage) {
+						// TODO 自动生成的方法存根
+						new Dialog_Hint(_this,""+errorMessage.msg,false).showShort();
+					}
+				});
+	}
+	public void toPayForCard() {
+		payType=1;
+		dialog("赠送卡支付", "您确认使用赠送卡支付吗？", "取消", true, "确认", "");
 	}
 }

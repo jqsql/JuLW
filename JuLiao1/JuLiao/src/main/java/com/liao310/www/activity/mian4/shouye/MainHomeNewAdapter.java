@@ -33,7 +33,7 @@ public class MainHomeNewAdapter extends BaseRecyclerAdapter<Article> {
 
     public MainHomeNewAdapter(Context context, int layoutID, List list) {
         super(context, layoutID, list);
-        _this=context;
+        _this = context;
     }
 
     public void setType(int _type) {
@@ -148,6 +148,11 @@ public class MainHomeNewAdapter extends BaseRecyclerAdapter<Article> {
             }
         }
 
+        if(article.isIf_roback()==1){
+            holder.getView(R.id.result_Fan).setVisibility(View.VISIBLE);
+        }else {
+            holder.getView(R.id.result_Fan).setVisibility(View.GONE);
+        }
         if (_typeFovourite == 0) {
             sendtime.setText(article.getPublish_time() + "");
             bottom.setVisibility(View.VISIBLE);
@@ -210,43 +215,22 @@ public class MainHomeNewAdapter extends BaseRecyclerAdapter<Article> {
         }
         xUtilsImageUtils.display((ImageView) holder.getView(R.id.head), article.getAvatar(), R.drawable.defaultpic, true);
         name.setText(article.getNickname());
-        if ("0".
-
-                equals(article.getPrice()))
-
+        if ("0".equals(article.getPrice()))
         {
             money.setText("免费");
-        } else
-
-        {
+        } else {
             money.setText(article.getPrice() + "金币");
         }
         if (article.getMatch() != null &&
-                article.getMatch().
-
-                        size() > 0)
+                article.getMatch().size() > 0)
 
         {
             gamename1.setText(article.getMatch().get(0).getLs_cname());
             hostteamname1.setText(article.getMatch().get(0).getZhuname());
             gustteamname1.setText(article.getMatch().get(0).getKename());
         }
-        switch (
 
-                getItemViewType(position))
-
-        {
-            case 0:
-
-                break;
-            case 1:
-
-
-                break;
-        }
-        holder.getView(R.id.head).
-
-                setOnClickListener(new View.OnClickListener() {
+        holder.getView(R.id.head).setOnClickListener(new View.OnClickListener() {
 
                     @Override
                     public void onClick(View v) {

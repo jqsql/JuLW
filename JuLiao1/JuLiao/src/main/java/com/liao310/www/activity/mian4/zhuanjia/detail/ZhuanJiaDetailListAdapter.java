@@ -6,6 +6,8 @@ import com.liao310.www.R;
 import com.liao310.www.activity.mian4.match.MatchDetailActivity;
 import com.liao310.www.domain.match.Match;
 import com.liao310.www.domain.shouye.Article;
+import com.liao310.www.net.https.xUtilsImageUtils;
+import com.liao310.www.widget.ShapedImageView;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -92,6 +94,7 @@ public class ZhuanJiaDetailListAdapter extends BaseAdapter {
                     holder.matchkey = (TextView) convertView.findViewById(R.id.matchkey);
                     holder.gameinfo = (TextView) convertView.findViewById(R.id.gameinfo);
                     holder.mResultState=convertView.findViewById(R.id.result_State);
+                    holder.mFan=convertView.findViewById(R.id.result_Fan);
                     break;
                 case 1:
                     convertView = LayoutInflater.from(_this).inflate(R.layout.zhuanjia_jc3_new_item, parent, false);
@@ -110,20 +113,30 @@ public class ZhuanJiaDetailListAdapter extends BaseAdapter {
 
                     //holder.result = (ImageView) convertView.findViewById(R.id.result);
                     holder.mResultState=convertView.findViewById(R.id.result_State);
+                    holder.mFan=convertView.findViewById(R.id.result_Fan);
                     break;
                 case 2:
-                    convertView = LayoutInflater.from(_this).inflate(R.layout.zhuanjia_jc1_item, parent, false);
-                    holder.state = (TextView) convertView.findViewById(R.id.state);
+                    convertView = LayoutInflater.from(_this).inflate(R.layout.zhuanjia_buy_item, parent, false);
+                    /*holder.state = (TextView) convertView.findViewById(R.id.state);
                     holder.vs = (TextView) convertView.findViewById(R.id.vs);
                     holder.endtime = (TextView) convertView.findViewById(R.id.endtime);
                     holder.wanfa = (TextView) convertView.findViewById(R.id.wanfa);
                     holder.pankou = (TextView) convertView.findViewById(R.id.pankou);
                     holder.gamename = (TextView) convertView.findViewById(R.id.gamename);
                     holder.hostteamname = (TextView) convertView.findViewById(R.id.hostteamname);
-                    holder.gustteamname = (TextView) convertView.findViewById(R.id.gustteamname);
+                    holder.gustteamname = (TextView) convertView.findViewById(R.id.gustteamname);*/
+                    holder.mHead = (ShapedImageView) convertView.findViewById(R.id.head);
+                    holder.mName = (TextView) convertView.findViewById(R.id.name);
+                    holder.mBiaoqian=convertView.findViewById(R.id.LianSai_Biaoqian);
+                    holder.mLianSai_Name=convertView.findViewById(R.id.LianSai_Name);
+                    holder.mLianSai_Time=convertView.findViewById(R.id.LianSai_Time);
+                    holder.mLeiTai_Buy_zhu=convertView.findViewById(R.id.LeiTai_Buy_zhu);
+                    holder.mLeiTai_Buy_Number=convertView.findViewById(R.id.LeiTai_Buy_Number);
+                    holder.mLeiTai_Buy_ke=convertView.findViewById(R.id.LeiTai_Buy_ke);
+                    holder.mToLook=convertView.findViewById(R.id.result_State);
                     break;
             }
-            holder.money = (TextView) convertView.findViewById(R.id.money);
+            holder.money = convertView.findViewById(R.id.money);
 
             convertView.setTag(holder);
         } else {
@@ -164,6 +177,11 @@ public class ZhuanJiaDetailListAdapter extends BaseAdapter {
                             _this.startActivity(intent);
                         }
                     });
+                }
+                if(favourite.isIf_roback()==1){
+                    holder.mFan.setVisibility(View.VISIBLE);
+                }else {
+                    holder.mFan.setVisibility(View.GONE);
                 }
 
                 //String artivleresult = "";
@@ -240,28 +258,35 @@ public class ZhuanJiaDetailListAdapter extends BaseAdapter {
                             _this.startActivity(intent);
                         }
                     });
-                    String matchKey2 = favourite.getMatch().get(1).getMatchKey();
-                    if (TextUtils.isEmpty(matchKey2)) {
-                        holder.matchkey2.setVisibility(View.GONE);
-                    } else {
-                        holder.matchkey2.setVisibility(View.VISIBLE);
-                        holder.matchkey2.setText(matchKey2);
-                    }
-                    String info2 = favourite.getMatch().get(1).getLs_cname() + "  "
-                            + favourite.getMatch().get(1).getZhuname() + "  VS  "
-                            + favourite.getMatch().get(1).getKename();
-                    holder.gameinfo2.setText(info2);
-                    holder.match2.setOnClickListener(new View.OnClickListener() {
-
-                        @Override
-                        public void onClick(View v) {
-                            // TODO Auto-generated method stub
-                            Intent intent = new Intent(_this, MatchDetailActivity.class);
-                            intent.putExtra("aid", favourite.getMatch().get(1).getAid());
-                            intent.putExtra("cid", favourite.getMatch().get(1).getCid());
-                            _this.startActivity(intent);
+                    if(favourite.getMatch().size()>=2) {
+                        String matchKey2 = favourite.getMatch().get(1).getMatchKey();
+                        if (TextUtils.isEmpty(matchKey2)) {
+                            holder.matchkey2.setVisibility(View.GONE);
+                        } else {
+                            holder.matchkey2.setVisibility(View.VISIBLE);
+                            holder.matchkey2.setText(matchKey2);
                         }
-                    });
+                        String info2 = favourite.getMatch().get(1).getLs_cname() + "  "
+                                + favourite.getMatch().get(1).getZhuname() + "  VS  "
+                                + favourite.getMatch().get(1).getKename();
+                        holder.gameinfo2.setText(info2);
+                        holder.match2.setOnClickListener(new View.OnClickListener() {
+
+                            @Override
+                            public void onClick(View v) {
+                                // TODO Auto-generated method stub
+                                Intent intent = new Intent(_this, MatchDetailActivity.class);
+                                intent.putExtra("aid", favourite.getMatch().get(1).getAid());
+                                intent.putExtra("cid", favourite.getMatch().get(1).getCid());
+                                _this.startActivity(intent);
+                            }
+                        });
+                    }
+                }
+                if(favourite.isIf_roback()==1){
+                    holder.mFan.setVisibility(View.VISIBLE);
+                }else {
+                    holder.mFan.setVisibility(View.GONE);
                 }
                 switch (favourite.getArticlresult()) {
                     case -1:
@@ -297,7 +322,7 @@ public class ZhuanJiaDetailListAdapter extends BaseAdapter {
                 break;
 
             case 2:
-                if (favourite.getMatch() != null &&
+               /* if (favourite.getMatch() != null &&
                         favourite.getMatch().size() > 0) {
                     holder.gamename.setText(favourite.getMatch().get(0).getLs_cname());
                     holder.hostteamname.setText(setSpliteMessage(favourite.getMatch().get(0).getZhuname()));
@@ -363,6 +388,76 @@ public class ZhuanJiaDetailListAdapter extends BaseAdapter {
                         }
                     }else {
                       holder.vs.setText("VS");
+                    }
+                }*/
+                if(favourite!=null) {
+                    xUtilsImageUtils.display(holder.mHead, favourite.getAvatar(), R.drawable.defaultpic, true);
+                    holder.mName.setText(favourite.getNickname());
+                    if(favourite.getMatch()!=null && favourite.getMatch().size()>0) {
+                        holder.mBiaoqian.setText(favourite.getMatch().get(0).getWanfa());
+
+                        holder.mLianSai_Name.setText(favourite.getMatch().get(0).getLs_cname());
+                        holder.mLianSai_Time.setText(favourite.getMatch().get(0).getSc_time());
+                        holder.mLeiTai_Buy_zhu.setText(favourite.getMatch().get(0).getZhuname());
+                        holder.mLeiTai_Buy_ke.setText(favourite.getMatch().get(0).getKename());
+                        if (favourite.getMatch().get(0).getGameresult() == -1) {
+                            //未结算
+                            holder.mLeiTai_Buy_Number.setText("VS");
+                        } else {
+                            holder.mLeiTai_Buy_Number.setText(favourite.getMatch().get(0).getZhunamescore()
+                                    + "-" + favourite.getMatch().get(0).getKenamescore());
+                        }
+                        switch (favourite.getMatch().get(0).getGameresult()) {
+                            case -1:
+                                // artivleresult = "";
+                                //background = null;
+                                holder.mToLook.setText("立即查看");
+                                holder.mToLook.setTextColor(_this.getResources().getColor(R.color.black));
+                                holder.mToLook.setBackgroundResource(R.drawable.shape_app_4);
+                                break;
+                            case 0:
+                                holder.mToLook.setText("输");
+                                holder.mToLook.setTextColor(_this.getResources().getColor(R.color.whiteGrey));
+                                holder.mToLook.setBackgroundResource(R.drawable.shape_grey_4);
+                                break;
+                            case 1:
+                                holder.mToLook.setText("输  半");
+                                holder.mToLook.setTextColor(_this.getResources().getColor(R.color.whiteGrey));
+                                holder.mToLook.setBackgroundResource(R.drawable.shape_grey_4);
+                                break;
+                            case 2:
+                                holder.mToLook.setText("走");
+                                holder.mToLook.setTextColor(_this.getResources().getColor(R.color.black));
+                                holder.mToLook.setBackgroundResource(R.drawable.shape_yellow_4);
+                                break;
+                            case 3:
+                                holder.mToLook.setText("赢");
+                                holder.mToLook.setTextColor(_this.getResources().getColor(R.color.white));
+                                holder.mToLook.setBackgroundResource(R.drawable.shape_red_4);
+                                break;
+                            case 4:
+                                holder.mToLook.setText("赢  半");
+                                holder.mToLook.setTextColor(_this.getResources().getColor(R.color.white));
+                                holder.mToLook.setBackgroundResource(R.drawable.shape_red_4);
+                                break;
+                            case 5:
+                                holder.mToLook.setText("命  中");
+                                holder.mToLook.setTextColor(_this.getResources().getColor(R.color.white));
+                                holder.mToLook.setBackgroundResource(R.drawable.shape_red_4);
+                                break;
+                            case 6:
+                                holder.mToLook.setText("未命中");
+                                holder.mToLook.setTextColor(_this.getResources().getColor(R.color.whiteGrey));
+                                holder.mToLook.setBackgroundResource(R.drawable.shape_grey_4);
+                                break;
+                            case 7:
+                                holder.mToLook.setText("二中一");
+                                holder.mToLook.setTextColor(_this.getResources().getColor(R.color.white));
+                                holder.mToLook.setBackgroundResource(R.drawable.shape_red_4);
+                                break;
+                            default:
+                                break;
+                        }
                     }
                 }
                 break;
@@ -455,6 +550,17 @@ public class ZhuanJiaDetailListAdapter extends BaseAdapter {
 
         private TextView mResultState;//结果状态
         private ImageView mFan;//‘返’  标志
+
+        //竞猜
+        private ShapedImageView mHead;
+        private TextView mName;
+        private TextView mBiaoqian;
+        private TextView mLianSai_Name;
+        private TextView mLianSai_Time;
+        private TextView mLeiTai_Buy_zhu;
+        private TextView mLeiTai_Buy_Number;
+        private TextView mLeiTai_Buy_ke;
+        private TextView mToLook;
 
     }
 

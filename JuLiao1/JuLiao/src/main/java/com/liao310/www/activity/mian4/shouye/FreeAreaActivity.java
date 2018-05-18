@@ -75,7 +75,7 @@ public class FreeAreaActivity  extends BaseActivity{
 						intent.putExtra("rid", art.getRid());
 						startActivity(intent);
 					}else {
-						toGetJC1Result(art,"");
+						toGetJC1Result(art.getRid(),art.getPrice(),"");
 					}
 				}
 			}

@@ -15,6 +15,7 @@ import com.liao310.www.net.https.ServiceABase;
 import com.liao310.www.utils.NetWorkUtil;
 
 import android.content.Context;
+import android.util.Log;
 
 public class ServicePay  extends ServiceABase {
 	private static ServicePay instance;
@@ -84,11 +85,14 @@ public class ServicePay  extends ServiceABase {
 			token = user.getToken();
 		}
 		String url =  ConstantsBase.IP+"index.php/pay/getwxbill/type/"+type+"/price/"+money;
+		Log.e("支付结果=",""+url);
+		Log.e("支付结果=",""+token);
 		BaseHttps.getInstance().getHttpRequest(context,GetCommonParamNoActionHead(url,token),
 				new BaseHttpsCallback<String>() {  
 
 			@Override  
-			public void onSuccess(String result) {  
+			public void onSuccess(String result) {
+				Log.e("支付结果=",""+result);
 				int errMsg;
 				String msg = null;
 				try {
@@ -118,7 +122,7 @@ public class ServicePay  extends ServiceABase {
 		});  
 	} 
 	//金币购买
-	public  void pay(Context context,String rid,int type,int channel,//1余额,2微信,3支付宝
+	public  void pay(Context context,String rid,int type,//1 卡片购买，不传 或 传 0 表示金币购买
 			final CallBack<PayBack> callBack) {
 		if (!NetWorkUtil.isNetworkAvailable(context)) {
 			callBack.onFailure(new ErrorMsg("-1", "当前网络信号较差，请检查网络设置"));
@@ -129,7 +133,7 @@ public class ServicePay  extends ServiceABase {
 		if(user!=null) {
 			token = user.getToken();
 		}
-		String url =  ConstantsBase.IP+"index.php/article/buy/rid/"+rid+"/type/"+type+"/channel/"+channel;
+		String url =  ConstantsBase.IP+"index.php/article/buy2/rid/"+rid+"/type/"+type;
 		BaseHttps.getInstance().getHttpRequest(context,GetCommonParamNoActionHead(url,token),
 				new BaseHttpsCallback<String>() {  
 
@@ -162,5 +166,51 @@ public class ServicePay  extends ServiceABase {
 			@Override  
 			public void onFinished() {  }  
 		});  
-	} 
+	}
+	//金币购买
+	public  void getRechagePay(Context context,final CallBack<PayBack> callBack) {
+		if (!NetWorkUtil.isNetworkAvailable(context)) {
+			callBack.onFailure(new ErrorMsg("-1", "当前网络信号较差，请检查网络设置"));
+			return;
+		}
+		String token = "";
+		User user = MyDbUtils.getCurrentUser();
+		if(user!=null) {
+			token = user.getToken();
+		}
+		String url =  ConstantsBase.IP+"index.php/pay/myrecharge/type/1";
+		BaseHttps.getInstance().getHttpRequest(context,GetCommonParamNoActionHead(url,token),
+				new BaseHttpsCallback<String>() {
+
+					@Override
+					public void onSuccess(String result) {
+						Log.e("支付金额=",""+result);
+						int errMsg;
+						String msg = null;
+						try {
+							JSONObject jsonObject = new JSONObject(result);
+							errMsg = jsonObject.getInt("errno");
+							msg = jsonObject.getString("msg");
+							if ( errMsg == 0&&"success".equals(msg)) {
+								Gson gson = new Gson();
+								PayBack mResult = gson.fromJson(
+										result,PayBack.class);
+								callBack.onSuccess(mResult);
+							} else {
+								callBack.onFailure(new ErrorMsg("-1", getWrongBack(msg)));
+							}
+						} catch (JSONException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+							callBack.onFailure(new ErrorMsg("-1", getWrongBack(e.getMessage())));
+						}
+					}
+					@Override
+					public void onError(int code, String message) {
+						callBack.onFailure(new ErrorMsg("-1", getWrongBack(message)));
+					}
+					@Override
+					public void onFinished() {  }
+				});
+	}
 }

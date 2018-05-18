@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:wxq="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_trap_4"
+        android:padding="6dp">
+
+        <com.liao310.www.widget.ShapedImageView
+            android:id="@+id/ZJ_JX_Head"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/defaultpic"
+            android:scaleType="centerCrop"
+            wxq:shape_mode="circle"/>
+
+        <TextView
+            android:id="@+id/ZJ_JX_NickName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/ZJ_JX_Head"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/ZJ_JX_Head"
+            android:text="昵称"
+            android:textColor="@color/white"
+            android:textSize="12dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/ZJ_JX_Head"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/ZJ_JX_Head">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="近7日:"
+                android:textColor="@color/white"
+                android:textSize="10dp"/>
+
+            <TextView
+                android:id="@+id/ZJ_JX_Ying"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="0赢"
+                android:textColor="@color/BorderRed"
+                android:textSize="10dp"/>
+
+            <TextView
+                android:id="@+id/ZJ_JX_YingBan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="0赢半"
+                android:textColor="@color/BorderRed"
+                android:textSize="10dp"/>
+
+            <TextView
+                android:id="@+id/ZJ_JX_Zou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="0走"
+                android:textColor="@color/Yellow"
+                android:textSize="10dp"/>
+
+            <TextView
+                android:id="@+id/ZJ_JX_Shu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="0输"
+                android:textColor="@color/textgreen"
+                android:textSize="10dp"/>
+
+            <TextView
+                android:id="@+id/ZJ_JX_ShuBan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="0输半"
+                android:textColor="@color/textgreen"
+                android:textSize="10dp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ZJ_JX_MsgHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/fanhui"/>
+        <TextView
+            android:id="@+id/ZJ_JX_MsgHintText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/ZJ_JX_MsgHint"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ball_green"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="0"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -7,8 +7,8 @@ public class ConstantsBase {
 
 	/************************线上环境*************************/
 	public static final String IP_Commen = "http://ad.310liao.com/";//http://liao.liuh5.com/
-	public static final String IP_TEST = "http://101.132.97.135/";
-	public static final String IP = IP_Commen;
+	public static final String IP_TEST = "http://test.310liao.com/";
+	public static final String IP = IP_TEST;
 	/**
 	 * 附件下载成功状态位
 	 */

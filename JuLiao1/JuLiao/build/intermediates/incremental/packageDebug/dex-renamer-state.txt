@@ -1,7 +1,7 @@
-#Tue May 15 13:31:14 CST 2018
-base.0=F\:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_32e2f815d98ea385ab71326da02338d6c0ea7518
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=F\:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_5998d517f050103068aa151d787d8060f6bea928\\classes.dex
-base.1=F\:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_5998d517f050103068aa151d787d8060f6bea928
-file.0=F\:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_32e2f815d98ea385ab71326da02338d6c0ea7518\\classes.dex
+#Fri May 18 18:03:04 CST 2018
+base.0=F\:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_5998d517f050103068aa151d787d8060f6bea928
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=F\:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_32e2f815d98ea385ab71326da02338d6c0ea7518\\classes.dex
+base.1=F\:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_32e2f815d98ea385ab71326da02338d6c0ea7518
+file.0=F\:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_5998d517f050103068aa151d787d8060f6bea928\\classes.dex

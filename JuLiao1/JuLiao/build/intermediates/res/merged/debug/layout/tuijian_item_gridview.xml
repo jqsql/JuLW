@@ -25,7 +25,7 @@
         android:background="@drawable/shape_app_4"
         android:paddingLeft="3dp"
         android:paddingRight="3dp"
-        android:text="10中10"
+        android:text="0中0"
         android:textColor="@color/white"
         android:textSize="11dp"/>
 
@@ -36,6 +36,9 @@
         android:layout_below="@id/Main_TuiJian_head"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:maxEms="5"
+        android:ellipsize="end"
         android:text="专家名称"
         android:textColor="@color/white"
         android:textSize="14dp"/>

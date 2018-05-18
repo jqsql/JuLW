@@ -220,7 +220,7 @@ public class PayActivity extends BaseActivity implements OnClickListener {
 	}
 
 	public void dialogToDo() {
-		ServicePay.getInstance().pay(_this, rid, 0, payway,
+		ServicePay.getInstance().pay(_this, rid, 0,
 				new CallBack<PayBack>() {
 					@Override
 					public void onSuccess(PayBack t) {

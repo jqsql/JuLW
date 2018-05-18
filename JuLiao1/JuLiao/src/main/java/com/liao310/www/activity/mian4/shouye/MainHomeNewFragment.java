@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
@@ -13,7 +14,6 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -22,50 +22,57 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ExpandableListView;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListAdapter;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.liao310.www.R;
 import com.liao310.www.activity.login.LoginActivity;
 import com.liao310.www.activity.mian4.ArticleDetailActivity;
-import com.liao310.www.activity.mian4.adapter.ArticleListAdapter;
+import com.liao310.www.activity.mian4.WebActivity;
+import com.liao310.www.activity.mian4.adapter.ExpandableAdapter;
 import com.liao310.www.activity.mian4.adapter.ViewPagerAdapter;
 import com.liao310.www.activity.mian4.adapter.ZJTuiJianViewAdapter;
+import com.liao310.www.activity.mian4.personcenter.ReChargeActivity;
 import com.liao310.www.activity.mian4.shouye.zhuanjia.ZhuanJiaFoucedActivity;
 import com.liao310.www.activity.mian4.zhuanjia.detail.ZhuanJiaDetailActivity;
 import com.liao310.www.activity.pay.PayActivity;
 import com.liao310.www.base.BaseActivity;
-import com.liao310.www.db.MyDbUtils;
-import com.liao310.www.domain.login.User;
+import com.liao310.www.domain.pay.PayBack;
 import com.liao310.www.domain.shouye.Article;
 import com.liao310.www.domain.shouye.ArticleListBack;
-import com.liao310.www.domain.shouye.LunBoTu;
-import com.liao310.www.domain.shouye.LunBoTuList;
-import com.liao310.www.domain.shouye.LunBoTuListBack;
+import com.liao310.www.domain.shouye.LunBoTuListNewBack;
+import com.liao310.www.domain.shouye.LunBoTuNew;
 import com.liao310.www.domain.shouye.Notice;
 import com.liao310.www.domain.shouye.NoticeBack;
+import com.liao310.www.domain.shouye.ZJRecommend;
+import com.liao310.www.domain.shouye.ZJRecommendBack;
 import com.liao310.www.domain.version.ErrorMsg;
+import com.liao310.www.domain.zhuanjia.AttentionListBack;
+import com.liao310.www.domain.zhuanjia.ZhuanJia;
+import com.liao310.www.net.ServicePay;
 import com.liao310.www.net.ServiceShouYe;
 import com.liao310.www.net.https.ServiceABase.CallBack;
-import com.liao310.www.utils.BaseRecyclerAdapterUtils.BaseRecyclerAdapter;
-import com.liao310.www.utils.BaseRecyclerAdapterUtils.BaseTypeRecyclerAdapter;
 import com.liao310.www.utils.BaseRecyclerAdapterUtils.BaseViewHolder;
 import com.liao310.www.utils.BaseRecyclerAdapterUtils.interfaces.OnLoadMoreClickListener;
 import com.liao310.www.utils.BaseRecyclerAdapterUtils.interfaces.OnRecycleItemClickListener;
 import com.liao310.www.utils.PreferenceUtil;
 import com.liao310.www.utils.ToastUtils;
+import com.liao310.www.widget.Dialog_Hint;
 import com.liao310.www.widget.ImageCycleView;
 import com.liao310.www.widget.ImageCycleView.ImageCycleViewListener;
 import com.liao310.www.widget.LooperTextView;
+import com.liao310.www.widget.MyExpandableListView;
 import com.liao310.www.widget.MyGrideview;
-import com.liao310.www.widget.RefreshListView;
-import com.liao310.www.widget.RefreshListView.OnRefreshListener;
-import com.liao310.www.widget.ShapedImageView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import de.greenrobot.event.EventBus;
 
@@ -86,8 +93,9 @@ public class MainHomeNewFragment extends Fragment implements OnClickListener {
     private ViewPager mViewPager;//专家推荐布局
     private LinearLayout mLlDot;//指示点
     private List<View> mPagerList = new ArrayList<>();
-    private List<User> mDatas = new ArrayList<>();
+    private List<ZJRecommend> mDatas = new ArrayList<>();
     private LayoutInflater mInflater;
+    private ZJTuiJianViewAdapter mTuiJianViewAdapter;
     /**
      * 总的页数
      */
@@ -109,11 +117,13 @@ public class MainHomeNewFragment extends Fragment implements OnClickListener {
     private CollapsingToolbarLayout mCollapsingToolbarLayout;
     private AppBarLayout mAppBarLayout;
     private RelativeLayout mToolLayout;
-    private RelativeLayout mNoctionLayout;
-    private LinearLayout mIndicatorLayout;
-    private int ScroolFlag=0;//滑动状态标志：0：展开 1：缩放 2：中间状态
+    private RelativeLayout mRecommendLayout;
+    private MyExpandableListView mExpandableListView;
+    private int ScroolFlag = 0;//滑动状态标志：0：展开 1：缩放 2：中间状态
 
-
+    private String[] groups = {"精选", "竞彩"};
+    private Map<String, List<ZhuanJia>> children;
+    private ExpandableAdapter mAttentionAdapter;
     /**
      * ------------------------END-----------------------
      */
@@ -126,14 +136,16 @@ public class MainHomeNewFragment extends Fragment implements OnClickListener {
     private MainHomeNewAdapter mAdapter;
     private SwipeRefreshLayout mRefreshLayout;
 
-    private int type = 0;//0精选，1竞彩,2竞猜,3关注
+    private int type = 0;//0精选，1竞彩,2免费,3关注
 
-    private LunBoTuList lunboData;
+    private List<LunBoTuNew> lunboData;
     private ArrayList<Notice> noticelist;
     private ArrayList<Article> articles;
+    private boolean isHavTopImg = true;
     private boolean isGetting = false;
     private int more = 1;
     boolean toShowRegisterPacket = false;
+    private int payType=0;//支付方式
     Article art;
 
     @Override
@@ -143,7 +155,7 @@ public class MainHomeNewFragment extends Fragment implements OnClickListener {
         View view = inflater.inflate(R.layout.main4_fragment_shouye_new, container, false);
         EventBus.getDefault().register(this);
         initView(view);
-        initTuiJian();
+        getZJ_Tuijian();
         initLunBo();
         initNotice();
         setTitleBack(0);
@@ -155,28 +167,64 @@ public class MainHomeNewFragment extends Fragment implements OnClickListener {
      * 专家推荐布局初始化
      */
     private void initTuiJian() {
-        getZJ_Tuijian();
         mInflater = LayoutInflater.from(getActivity());
         //总的页数 = 总数 / 每页数量，并取整
         pageCount = (int) Math.ceil(mDatas.size() * 1.0 / pageSize);
         mPagerList = new ArrayList<View>();
+        int height = 0;
         for (int i = 0; i < pageCount; i++) {
             // 每个页面都是inflate出一个新实例
             MyGrideview gridView = (MyGrideview) mInflater.inflate(R.layout.main_gridview, mViewPager, false);
-            //GridView gridView =new GridView(getActivity());
-            gridView.setAdapter(new ZJTuiJianViewAdapter(getActivity(), mDatas, i, pageSize));
+            mTuiJianViewAdapter = new ZJTuiJianViewAdapter(getActivity(), mDatas, i, pageSize);
+            gridView.setAdapter(mTuiJianViewAdapter);
             mPagerList.add(gridView);
             gridView.setOnItemClickListener(new OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     int pos = position + curIndex * pageSize;
+                    Intent intent = new Intent(_this, ZhuanJiaDetailActivity.class);
+                    intent.putExtra("uid", mDatas.get(pos).getId());
+                    _this.startActivity(intent);
                 }
             });
+            height = setGridViewHeight(gridView, height);
         }
         //设置适配器
         mViewPager.setAdapter(new ViewPagerAdapter(mPagerList));
+        //动态设置高度
+        ViewGroup.LayoutParams PagerParams = mViewPager.getLayoutParams();
+        PagerParams.height = height+10;
+        mViewPager.setLayoutParams(PagerParams);
         //设置圆点
         setOvalLayout();
+    }
+
+    public int setGridViewHeight(GridView gridview, int height) {
+        // 获取gridview的adapter
+        ListAdapter listAdapter = gridview.getAdapter();
+        if (listAdapter == null) {
+            return height;
+        }
+        // 固定列宽，有多少列
+        int numColumns = 4;
+        int totalHeight = 0;
+        // 计算每一列的高度之和
+        for (int i = 0; i < listAdapter.getCount(); i += numColumns) {
+            // 获取gridview的每一个item
+            View listItem = listAdapter.getView(i, null, gridview);
+            listItem.measure(0, 0);
+            // 获取item的高度和
+            totalHeight += listItem.getMeasuredHeight();
+        }
+       /* // 获取gridview的布局参数
+        ViewGroup.LayoutParams params = gridview.getLayoutParams();
+        params.height = totalHeight;
+        gridview.setLayoutParams(params);*/
+        if (height < totalHeight)
+            return totalHeight;
+        else
+            return height;
+
     }
 
 
@@ -185,8 +233,8 @@ public class MainHomeNewFragment extends Fragment implements OnClickListener {
         mCollapsingToolbarLayout = view.findViewById(R.id.CollapsingToolbarLayoutView);
         mAppBarLayout = view.findViewById(R.id.AppBarLayout);
         mToolLayout = view.findViewById(R.id.ToolLayout);
-        mIndicatorLayout = view.findViewById(R.id.MainHome_IndicatorLayout);
-        mNoctionLayout = view.findViewById(R.id.rl_news);
+        mExpandableListView = view.findViewById(R.id.expandableListView);
+        mRecommendLayout = view.findViewById(R.id.Main_ShouYe_RecommendLayout);
         mAdView = (ImageCycleView) view.findViewById(R.id.ad_view);
         rl_news = (RelativeLayout) view.findViewById(R.id.rl_news);
         looperview = (LooperTextView) view.findViewById(R.id.looperview);
@@ -223,13 +271,13 @@ public class MainHomeNewFragment extends Fragment implements OnClickListener {
 
         /**-----------------------------------**/
         mRecyclerView = view.findViewById(R.id.rl_listview);
-        mRefreshLayout=  view.findViewById(R.id.Main_SwipeRefreshLayout);
+        mRefreshLayout = view.findViewById(R.id.Main_SwipeRefreshLayout);
         //对recyclerview的常规配置
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(linearLayoutManager);
 
-        mAdapter=new MainHomeNewAdapter(getActivity(),R.layout.myfavourite_item,articles);
+        mAdapter = new MainHomeNewAdapter(getActivity(), R.layout.myfavourite_item, articles);
         mRecyclerView.setAdapter(mAdapter);
 
         //下拉刷新
@@ -246,21 +294,56 @@ public class MainHomeNewFragment extends Fragment implements OnClickListener {
                 initdata(true);
             }
         });
-        mAdapter.setItemClickListener(new OnRecycleItemClickListener() {
+        mAdapter.setItemClickListener(new OnRecycleItemClickListener<Article>() {
             @Override
-            public void onClick(BaseViewHolder holder, Object o, int position) {
+            public void onClick(BaseViewHolder holder, Article o, int position) {
                 if (articles != null && position < articles.size() && position >= 0) {
                     art = articles.get(position);
                     if (art.getArt_type() != 2) {
-                        Intent intent = new Intent(_this, ArticleDetailActivity.class);
-                        intent.putExtra("rid", art.getRid());
-                        startActivity(intent);
+                        _this.getArticledetail(art.getRid(),art.getPrice(), "dialogToDo");
+                       /* if(art.isShow()) {
+                            Intent intent = new Intent(_this, ArticleDetailActivity.class);
+                            intent.putExtra("rid", art.getRid());
+                            startActivity(intent);
+                        }else {
+                            _this.dialog("", art.getPrice() + "", "取消", true, "去支付", "dialogToDo");
+                        }*/
                     } else {
-                        _this.toGetJC1Result(art, "dialogToDo");
+                        if (!PreferenceUtil.getBoolean(_this, "hasLogin")) {
+                            Intent intentLogin = new Intent(_this, LoginActivity.class);
+                            intentLogin.putExtra("requestName", "intentLogin");
+                            startActivityForResult(intentLogin, LOGIN_PAY);
+                        } else {
+                            _this.toGetJC1Result(art.getRid(),art.getPrice(), "dialogToDo");
+                        }
                     }
                 }
             }
         });
+
+        //设置子条目的点击监听
+        mExpandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+                //这里return true的话子列表不会展开  return false才展开
+                if (mAttentionAdapter != null) {
+                    ZhuanJia zhuanJia = (ZhuanJia) mAttentionAdapter.getChild(groupPosition, childPosition);
+                    if (zhuanJia != null) {
+                        Intent intent = new Intent(_this, ZhuanJiaDetailActivity.class);
+                        intent.putExtra("uid", zhuanJia.getUid());
+                        _this.startActivity(intent);
+                    }
+                }
+                return false;
+            }
+        });
+        /*//设置父条目的点击监听
+        mExpandableListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
+            @Override
+            public boolean onGroupClick(ExpandableListView expandableListView, View view, int groupPosition, long id) {
+                return false;
+            }
+        });*/
         /**--------------------------------------**/
 
         mAppBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
@@ -277,17 +360,18 @@ public class MainHomeNewFragment extends Fragment implements OnClickListener {
                     }
                     ScroolFlag = 1;
                 } else {
-                    if(verticalOffset<-100){
-                        mToolLayout.setVisibility(View.VISIBLE);
-                    }else {
-                        mToolLayout.setVisibility(View.GONE);
+                    if (isHavTopImg) {
+                        if (verticalOffset < -100) {
+                            mToolLayout.setVisibility(View.VISIBLE);
+                        } else {
+                            mToolLayout.setVisibility(View.GONE);
+                        }
                     }
                     if (ScroolFlag != 2) {
 
                     }
                     ScroolFlag = 2;
                 }
-                Log.e("jqs=",verticalOffset+"==="+appBarLayout.isHovered()+"===="+appBarLayout.getTotalScrollRange());
 
             }
         });
@@ -321,6 +405,8 @@ public class MainHomeNewFragment extends Fragment implements OnClickListener {
                 startActivity(intentMF);
                 break;
             case R.id.yesterday:
+                mExpandableListView.setVisibility(View.GONE);
+                mRefreshLayout.setVisibility(View.VISIBLE);
                 if (type != 0) {
                     type = 0;
                     setTitleBack(0);
@@ -330,6 +416,8 @@ public class MainHomeNewFragment extends Fragment implements OnClickListener {
                 }
                 break;
             case R.id.today:
+                mExpandableListView.setVisibility(View.GONE);
+                mRefreshLayout.setVisibility(View.VISIBLE);
                 if (type != 1) {
                     type = 1;
                     setTitleBack(1);
@@ -339,6 +427,8 @@ public class MainHomeNewFragment extends Fragment implements OnClickListener {
                 }
                 break;
             case R.id.tomorrow:
+                mExpandableListView.setVisibility(View.GONE);
+                mRefreshLayout.setVisibility(View.VISIBLE);
                 if (type != 2) {
                     type = 2;
                     setTitleBack(2);
@@ -348,15 +438,51 @@ public class MainHomeNewFragment extends Fragment implements OnClickListener {
                 }
                 break;
             case R.id.Main_Attention:
+                mExpandableListView.setVisibility(View.VISIBLE);
+                mRefreshLayout.setVisibility(View.GONE);
                 if (type != 3) {
                     type = 3;
                     setTitleBack(3);
-                    initdata(false);
+                    //initdata(false);
+                    initAttention();
                 } else {
                     type = 3;
                 }
                 break;
         }
+    }
+
+    /**
+     * 获取关注列表
+     */
+    private void initAttention() {
+        _this.showProgress();
+        ServiceShouYe.getInstance().getZJAttentionList(getActivity(), new CallBack<AttentionListBack>() {
+            @Override
+            public void onSuccess(AttentionListBack attentionListBack) {
+                _this.dismissProgress();
+                children = new HashMap<>();
+                if (attentionListBack != null && attentionListBack.getData() != null) {
+                    if (attentionListBack.getData().getExpert_items() != null && attentionListBack.getData().getExpert_items().getJx() != null)
+                        children.put(groups[0], attentionListBack.getData().getExpert_items().getJx());
+                    if (attentionListBack.getData().getExpert_items() != null && attentionListBack.getData().getExpert_items().getJc() != null)
+                        children.put(groups[1], attentionListBack.getData().getExpert_items().getJc());
+                }
+                //关注
+                mAttentionAdapter = new ExpandableAdapter(getActivity(), groups, children);
+                mExpandableListView.setAdapter(mAttentionAdapter);
+                //遍历所有group,将所有项设置成默认展开
+                int groupCount = mExpandableListView.getCount();
+                for (int i = 0; i < groupCount; i++) {
+                    mExpandableListView.expandGroup(i);
+                }
+            }
+
+            @Override
+            public void onFailure(ErrorMsg errorMessage) {
+                _this.dismissProgress();
+            }
+        });
     }
 
     void initdata(boolean isMore) {
@@ -374,22 +500,26 @@ public class MainHomeNewFragment extends Fragment implements OnClickListener {
                 getWenZhang(isMore);
         }
     }
+
     private void getWenZhang(final boolean isMore) {
+        _this.showProgress();
         ServiceShouYe.getInstance().getJingCaiGuoGuanList(_this, more, type,
                 new CallBack<ArticleListBack>() {
                     @Override
                     public void onSuccess(ArticleListBack t) {
                         // TODO 自动生成的方法存根
+                        _this.dismissProgress();
                         dodata(t, !isMore);
                     }
 
                     @Override
                     public void onFailure(ErrorMsg errorMessage) {
                         // TODO 自动生成的方法存根
+                        _this.dismissProgress();
                         if (isMore) {
                             more--;
                             mRefreshLayout.setRefreshing(false);
-                        }else {
+                        } else {
                             mAdapter.setOnRefrash(articles);
                         }
                         ToastUtils.showShort(_this, errorMessage.msg);
@@ -404,21 +534,24 @@ public class MainHomeNewFragment extends Fragment implements OnClickListener {
      * @param isMore
      */
     private void getFree(final boolean isMore) {
+        _this.showProgress();
         ServiceShouYe.getInstance().getFreeList(_this, more,
                 new CallBack<ArticleListBack>() {
                     @Override
                     public void onSuccess(ArticleListBack t) {
                         // TODO 自动生成的方法存根
+                        _this.dismissProgress();
                         dodata(t, !isMore);
                     }
 
                     @Override
                     public void onFailure(ErrorMsg errorMessage) {
                         // TODO 自动生成的方法存根
+                        _this.dismissProgress();
                         if (isMore) {
                             more--;
                             mRefreshLayout.setRefreshing(false);
-                        }else {
+                        } else {
                             mAdapter.setOnRefrash(articles);
                         }
                         ToastUtils.showShort(_this, errorMessage.msg);
@@ -488,12 +621,11 @@ public class MainHomeNewFragment extends Fragment implements OnClickListener {
     }
 
     private void initLunBo() {
-        lunboData = MyDbUtils.getLunBoTuList();
-        setAds();
-        //if (lunboData == null||lunboData.getSlides()==null||lunboData.getSlides().size() ==0) {
-        ServiceShouYe.getInstance().gettLunBoTuList(_this, new CallBack<LunBoTuListBack>() {
+        //lunboData = MyDbUtils.getLunBoTuList();
+        //setAds();
+        ServiceShouYe.getInstance().gettLunBoTuListNew(_this, new CallBack<LunBoTuListNewBack>() {
             @Override
-            public void onSuccess(LunBoTuListBack t) {
+            public void onSuccess(LunBoTuListNewBack t) {
                 // TODO 自动生成的方法存根
                 // 更新过跳转就要显示界面
                 lunboData = t.getData();
@@ -503,41 +635,61 @@ public class MainHomeNewFragment extends Fragment implements OnClickListener {
             @Override
             public void onFailure(ErrorMsg errorMessage) {
                 // TODO 自动生成的方法存根
+                setAds();
             }
         });
-        //}
-
     }
 
     public void setAds() {
-        if (lunboData != null) {
-            ArrayList<LunBoTu> slides = lunboData.getSlides();
+        if (lunboData != null && lunboData.size() != 0) {
+            mAdView.setVisibility(View.VISIBLE);
             ArrayList<String> mImageUrl = new ArrayList<String>();
             ArrayList<String> mImageTitle = new ArrayList<String>();
-            if (slides != null && slides.size() != 0) {
-                mAdView.setVisibility(View.VISIBLE);
-                for (int i = 0; i < slides.size(); i++) {
-                    mImageUrl.add(slides.get(i).getImg_url());
-                    mImageTitle.add(slides.get(i).getInfo());
-                    Log.e("测试轮播图= ", slides.get(i).toString());
-                }
-                mAdView.setImageResources(mImageUrl, mImageTitle,
-                        mAdCycleViewListener, 2, false);
-            } else {
-                mAdView.setVisibility(View.GONE);
+            for (int i = 0; i < lunboData.size(); i++) {
+                mImageUrl.add(lunboData.get(i).getPicture());
+                mImageTitle.add(lunboData.get(i).getTitle());
             }
+            mAdView.setImageResources(mImageUrl, mImageTitle,
+                    mAdCycleViewListener, 2, false);
+        } else {
+            mAdView.setVisibility(View.GONE);
+            mToolLayout.setVisibility(View.VISIBLE);
+            isHavTopImg = false;
         }
+
     }
 
     private ImageCycleViewListener mAdCycleViewListener = new ImageCycleViewListener() {
         @Override
         public void onImageClick(final int position, View imageView) {
-            /*LunBoTu lunbo = lunboData.getSlides().get(position);
-            if (!lunbo.getUrl().equals("")) {
-				Intent intent = new Intent(getActivity(),WebActivity.class);// 跳转html活动界面
-				intent.putExtra("url", lunbo.getUrl());
-				startActivity(intent);
-			}*/
+            LunBoTuNew lunbo = lunboData.get(position);
+            if (lunbo != null) {
+                switch (lunbo.getType()) {
+                    case 2:
+                        //不跳转
+                        break;
+                    case 3:
+                        //外链跳转
+                        Intent intent1 = new Intent(getActivity(), WebActivity.class);// 跳转html活动界面
+                        intent1.putExtra("url", lunbo.getJump_url());
+                        intent1.putExtra("titleStr", lunbo.getTitle());
+                        startActivity(intent1);
+                        break;
+                    case 4:
+                        //跳转专家
+                        Intent intent2 = new Intent(_this, ZhuanJiaDetailActivity.class);
+                        intent2.putExtra("uid", lunbo.getExp_id() + "");
+                        _this.startActivity(intent2);
+                        break;
+                    case 5:
+                        //轮播新闻
+                        break;
+                    case 6:
+                        //轮播-跳转充值
+                        startActivity(new Intent(getActivity(), ReChargeActivity.class));
+                        break;
+                }
+            }
         }
     };
 
@@ -623,11 +775,11 @@ public class MainHomeNewFragment extends Fragment implements OnClickListener {
                     startActivity(intentGZ);
                     break;
                 case LOGIN_PAY:
-                    Intent intentPay = new Intent(_this, PayActivity.class);
+                    /*Intent intentPay = new Intent(_this, PayActivity.class);
                     intentPay.putExtra("rid", art.getRid());
                     intentPay.putExtra("name", art.getNickname());
                     intentPay.putExtra("prize", art.getPrice());
-                    startActivity(intentPay);
+                    startActivity(intentPay);*/
                     break;
             }
         }
@@ -637,17 +789,17 @@ public class MainHomeNewFragment extends Fragment implements OnClickListener {
         if (!TextUtils.isEmpty(event)) {
             if ("dialogToDo".equals(event)) {
                 dialogToDo();
-            }
-            if ("showRegisterPacket".equals(event)) {
+            }else if("toPayForCard".equals(event)){
+                toPayForCard();
+            }else if ("showRegisterPacket".equals(event)) {
                 toShowRegisterPacket = true;
-            }
-            if ("showRegisterPacketNo".equals(event)) {
+            }else if ("showRegisterPacketNo".equals(event)) {
                 toShowRegisterPacket = false;
             }
         }
     }
 
-    public void dialogToDo() {
+  /*  public void dialogToDo() {
         if (!PreferenceUtil.getBoolean(_this, "hasLogin")) {
             Intent intentLogin = new Intent(_this, LoginActivity.class);
             intentLogin.putExtra("requestName", "intentLogin");
@@ -659,7 +811,7 @@ public class MainHomeNewFragment extends Fragment implements OnClickListener {
             intentPay.putExtra("prize", art.getPrice());
             startActivity(intentPay);
         }
-    }
+    }*/
 
     @Override
     public void onHiddenChanged(boolean hidden) {
@@ -706,12 +858,24 @@ public class MainHomeNewFragment extends Fragment implements OnClickListener {
      * 获取专家推荐列表
      */
     public void getZJ_Tuijian() {
-        for (int i = 0; i < 21; i++) {
-            User user = new User();
-            user.setAvatar("");
-            user.setNickname("" + i);
-            mDatas.add(user);
-        }
+        ServiceShouYe.getInstance().getZJRecommend(getActivity(), new CallBack<ZJRecommendBack>() {
+            @Override
+            public void onSuccess(ZJRecommendBack zjRecommendBack) {
+                if (zjRecommendBack != null && zjRecommendBack.getData() != null && zjRecommendBack.getData().size() != 0) {
+                    mRecommendLayout.setVisibility(View.VISIBLE);
+                    mDatas.clear();
+                    mDatas.addAll(zjRecommendBack.getData());
+                    initTuiJian();
+                } else {
+                    mRecommendLayout.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onFailure(ErrorMsg errorMessage) {
+                mRecommendLayout.setVisibility(View.GONE);
+            }
+        });
     }
 
     /**
@@ -748,4 +912,43 @@ public class MainHomeNewFragment extends Fragment implements OnClickListener {
         });
     }
 
+
+
+
+
+    public void dialogToDo() {
+        ServicePay.getInstance().pay(_this, art.getRid(), payType,
+                new CallBack<PayBack>() {
+                    @Override
+                    public void onSuccess(PayBack t) {
+                        // TODO 自动生成的方法存根
+                        final Dialog_Hint dialog_hint=new Dialog_Hint(_this,"购买成功",false);
+                        dialog_hint.show();
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                dialog_hint.dismiss();
+                                if(art.getArt_type()!=2) {
+                                    Intent intent = new Intent(_this, ArticleDetailActivity.class);
+                                    intent.putExtra("rid", art.getRid());
+                                    startActivity(intent);
+                                }else {
+                                    _this.toGetJC1Result(art.getRid(), art.getPrice(), "dialogToDo");
+                                }
+                            }
+                        },1000);
+                    }
+
+                    @Override
+                    public void onFailure(ErrorMsg errorMessage) {
+                        // TODO 自动生成的方法存根
+                        new Dialog_Hint(_this,""+errorMessage.msg,false).showShort();
+                    }
+                });
+    }
+
+    public void toPayForCard() {
+        payType=1;
+        _this.dialog("赠送卡支付", "您确认使用赠送卡支付吗？", "取消", true, "确认", "dialogToDo");
+    }
 }

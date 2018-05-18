@@ -13,6 +13,7 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.liao310.www.R;
+import com.liao310.www.activity.mian4.personcenter.ReChargeActivity;
 import com.liao310.www.activity.pay.PayActivity;
 import com.liao310.www.domain.login.RegisterBack;
 import com.liao310.www.domain.version.ErrorMsg;
@@ -103,12 +104,12 @@ public class Dialog_Pay extends Dialog implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.ToPay_AddGold:
-                //mListener.onClick(view);
-                /*Intent intent=new Intent(mContext, PayActivity.class);
-                mContext.startActivity(intent);*/
+                Intent intent=new Intent(mContext, ReChargeActivity.class);
+                mContext.startActivity(intent);
+                dismiss();
                 break;
             case R.id.ToPay_ReadCard:
-                //mListener.onClick(view);
+                mListener.onClick(view);
                 break;
             case R.id.ToPay_ToPay:
                 if(Double.parseDouble(toPay)>Double.parseDouble(havingGold)){
@@ -130,6 +131,9 @@ public class Dialog_Pay extends Dialog implements View.OnClickListener {
         }
     }
 
+    /**
+     * 获取余额
+     */
     private void getHavingGold(){
         ServiceLogin.getInstance().getInfo(mContext,
             new ServiceABase.CallBack<RegisterBack>() {

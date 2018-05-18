@@ -24,6 +24,45 @@ public class ZhuanJia {
 	int lianhongMost;//最高连红数
 	int weikaishi;//未开始数
 
+	private String day7_dc_sl;//单场胜率
+	private String day7_dx_sl;//大小球胜率
+	private String day7_single_yl;//单关盈利率
+
+
+	//关注专家列表时使用
+	private String days7;//逗号分割 — 精选：赢，赢半，走，输半，输 ； 竞彩： 总场数，命中场数，盈利率
+
+	public String getDays7() {
+		return days7;
+	}
+
+	public void setDays7(String days7) {
+		this.days7 = days7;
+	}
+
+	public String getDay7_dc_sl() {
+		return day7_dc_sl;
+	}
+
+	public void setDay7_dc_sl(String day7_dc_sl) {
+		this.day7_dc_sl = day7_dc_sl;
+	}
+
+	public String getDay7_dx_sl() {
+		return day7_dx_sl;
+	}
+
+	public void setDay7_dx_sl(String day7_dx_sl) {
+		this.day7_dx_sl = day7_dx_sl;
+	}
+
+	public String getDay7_single_yl() {
+		return day7_single_yl;
+	}
+
+	public void setDay7_single_yl(String day7_single_yl) {
+		this.day7_single_yl = day7_single_yl;
+	}
 
 	public int getLianhongMost() {
 		return lianhongMost;

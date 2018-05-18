@@ -8,18 +8,22 @@ import com.liao310.www.activity.mian4.ArticleDetailActivity;
 import com.liao310.www.activity.mian4.adapter.ArticleListAdapter;
 import com.liao310.www.activity.pay.PayActivity;
 import com.liao310.www.base.BaseActivity;
+import com.liao310.www.domain.pay.PayBack;
 import com.liao310.www.domain.shouye.Article;
 import com.liao310.www.domain.shouye.ArticleListBack;
 import com.liao310.www.domain.version.ErrorMsg;
+import com.liao310.www.net.ServicePay;
 import com.liao310.www.net.ServicePersonal;
 import com.liao310.www.net.https.ServiceABase.CallBack;
 import com.liao310.www.utils.PreferenceUtil;
 import com.liao310.www.utils.ToastUtils;
+import com.liao310.www.widget.Dialog_Hint;
 import com.liao310.www.widget.RefreshListView;
 import com.liao310.www.widget.RefreshListView.OnRefreshListener;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -37,6 +41,7 @@ public class MyFavouriteActivity  extends BaseActivity {
 	private ArrayList<Article> articles;
 	private boolean isGetting = false;
 	private int more = 0;
+	private int payType=0;//支付方式
 	Article art;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -71,11 +76,15 @@ public class MyFavouriteActivity  extends BaseActivity {
 				if(articles!=null&&position<articles.size()&&position>=0){
 					art = articles.get(position);
 					if(art.getArt_type()!=2) {
-						Intent intent = new Intent(_this,ArticleDetailActivity.class);
-						intent.putExtra("rid", art.getRid());
-						startActivity(intent);
+						_this.getArticledetail(art.getRid(),art.getPrice(), "");
 					}else {
-						toGetJC1Result(art,"");
+						if (!PreferenceUtil.getBoolean(_this,"hasLogin")) {
+							Intent intentLogin = new Intent(_this, LoginActivity.class);
+							intentLogin.putExtra("requestName", "intentLogin");
+							startActivityForResult(intentLogin,LOGIN_PAY);
+						}else{
+							toGetJC1Result(art.getRid(),art.getPrice(),"");
+						}
 					}
 				}
 			}
@@ -177,17 +186,39 @@ public class MyFavouriteActivity  extends BaseActivity {
 		isGetting = false;
 	}
 	public void dialogToDo() {
-		if (!PreferenceUtil.getBoolean(_this,"hasLogin")) {
-			Intent intentLogin = new Intent(_this, LoginActivity.class); 
-			intentLogin.putExtra("requestName", "intentLogin");
-			startActivityForResult(intentLogin,LOGIN_PAY);
-		}else{
-			Intent intentPay = new Intent(_this, PayActivity.class); 
-			intentPay.putExtra("rid", art.getRid());
-			intentPay.putExtra("name", art.getNickname());
-			intentPay.putExtra("prize", art.getPrice());
-			startActivity(intentPay);
-		}	
+		ServicePay.getInstance().pay(_this, art.getRid(), payType,
+				new CallBack<PayBack>() {
+					@Override
+					public void onSuccess(PayBack t) {
+						// TODO 自动生成的方法存根
+						final Dialog_Hint dialog_hint=new Dialog_Hint(_this,"购买成功",false);
+						dialog_hint.show();
+						new Handler().postDelayed(new Runnable() {
+							@Override
+							public void run() {
+								dialog_hint.dismiss();
+								if(art.getArt_type()!=2) {
+									Intent intent = new Intent(_this, ArticleDetailActivity.class);
+									intent.putExtra("rid", art.getRid());
+									startActivity(intent);
+								}else {
+									toGetJC1Result(art.getRid(), art.getPrice(), "");
+								}
+							}
+						},1000);
+					}
+
+					@Override
+					public void onFailure(ErrorMsg errorMessage) {
+						// TODO 自动生成的方法存根
+						new Dialog_Hint(_this,""+errorMessage.msg,false).showShort();
+					}
+				});
+	}
+
+	public void toPayForCard() {
+		payType=1;
+		dialog("赠送卡支付", "您确认使用赠送卡支付吗？", "取消", true, "确认", "");
 	}
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO Auto-generated method stub

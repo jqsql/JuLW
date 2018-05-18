@@ -11,16 +11,14 @@ import android.widget.TextView;
 
 import com.liao310.www.R;
 import com.liao310.www.domain.login.User;
+import com.liao310.www.domain.shouye.ZJRecommend;
 import com.liao310.www.tool.xUtilsImageUtils;
 import com.liao310.www.widget.ShapedImageView;
 
 import java.util.List;
 
-/**
- * Created by lijuan on 2016/9/12.
- */
 public class ZJTuiJianViewAdapter extends BaseAdapter {
-    private List<User> mDatas;
+    private List<ZJRecommend> mDatas;
     private LayoutInflater inflater;
     /**
      * 页数下标,从0开始(当前是第几页)
@@ -31,7 +29,7 @@ public class ZJTuiJianViewAdapter extends BaseAdapter {
      */
     private int pageSize;
 
-    public ZJTuiJianViewAdapter(Context context, List<User> mDatas, int curIndex, int pageSize) {
+    public ZJTuiJianViewAdapter(Context context, List<ZJRecommend> mDatas, int curIndex, int pageSize) {
         inflater = LayoutInflater.from(context);
         this.mDatas = mDatas;
         this.curIndex = curIndex;
@@ -58,7 +56,7 @@ public class ZJTuiJianViewAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder viewHolder = null;
+        ViewHolder viewHolder;
         if (convertView == null) {
             convertView = inflater.inflate(R.layout.tuijian_item_gridview, parent, false);
             viewHolder = new ViewHolder();
@@ -68,10 +66,22 @@ public class ZJTuiJianViewAdapter extends BaseAdapter {
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
-        } /** * 在给View绑定显示的数据时，计算正确的position = position + curIndex * pageSize */
+        }
+        /** * 在给View绑定显示的数据时，计算正确的position = position + curIndex * pageSize */
         int pos = position + curIndex * pageSize;
-        User user=mDatas.get(pos);
-        viewHolder.name.setText(user.getNickname());
+        ZJRecommend user=mDatas.get(pos);
+        viewHolder.name.setText(user.getUsername());
+        viewHolder.msg.setText(user.getRe_tag());
+        if(user.getRe_tag().isEmpty()){
+            viewHolder.msg.setVisibility(View.GONE);
+        }else {
+            viewHolder.msg.setVisibility(View.VISIBLE);
+        }
+        if(user.getRole()==2){
+            viewHolder.msg.setBackgroundResource(R.drawable.shape_app_4);
+        }else {
+            viewHolder.msg.setBackgroundResource(R.drawable.shape_red_4);
+        }
         xUtilsImageUtils.display(viewHolder.head, user.getAvatar(), R.drawable.defaultpic, true);
         return convertView;
     }

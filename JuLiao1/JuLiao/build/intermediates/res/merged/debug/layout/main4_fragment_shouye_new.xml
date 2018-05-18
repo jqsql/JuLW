@@ -30,9 +30,11 @@
                     android:layout_height="140dp"/>
                 <!--专家推荐部分-->
                 <RelativeLayout
+                    android:id="@+id/Main_ShouYe_RecommendLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="230dp"
+                    android:layout_height="wrap_content"
                     android:padding="5dp"
+                    android:visibility="gone"
                     >
 
                     <ImageView
@@ -51,24 +53,23 @@
                         android:textColor="@color/white"
                         android:textSize="13dp"/>
 
-                    <LinearLayout
-                        android:id="@+id/Main_ShouYe_TuijianOvalView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_margin="5dp"
-                        android:orientation="horizontal"
-                        />
 
                     <android.support.v4.view.ViewPager
                         android:id="@+id/Main_ShouYe_TuijianView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_above="@id/Main_ShouYe_TuijianOvalView"
                         android:layout_below="@id/Main_ShouYe_TuiJianImg"
                         android:padding="5dp"/>
 
+                    <LinearLayout
+                        android:id="@+id/Main_ShouYe_TuijianOvalView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Main_ShouYe_TuijianView"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal"
+                        />
                 </RelativeLayout>
 
                 <!--改版先隐藏掉这部分-->
@@ -346,6 +347,23 @@
         </LinearLayout>
 
     </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.liao310.www.widget.MyExpandableListView
+            android:id="@+id/expandableListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:groupIndicator="@null"
+            android:visibility="gone"
+            />
+    </android.support.v4.widget.NestedScrollView>
+
+
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/Main_SwipeRefreshLayout"
         android:layout_width="wrap_content"
@@ -353,11 +371,6 @@
         android:layout_marginTop="5dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <!--<android.support.v4.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rl_listview"
@@ -366,7 +379,8 @@
             android:divider="@null"
             android:overScrollMode="never"
             android:scrollbars="none"/>
-   <!-- </android.support.v4.widget.NestedScrollView>-->
+
+
     </android.support.v4.widget.SwipeRefreshLayout>
 
 

@@ -8,7 +8,7 @@ android {
         applicationId "com.liao310.www"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 100016
+        versionCode 100017
         versionName "2.0.2"
     }
 

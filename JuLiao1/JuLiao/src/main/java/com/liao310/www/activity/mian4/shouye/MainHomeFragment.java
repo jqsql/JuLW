@@ -152,7 +152,7 @@ public class MainHomeFragment extends Fragment implements OnClickListener {
         //总的页数 = 总数 / 每页数量，并取整
         pageCount = (int) Math.ceil(mDatas.size() * 1.0 / pageSize);
         mPagerList = new ArrayList<View>();
-        for (int i = 0; i < pageCount; i++) {
+      /*  for (int i = 0; i < pageCount; i++) {
             // 每个页面都是inflate出一个新实例
             MyGrideview gridView = (MyGrideview) mInflater.inflate(R.layout.main_gridview, mViewPager, false);
             //GridView gridView =new GridView(getActivity());
@@ -164,7 +164,7 @@ public class MainHomeFragment extends Fragment implements OnClickListener {
                     int pos = position + curIndex * pageSize;
                 }
             });
-        }
+        }*/
         //设置适配器
         mViewPager.setAdapter(new ViewPagerAdapter(mPagerList));
         //设置圆点
@@ -229,7 +229,7 @@ public class MainHomeFragment extends Fragment implements OnClickListener {
                         intent.putExtra("rid", art.getRid());
                         startActivity(intent);
                     } else {
-                        _this.toGetJC1Result(art, "dialogToDo");
+                        _this.toGetJC1Result(art.getRid(),art.getPrice(), "dialogToDo");
                     }
                 }
             }

@@ -7,6 +7,7 @@ import com.liao310.www.activity.mian4.shouye.MainHomeNewFragment;
 import com.liao310.www.activity.mian4.zhuanjia.ZhuanJiaMainFragment;
 import com.liao310.www.activity.mian4.zhuanjia.ZhuanJiaMainNewFragment;
 import com.liao310.www.base.BaseActivity;
+import com.liao310.www.domain.shouye.Article;
 import com.liao310.www.utils.StatusBarColor;
 
 import android.content.Intent;
@@ -22,7 +23,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import cn.jpush.android.api.JPushInterface;
 
-public class MainActivity extends BaseActivity implements OnClickListener{
+public class MainActivity extends BaseActivity implements OnClickListener,MatchMainNewFragment.GetMainActivity {
 	private View shouye,zhuanjia,bisai,wode;
 	private ImageView shouye_im,zhuanjia_im,bisai_im,wode_im;
 	private TextView shouye_tv,zhuanjia_tv,bisai_tv,wode_tv;
@@ -38,6 +39,13 @@ public class MainActivity extends BaseActivity implements OnClickListener{
 	FragmentManager fm;
 	Bundle savedInstanceState;
 	TextView notice;
+
+	@Override
+	public MainActivity getMainActivity() {
+		return this;
+	}
+
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

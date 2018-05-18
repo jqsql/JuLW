@@ -43,9 +43,8 @@ public class ServiceZhuanJia   extends ServiceABase {
 		if(user!=null) {
 			token = user.getToken();
 		}
-		String url =  ConstantsBase.IP+"index.php/expert/expertlist/p/"+page
+		String url =  ConstantsBase.IP+"index.php/expert/expertlist2/p/"+page
 		+"/pl/10/titletype/"+titleType+"/type/"+type;
-		System.out.println("url:"+url); 
 		BaseHttps.getInstance().getHttpRequest(context,GetCommonParamNoActionHead(url,token),
 				new BaseHttpsCallback<String>() {  
 
@@ -280,7 +279,8 @@ public class ServiceZhuanJia   extends ServiceABase {
 				new BaseHttpsCallback<String>() {  
 
 			@Override  
-			public void onSuccess(String result) {  
+			public void onSuccess(String result) {
+				Log.e("获取竞猜列表点击",""+result);
 				int errMsg;
 				String msg = null;
 				try {
@@ -354,4 +354,58 @@ public class ServiceZhuanJia   extends ServiceABase {
 			public void onFinished() {  }  
 		});  
 	}
+
+/*
+	*/
+/**
+	 * 专家排行榜
+	 *//*
+
+	public  void getExpertList(Context context,int titletype,int type,int p,int pl,
+							  final CallBack<ZhuanJiaListBack> callBack) {
+		if (!NetWorkUtil.isNetworkAvailable(context)) {
+			callBack.onFailure(new ErrorMsg("-1", "当前网络信号较差，请检查网络设置"));
+			return;
+		}
+		String token = "";
+		User user = MyDbUtils.getCurrentUser();
+		if(user!=null) {
+			token = user.getToken();
+		}
+		String url =  ConstantsBase.IP+"index.php/expert/expertlist2/p/"+p+"/pl/"+pl+"/titletype/"+titletype+"/type/"+type;
+		BaseHttps.getInstance().getHttpRequest(context,GetCommonParamNoActionHead(url,token),
+				new BaseHttpsCallback<String>() {
+
+					@Override
+					public void onSuccess(String result) {
+						int errMsg;
+						String msg = null;
+						try {
+							JSONObject jsonObject = new JSONObject(result);
+							errMsg = jsonObject.getInt("errno");
+							msg = jsonObject.getString("msg");
+							if ( errMsg == 0&&"success".equals(msg)) {
+								Gson gson = new Gson();
+								ZhuanJiaListBack mResult = gson.fromJson(
+										result,ZhuanJiaListBack.class);
+								callBack.onSuccess(mResult);
+							} else {
+								callBack.onFailure(new ErrorMsg("-1", getWrongBack(msg)));
+							}
+						} catch (JSONException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+							callBack.onFailure(new ErrorMsg("-1", getWrongBack(e.getMessage())));
+						}
+					}
+					@Override
+					public void onError(int code, String message) {
+						callBack.onFailure(new ErrorMsg("-1", getWrongBack(message)));
+					}
+					@Override
+					public void onFinished() {  }
+				});
+	}
+*/
+
 }

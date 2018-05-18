@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_trap_4"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/shouqi1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--这个ImageView不用了-->
+            <ImageView
+                android:id="@+id/arrow1"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/up_arrow"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/matchview1_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/gamename1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="切尔西"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/matchkey1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="切尔西"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/time1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/matchview1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/matchview1_top"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/hostteamname1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="切尔西"
+                    android:textColor="@color/textgreen"
+                    android:textSize="14dp"/>
+
+                <TextView
+                    android:id="@+id/vs1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="VS"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"/>
+
+                <TextView
+                    android:id="@+id/gustteamname1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="切尔西"
+                    android:textColor="@color/textgreen"
+                    android:textSize="14dp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ActicleDetail_Jc_Fan1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/fan"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/free1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/shape_background_4"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/wanfa1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="客胜"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/wanfa_num1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="7.50"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/shengview1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/sheng1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="5dp"
+                        android:text="客胜"
+                        android:textColor="@color/white"
+                        android:textSize="12dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@id/sheng1"
+                        android:background="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/shenglv1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/sheng1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="7.50"
+                        android:textColor="@color/textgreen"
+                        android:textSize="12dp"/>
+                    <ImageView
+                        android:id="@+id/resultsheng1"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignBottom="@id/shenglv1"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="6dp"
+                        android:src="@drawable/zhonggreen"
+
+                        />
+                    <ImageView
+                        android:id="@+id/resultsheng1_"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/zhongyi"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black"/>
+
+                <RelativeLayout
+                    android:id="@+id/pingview1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/ping1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="5dp"
+                        android:text="客胜"
+                        android:textColor="@color/white"
+                        android:textSize="12dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@id/ping1"
+                        android:background="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/pinglv1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ping1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="7.50"
+                        android:textColor="@color/textgreen"
+                        android:textSize="12dp"/>
+
+                    <ImageView
+                        android:id="@+id/resultping1"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignBottom="@id/pinglv1"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="6dp"
+                        android:src="@drawable/zhonggreen"
+                        android:visibility="gone"/>
+                    <ImageView
+                        android:id="@+id/resultping1_"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/zhongyi"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black"/>
+
+                <RelativeLayout
+                    android:id="@+id/fuview1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/fu1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="5dp"
+                        android:text="客胜"
+                        android:textColor="@color/white"
+                        android:textSize="12dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@id/fu1"
+                        android:background="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/fulv1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/fu1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="7.50"
+                        android:textColor="@color/textgreen"
+                        android:textSize="12dp"/>
+
+                    <ImageView
+                        android:id="@+id/resultfu1"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignBottom="@id/fulv1"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="6dp"
+                        android:src="@drawable/zhonggreen"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/resultfu1_"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/zhongyi"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--第二部分-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_trap_4"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/shouqi2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--这个image不要了-->
+            <ImageView
+                android:id="@+id/arrow2"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/up_arrow"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/matchview2_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/gamename2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="切尔西"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/matchkey2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="切尔西"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/time2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/matchview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/matchview2_top"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/hostteamname2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="切尔西"
+                    android:textColor="@color/textgreen"
+                    android:textSize="14dp"/>
+
+                <TextView
+                    android:id="@+id/vs2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="VS"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"/>
+
+                <TextView
+                    android:id="@+id/gustteamname2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="切尔西"
+                    android:textColor="@color/textgreen"
+                    android:textSize="14dp"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ActicleDetail_Jc_Fan2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/fan"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/free2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/shape_background_4"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/wanfa2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="客胜"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/wanfa_num2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="7.50"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/shengview2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:id="@+id/sheng2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="5dp"
+                        android:text="客胜"
+                        android:textColor="@color/white"
+                        android:textSize="12dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@id/sheng2"
+                        android:background="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/shenglv2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/sheng2"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="7.50"
+                        android:textColor="@color/textgreen"
+                        android:textSize="12dp"/>
+
+                    <ImageView
+                        android:id="@+id/resultsheng2"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignBottom="@id/shenglv2"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="6dp"
+                        android:src="@drawable/zhonggreen"
+                        android:visibility="gone"/>
+                    <ImageView
+                        android:id="@+id/resultsheng2_"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/zhongyi"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black"/>
+
+                <RelativeLayout
+                    android:id="@+id/pingview2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/ping2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="5dp"
+                        android:text="客胜"
+                        android:textColor="@color/white"
+                        android:textSize="12dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@id/ping2"
+                        android:background="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/pinglv2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ping2"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="7.50"
+                        android:textColor="@color/textgreen"
+                        android:textSize="12dp"/>
+
+                    <ImageView
+                        android:id="@+id/resultping2"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignBottom="@id/pinglv2"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="6dp"
+                        android:src="@drawable/zhonggreen"
+                        android:visibility="gone"/>
+                    <ImageView
+                        android:id="@+id/resultping2_"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/zhongyi"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black"/>
+
+                <RelativeLayout
+                    android:id="@+id/fuview2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/fu2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="5dp"
+                        android:text="客胜"
+                        android:textColor="@color/white"
+                        android:textSize="12dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@id/fu2"
+                        android:background="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/fulv2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/fu2"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="7.50"
+                        android:textColor="@color/textgreen"
+                        android:textSize="12dp"/>
+
+                    <ImageView
+                        android:id="@+id/resultfu2"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignBottom="@id/fulv2"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="6dp"
+                        android:src="@drawable/zhonggreen"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/resultfu2_"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/zhongyi"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="的问"
+        android:textColor="@color/white"
+        android:textSize="14dp"/>
+
+</LinearLayout>

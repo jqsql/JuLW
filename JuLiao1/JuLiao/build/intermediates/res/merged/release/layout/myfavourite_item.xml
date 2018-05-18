@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:wxq="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        app:cardBackgroundColor="@color/Transparency15"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/head_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <com.liao310.www.widget.ShapedImageView
+                    android:id="@+id/head"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/defaultpic"
+                    android:scaleType="centerCrop"
+                    wxq:shape_mode="circle"/>
+
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/head"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/head"
+                    android:text="竞进球彩人"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"/>
+
+
+                <TextView
+                    android:id="@+id/lasttime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="竞进球彩人"
+                    android:textColor="@color/textlightlightgrey"
+                    android:textSize="12dp"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/head"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/head">
+
+                    <TextView
+                        android:id="@+id/biaoqian1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cornerfulllinefull_greenline_whitefull"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:paddingTop="2dp"
+                        android:text="周命中"
+                        android:textColor="@color/textgreen"
+                        android:textSize="12dp"/>
+
+                    <TextView
+                        android:id="@+id/biaoqian2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/cornerfulllinefull_yellowline_whitefull"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:paddingTop="2dp"
+                        android:text="周命中"
+                        android:textColor="@color/Yellow"
+                        android:textSize="12dp"/>
+
+                    <TextView
+                        android:id="@+id/biaoqian3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/cornerfulllinefull_redline_whitefull"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:paddingTop="2dp"
+                        android:text="周命中"
+                        android:textColor="@color/BorderRed"
+                        android:textSize="12dp"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+
+                <!--改版隐藏-->
+                <LinearLayout
+                    android:id="@+id/shenglveview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="top"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/shenglvtx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2dp"
+                        android:text="盈利率"
+                        android:textColor="@color/textred"
+                        android:textSize="14dp"/>
+
+                    <TextView
+                        android:id="@+id/shenglv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100%"
+                        android:textColor="@color/textred"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/BottomLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:padding="10dp"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="免费"
+                    android:textColor="@color/textgreen"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/shape_app_4"
+                    android:gravity="center"
+                    android:text="立即查看"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"/>
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/Middle_View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/BottomLayout"
+                android:layout_below="@id/head_view"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:id="@+id/content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="南非杯南非杯南非杯南非杯南非杯南非杯南非杯南非杯"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:visibility="gone"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/matchview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/match1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/macthkey1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="周四008"
+                            android:textColor="@color/white"
+                            android:textSize="14dp"/>
+
+                        <TextView
+                            android:id="@+id/gamename1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="南非杯"
+                            android:textColor="@color/white"
+                            android:textSize="14dp"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/hostteamname1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="玻利维亚"
+                                android:textColor="@color/white"
+                                android:textSize="14dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="  VS  "
+                                android:textColor="@color/white"
+                                android:textSize="14dp"/>
+
+                            <TextView
+                                android:id="@+id/gustteamname1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text="巴巴多斯"
+                                android:textColor="@color/white"
+                                android:textSize="14dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/matchs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Middle_View"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/endtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="05-04 20:30"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/sendtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="05-04 20:30"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/result_Fan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/fan"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

@@ -91,6 +91,19 @@ public class ReChargeActivity  extends BaseActivity implements OnClickListener {
 		api.registerApp(ConstantsBase.APPIP_WEIXIN);
 		_this = this;
 		initView();
+
+		ServicePay.getInstance().getRechagePay(this, new CallBack<PayBack>() {
+			@Override
+			public void onSuccess(PayBack payBack) {
+
+			}
+
+			@Override
+			public void onFailure(ErrorMsg errorMessage) {
+
+			}
+		});
+
 	}
 	private void initView() {
 		back =(ImageView) findViewById(R.id.iv_back);

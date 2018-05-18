@@ -68,8 +68,8 @@
         android:layout_height="50dp"
         style="?attr/borderlessButtonStyle"
         android:layout_margin="20dp"
-        android:background="@drawable/cornerfulllinefull_greenline_15nofull"
-        android:textColor="@color/BorderRed"
+        android:background="@drawable/shape_app_15"
+        android:textColor="@color/black"
         android:textSize="14dp"
         android:text="退出登录"/>
 

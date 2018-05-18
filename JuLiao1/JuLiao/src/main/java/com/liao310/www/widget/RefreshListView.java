@@ -263,6 +263,7 @@ public class RefreshListView extends ListView implements OnScrollListener,
 
         //对外提供
         if (isLoadingMore) {// 正在加载更多...
+            setSelection(getCount()-1);
             mFooterView.setPadding(0, -mFooterViewHeight, 0, 0);// 隐藏脚布局
             isLoadingMore = false;
         } else {
@@ -303,6 +304,7 @@ public class RefreshListView extends ListView implements OnScrollListener,
 
                 if (mListener != null) {
                     mListener.onLoadMore(); //接口对象调用方法
+
                 }
             }
         }

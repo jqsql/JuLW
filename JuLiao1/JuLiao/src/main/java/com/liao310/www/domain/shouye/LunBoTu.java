@@ -3,7 +3,7 @@ package com.liao310.www.domain.shouye;
 import org.xutils.db.annotation.Column;
 import org.xutils.db.annotation.Table;
 
-@Table(name = "LunBoTu")
+@Table(name = "LunBoTuNew")
 public class LunBoTu {
 	@Column(name = "_id",isId = true,autoGen = true)  
 	public int _id;  

@@ -6,26 +6,21 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
-        app:cardBackgroundColor="@color/Transparency15"
-        app:cardCornerRadius="6dp"
-        app:cardElevation="3dp">
+    <!--app:cardElevation="3dp"-->
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="10dp">
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_trap_6">
 
             <RelativeLayout
                 android:id="@+id/head_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp">
+                android:padding="10dp">
 
                 <com.liao310.www.widget.ShapedImageView
                     android:id="@+id/head"
@@ -137,23 +132,54 @@
                         android:textStyle="bold"/>
                 </LinearLayout>
             </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/BottomLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:padding="10dp"
+                android:gravity="right"
+                android:orientation="vertical">
 
+                <TextView
+                    android:id="@+id/money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="免费"
+                    android:textColor="@color/textgreen"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/shape_app_4"
+                    android:gravity="center"
+                    android:text="立即查看"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"/>
+            </LinearLayout>
             <RelativeLayout
                 android:id="@+id/Middle_View"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/head_view">
+                android:layout_toLeftOf="@id/BottomLayout"
+                android:layout_below="@id/head_view"
+                android:paddingLeft="10dp">
 
                 <TextView
                     android:id="@+id/content"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingBottom="5dp"
-                    android:paddingTop="5dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
                     android:text="南非杯南非杯南非杯南非杯南非杯南非杯南非杯南非杯"
                     android:textColor="@color/white"
                     android:textSize="14dp"
-                    android:visibility="gone"/>
+                    android:visibility="gone"
+                    />
 
                 <LinearLayout
                     android:id="@+id/matchview"
@@ -165,8 +191,7 @@
                         android:id="@+id/match1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:paddingTop="8dp">
+                        android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/macthkey1"
@@ -210,6 +235,8 @@
                                 android:id="@+id/gustteamname1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:singleLine="true"
                                 android:text="巴巴多斯"
                                 android:textColor="@color/white"
                                 android:textSize="14dp"/>
@@ -230,7 +257,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/Middle_View"
-                android:layout_marginTop="2dp">
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp">
 
                 <TextView
                     android:id="@+id/endtime"
@@ -251,32 +280,12 @@
                     android:visibility="gone"/>
             </RelativeLayout>
 
-            <LinearLayout
+
+            <ImageView
+                android:id="@+id/result_Fan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
-                android:gravity="right"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/money"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="免费"
-                    android:textColor="@color/textgreen"
-                    android:textSize="12dp"/>
-
-                <TextView
-                    android:layout_width="60dp"
-                    android:layout_height="20dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/shape_app_4"
-                    android:gravity="center"
-                    android:text="立即查看"
-                    android:textColor="@color/black"
-                    android:textSize="12dp"/>
-            </LinearLayout>
+                android:src="@drawable/fan"/>
         </RelativeLayout>
-    </android.support.v7.widget.CardView>
 </LinearLayout>

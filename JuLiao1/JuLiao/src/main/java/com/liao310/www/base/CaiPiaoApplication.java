@@ -24,6 +24,7 @@ public class CaiPiaoApplication extends Application {
 	public static Map<String, Long> map;
 	private static List<Activity> activitys = new LinkedList<Activity>();
 	private List<Service> services = new LinkedList<Service>();
+	public static String Token;
 
 	private static Context mContext;
 	private static DbManager.DaoConfig daoConfig;

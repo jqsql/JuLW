@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal" >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="充值送解锁卡优惠活动开始啦！"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/towx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:text="赶快添加聚料客服微信juliao310来领取吧~"
+        android:textSize="14dp"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="凡充值后联系您的专属客服，均有好礼相送"
+        android:textSize="14dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="5dp"/>
+</LinearLayout>

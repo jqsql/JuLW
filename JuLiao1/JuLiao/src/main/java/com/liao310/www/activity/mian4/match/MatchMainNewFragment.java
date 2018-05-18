@@ -15,27 +15,30 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.liao310.www.MainActivity;
 import com.liao310.www.R;
-import com.liao310.www.activity.mian4.zhuanjia.ZhuanJiaListAdapter;
+import com.liao310.www.activity.mian4.ArticleDetailActivity;
+import com.liao310.www.activity.mian4.zhuanjia.ZhuanJiaBuyAdapter;
+import com.liao310.www.activity.mian4.zhuanjia.ZhuanJiaRankingAdapter;
 import com.liao310.www.activity.mian4.zhuanjia.ZhuanJiaRefreshListAdapter;
 import com.liao310.www.activity.mian4.zhuanjia.detail.ZhuanJiaDetailActivity;
-import com.liao310.www.domain.match.Match;
-import com.liao310.www.domain.match.MatchListBackBack;
+import com.liao310.www.base.BaseActivity;
+import com.liao310.www.domain.LeiTai.RankingBean;
+import com.liao310.www.domain.LeiTai.RankingListBack;
+import com.liao310.www.domain.LeiTai.ZhuanJBuyBean;
+import com.liao310.www.domain.LeiTai.ZhuanJBuyListBack;
 import com.liao310.www.domain.version.ErrorMsg;
-import com.liao310.www.domain.zhuanjia.ZhuanJia;
-import com.liao310.www.domain.zhuanjia.ZhuanJiaListBack;
-import com.liao310.www.net.ServiceMatch;
-import com.liao310.www.net.ServiceZhuanJia;
+import com.liao310.www.net.ServiceLeiTai;
 import com.liao310.www.net.https.ServiceABase.CallBack;
 import com.liao310.www.utils.ToastUtils;
 import com.liao310.www.widget.RefreshListView;
-import com.liao310.www.widget.RefreshListView.OnRefreshListener;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 /**
  * \
@@ -44,13 +47,14 @@ import java.util.Date;
 @SuppressLint("NewApi")
 public class MatchMainNewFragment extends Fragment
         implements OnClickListener {
-    private Activity _this;
+    private BaseActivity _this;
     private TextView ya, line, jing;
     private TextView zuqiu, lanqiu;
     private TextView yesterday, today, tomorrow;
     private TextView yesterday_line, today_line, tomorrow_line;//总榜、七日单场、七日大小球
-    private ListView listview;
-    private ZhuanJiaListAdapter myNoRefreshListAdapter = null;
+    //private ListView listview;
+    private ZhuanJiaRankingAdapter myNoRefreshListAdapter = null;
+    private ZhuanJiaBuyAdapter mJiaBuyAdapter = null;
     private RefreshListView refreshListView;
     private ZhuanJiaRefreshListAdapter myListAdapter = null;
 
@@ -59,14 +63,25 @@ public class MatchMainNewFragment extends Fragment
     private int title3 = 0;
 
     //private ArrayList<ZhuanJia> matchlist;
-    private ArrayList<ZhuanJia> zhuanjialist;//专家排行list
+    private ArrayList<RankingBean> zhuanjialist;//专家排行list
+    private ArrayList<ZhuanJBuyBean> mJBuyBeen;//擂台已购list
     private boolean isGetting = false;
     private int more = 1;
+    private GetMainActivity mGetMainActivity;
+    public interface GetMainActivity{
+        MainActivity getMainActivity();
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        mGetMainActivity= (GetMainActivity) activity;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        _this = getActivity();
+        _this = (BaseActivity) getActivity();
         View view = inflater.inflate(R.layout.main4_fragment_match, container, false);
         initView(view);
         initTitle();
@@ -100,66 +115,56 @@ public class MatchMainNewFragment extends Fragment
         today_line = (TextView) view.findViewById(R.id.today_line);
         tomorrow_line = (TextView) view.findViewById(R.id.tomorrow_line);
 
+       // listview = view.findViewById(R.id.rl_listview2);
+        refreshListView = view.findViewById(R.id.rl_listview);
+        myNoRefreshListAdapter = new ZhuanJiaRankingAdapter(_this);
 
-        listview = view.findViewById(R.id.rl_listview2);
-        myNoRefreshListAdapter = new ZhuanJiaListAdapter(_this);
-        listview.setAdapter(myNoRefreshListAdapter);
-        listview.setOnItemClickListener(new OnItemClickListener() {
+        refreshListView.setOnItemClickListener(new OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 // TODO 自动生成的方法存根
-                if (zhuanjialist != null && position < zhuanjialist.size() && position >= 0) {
-                    Intent intent = new Intent(_this, ZhuanJiaDetailActivity.class);
-                    intent.putExtra("uid", zhuanjialist.get(position).getUid());
-                    startActivity(intent);
+                if (!"paihang".equals(title2) && title3 == 0) {
+                    if (mJBuyBeen != null && position < mJBuyBeen.size() && position >= 0) {
+                        mGetMainActivity.getMainActivity().toGetJC1Result(mJBuyBeen.get(position).getId()+"","0","");
+                    }
+                } else {
+                    if (zhuanjialist != null && position < zhuanjialist.size() && position >= 0) {
+                        Intent intent = new Intent(_this, ZhuanJiaDetailActivity.class);
+                        intent.putExtra("uid", zhuanjialist.get(position).getId()+"");
+                        startActivity(intent);
+                    }
+
                 }
             }
         });
 
-        refreshListView = view.findViewById(R.id.rl_listview);
-        //myListAdapter = new ZhuanJiaRefreshListAdapter(_this);
-        //refreshListView.setAdapter(myListAdapter);
-        /*refreshListView.setOnItemClickListener(new OnItemClickListener() {
+        // 添加监听器
+        refreshListView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
 
-			@Override
-			public void onItemClick(AdapterView<?> parent, View view,
-					int position, long id) {
-				// TODO 自动生成的方法存根
-				if(matchlist!=null&&position<matchlist.size()&&position>=0){
-					Intent intent = new Intent(_this,MatchDetailActivity.class);
-					intent.putExtra("aid", matchlist.get(position).getAid());
-					intent.putExtra("cid", matchlist.get(position).getCid());
-					startActivity(intent);
-				}
-			}
-		});*/
-		/*// 添加监听器
-		refreshListView.setOnRefreshListener(new OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                // TODO 自动生成的方法存根
+                requestDataFromServer(false); // 冲服务器中获取刷新的数据
+            }
 
-			@Override
-			public void onRefresh() {
-				// TODO 自动生成的方法存根
-				requestDataFromServer(false); // 冲服务器中获取刷新的数据
-			}
+            @Override
+            public void onLoadMore() {
+                // TODO 自动生成的方法存根
+                requestDataFromServer(true);
+            }
 
-			@Override
-			public void onLoadMore() {
-				// TODO 自动生成的方法存根
-				requestDataFromServer(true);
-			}
+            private void requestDataFromServer(boolean isLoadingMore) {
+                // TODO 自动生成的方法存根
+                if (isLoadingMore) {
+                    initdata(true);
+                } else {
+                    initdata(false);
+                }
 
-			private   void  requestDataFromServer(boolean isLoadingMore) {
-				// TODO 自动生成的方法存根
-				if (isLoadingMore) {
-					initdata(true);
-				} else {
-					initdata(false);
-				}
-
-			}
-		});*/
+            }
+        });
     }
 
     @Override
@@ -273,156 +278,168 @@ public class MatchMainNewFragment extends Fragment
             }
             if ("paihang".equals(title2)) {
                 //排行接口
-                myNoRefreshListAdapter.setType(1,2);
-                getZhuanJia();
-            }else {
+                if (myNoRefreshListAdapter != null)
+                    myNoRefreshListAdapter.setType(title3);
+                if (title3 == 0) {
+                    getAllRanking("rank", isMore);
+                } else if (title3 == 1) {
+                    getAllRanking("dan", isMore);
+                } else {
+                    getAllRanking("dxq", isMore);
+                }
+            } else {
                 //擂台接口
-                //getMatchs(isMore);
+                if (title3 == 0) {
+                    getBuyRanking(isMore);
+                } else if (title3 == 1) {
+                    if (myNoRefreshListAdapter != null)
+                        myNoRefreshListAdapter.setType(4);
+                    getAllRanking("attention", isMore);
+                }
             }
         }
     }
 
     /**
-     * 获取专家排行
-     * 7日胜率：2
+     * 获取总榜列表
      */
-    private void getZhuanJia() {
-        ServiceZhuanJia.getInstance().getZhuanJia(_this, 1, 2, 1,
-                new CallBack<ZhuanJiaListBack>() {
-                    @Override
-                    public void onSuccess(ZhuanJiaListBack t) {
-                        // TODO 自动生成的方法存根
-                        dodata(t);
-                    }
+    private void getAllRanking(String type, final boolean isMore) {
+        _this.showProgress();
+        ServiceLeiTai.getInstance().getPHRanking(getActivity(), type, more, new CallBack<RankingListBack>() {
+            @Override
+            public void onSuccess(RankingListBack rankingListBack) {
+                // TODO 自动生成的方法存根
+                _this.dismissProgress();
+                RankDoData(rankingListBack, !isMore);
+            }
 
-                    @Override
-                    public void onFailure(ErrorMsg errorMessage) {
-                        // TODO 自动生成的方法存根
-                        //showProgress(false);
-                        ToastUtils.showShort(_this, errorMessage.msg);
-                        if (myNoRefreshListAdapter != null) {
-                            myNoRefreshListAdapter.notifyDataSetChanged();// 重新刷新数据
-                        }
-                        isGetting = false;
-                    }
-                });
+            @Override
+            public void onFailure(ErrorMsg errorMessage) {
+                // TODO 自动生成的方法存根
+                _this.dismissProgress();
+                if (isMore) {
+                    more--;
+                }
+                ToastUtils.showShort(_this, errorMessage.msg);
+                if (myNoRefreshListAdapter != null) {
+                    myNoRefreshListAdapter.notifyDataSetChanged();// 重新刷新数据
+                }
+                isGetting = false;
+            }
+        });
     }
 
-   /* private void getMatchs(final boolean isMore) {
-        ServiceMatch.getInstance().getMatch(_this, title1, title2, title3, more,
-                new CallBack<MatchListBackBack>() {
-                    @Override
-                    public void onSuccess(MatchListBackBack t) {
-                        // TODO 自动生成的方法存根
-                        dodata(t, !isMore);
-                    }
+    /**
+     * 获取已购列表
+     */
+    private void getBuyRanking(final boolean isMore) {
+        _this.showProgress();
+        ServiceLeiTai.getInstance().getPHBuyRanking(getActivity(), more, new CallBack<ZhuanJBuyListBack>() {
+            @Override
+            public void onSuccess(ZhuanJBuyListBack rankingListBack) {
+                // TODO 自动生成的方法存根
+                _this.dismissProgress();
+                RankDoDataBuy(rankingListBack, !isMore);
+            }
 
-                    @Override
-                    public void onFailure(ErrorMsg errorMessage) {
-                        // TODO 自动生成的方法存根
-                        if (isMore) {
-                            more--;
-                        }
-                        ToastUtils.showShort(_this, errorMessage.msg);
-                        if (myListAdapter != null) {
-                            myListAdapter.notifyDataSetChanged();// 重新刷新数据
-                        }
-                        refreshListView.onRefreshComplete(false);
-                        isGetting = false;
-                    }
-                });
-    }*/
+            @Override
+            public void onFailure(ErrorMsg errorMessage) {
+                // TODO 自动生成的方法存根
+                _this.dismissProgress();
+                if (isMore) {
+                    more--;
+                }
+                ToastUtils.showShort(_this, errorMessage.msg);
+                if (myNoRefreshListAdapter != null) {
+                    myNoRefreshListAdapter.notifyDataSetChanged();// 重新刷新数据
+                }
+                isGetting = false;
+            }
+        });
+    }
 
     /**
      * 没有刷新的数据处理
      *
      * @param t
      */
-    public synchronized void dodata(ZhuanJiaListBack t) {
-        refreshListView.setVisibility(View.GONE);
-        listview.setVisibility(View.VISIBLE);
-        if (zhuanjialist == null) {
-            zhuanjialist = new ArrayList<ZhuanJia>();
-        } else {
-            zhuanjialist.clear();
+    public synchronized void RankDoData(RankingListBack t, boolean isRefresh) {
+        if (myNoRefreshListAdapter == null) {
+            myNoRefreshListAdapter = new ZhuanJiaRankingAdapter(_this);
         }
-        if (t.getData() != null && t.getData().getItems() != null
-                && t.getData().getItems().size() > 0) {
-            zhuanjialist.addAll(t.getData().getItems());
-            myNoRefreshListAdapter.setDate(zhuanjialist);
-        }
-
-        if (myNoRefreshListAdapter != null) {
-            myNoRefreshListAdapter.notifyDataSetChanged();// 重新刷新数据
-        }
-        isGetting = false;
-        //showProgress(false);
-    }
-
-    /*public synchronized void dodata(MatchListBackBack t, boolean isRefresh) {
-        refreshListView.setVisibility(View.VISIBLE);
-        listview.setVisibility(View.GONE);
+        refreshListView.setAdapter(myNoRefreshListAdapter);
         if (isRefresh) {
-            if (matchlist == null) {
-                matchlist = new ArrayList<Match>();
+            if (zhuanjialist == null) {
+                zhuanjialist = new ArrayList<>();
             } else {
-                matchlist.clear();
+                zhuanjialist.clear();
             }
-            if (t.getData() != null && t.getData().getRecom_items() != null) {
-                if (t.getData().getRecom_items().getTotal() > 0
-                        && t.getData().getRecom_items().getItems() != null
-                        && t.getData().getRecom_items().getItems().size() > 0) {
-                    matchlist.addAll(t.getData().getRecom_items().getItems());
-                    myListAdapter.setDate(matchlist);
-                }
-                String getDate = t.getData().getRecom_items().getDate();
-                if (getDate != null) {
-					*//*yesterday.setText(getNextDay(getDate,-1));
-					today.setText(getDate);
-					tomorrow.setText(getNextDay(getDate,1));*//*
-					*//*switch (title3) {
-					case 0:
-						yesterday.setText(getDate);
-						today.setText(getNextDay(getDate,1));
-						tomorrow.setText(getNextDay(getDate,2));                    
-						break;
-					case 1:
-						
-						break;
-					case 2:
-						yesterday.setText(getNextDay(getDate,-2));
-						today.setText(getNextDay(getDate,-1));
-						tomorrow.setText(getDate);  
-						break;
-					default:
-						break;
-					}*//*
-                }
+            if (t.getData() != null && t.getData() != null && t.getData().size() > 0) {
+                zhuanjialist.addAll(t.getData());
+                myNoRefreshListAdapter.setDate(zhuanjialist);
             }
         } else {
-            ArrayList<Match> newlists = new ArrayList<>();
-            if (t.getData() != null && t.getData().getRecom_items() != null
-                    && t.getData().getRecom_items().getTotal() > 0
-                    && t.getData().getRecom_items().getItems() != null
-                    && t.getData().getRecom_items().getItems().size() > 0) {
-                newlists = t.getData().getRecom_items().getItems();
+            List<RankingBean> newlists = new ArrayList<>();
+            if (t.getData() != null && t.getData() != null
+                    && t.getData().size() > 0) {
+                newlists = t.getData();
             }
             if (newlists.size() == 0) {
                 ToastUtils.showShort(_this, "已无更多数据");
                 more--;
             }
-            if (matchlist == null) {
-                matchlist = new ArrayList<Match>();
+            if (zhuanjialist == null) {
+                zhuanjialist = new ArrayList<>();
             }
-            matchlist.addAll(newlists);
+            zhuanjialist.addAll(newlists);
+            myNoRefreshListAdapter.setDate(zhuanjialist);
         }
-        if (myListAdapter != null) {
-            myListAdapter.notifyDataSetChanged();// 重新刷新数据
-        }
+        myNoRefreshListAdapter.notifyDataSetChanged();// 重新刷新数据
         refreshListView.onRefreshComplete(false);
         isGetting = false;
     }
-*/
+
+    /**
+     * 没有刷新的数据处理
+     *
+     * @param t
+     */
+    public synchronized void RankDoDataBuy(ZhuanJBuyListBack t, boolean isRefresh) {
+        if (mJiaBuyAdapter == null) {
+            mJiaBuyAdapter = new ZhuanJiaBuyAdapter(_this);
+        }
+        refreshListView.setAdapter(mJiaBuyAdapter);
+        if (isRefresh) {
+            if (mJBuyBeen == null) {
+                mJBuyBeen = new ArrayList<>();
+            } else {
+                mJBuyBeen.clear();
+            }
+            if (t.getData() != null && t.getData() != null && t.getData().size() > 0) {
+                mJBuyBeen.addAll(t.getData());
+                mJiaBuyAdapter.setDate(mJBuyBeen);
+            }
+        } else {
+            List<ZhuanJBuyBean> newlists = new ArrayList<>();
+            if (t.getData() != null && t.getData() != null
+                    && t.getData().size() > 0) {
+                newlists = t.getData();
+            }
+            if (newlists.size() == 0) {
+                ToastUtils.showShort(_this, "已无更多数据");
+                more--;
+            }
+            if (mJBuyBeen == null) {
+                mJBuyBeen = new ArrayList<>();
+            }
+            mJBuyBeen.addAll(newlists);
+            mJiaBuyAdapter.setDate(mJBuyBeen);
+        }
+        mJiaBuyAdapter.notifyDataSetChanged();// 重新刷新数据
+        refreshListView.onRefreshComplete(false);
+        isGetting = false;
+    }
+
     public void setTitleBack(int title) {
         yesterday.setTextColor(getResources().getColor(R.color.white));
         yesterday_line.setVisibility(View.INVISIBLE);

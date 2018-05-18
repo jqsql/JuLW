@@ -1,4 +1,4 @@
-#Mon May 14 11:39:02 CST 2018
+#Fri May 18 16:22:35 CST 2018
 file.9=F\:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_1c5fbd3b7ca6b749bbf2e28b98c3c090c5a0955b\\classes.dex
 base.10=F\:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_9bfc149f7008983e334b6e80a1310c5db99b3aee
 file.8=F\:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_25e68644a973939785ce879db78b345cac505566\\classes.dex

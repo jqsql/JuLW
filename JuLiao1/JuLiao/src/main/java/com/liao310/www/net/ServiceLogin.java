@@ -7,6 +7,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.google.gson.Gson;
+import com.liao310.www.base.CaiPiaoApplication;
 import com.liao310.www.base.ConstantsBase;
 import com.liao310.www.db.MyDbUtils;
 import com.liao310.www.domain.login.RegisterBack;
@@ -203,6 +204,7 @@ public class ServiceLogin  extends ServiceABase {
 								result,RegisterBack.class);	
 						if (mResult.getData() != null) {									
 							MyDbUtils.saveUser(mResult.getData());
+							CaiPiaoApplication.Token=mResult.getData().getToken();
 						}					
 						callBack.onSuccess(mResult);
 					} else {
