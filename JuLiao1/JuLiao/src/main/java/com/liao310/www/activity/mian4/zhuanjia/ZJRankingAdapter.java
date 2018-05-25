@@ -23,7 +23,7 @@ import java.util.List;
 public class ZJRankingAdapter extends BaseAdapter {
     private List<ZhuanJia> zhuanjiaLists;
     private Context _this;
-    //专家模块 1 精选七日总胜率，2七日单场 ，3七日大小球 4 竞彩7日盈利率 5 竞彩7日命中率
+    //专家模块 1 精选七日总胜率，2七日单场 ，3七日大小球 4 竞彩7日盈利率 5 竞彩7日单关盈利率
     private int _type = 0;
 
     public ZJRankingAdapter(Context con) {
@@ -86,20 +86,22 @@ public class ZJRankingAdapter extends BaseAdapter {
             holder.mC2 = convertView.findViewById(R.id.ZJ_PH_Zou);
             holder.mC3 = convertView.findViewById(R.id.ZJ_PH_YingBan);
             holder.mC4 = convertView.findViewById(R.id.ZJ_PH_Ying);
+            holder.mLV_Layout = convertView.findViewById(R.id.zhuanjia_ProgressBarLV);
+            holder.mLVText = convertView.findViewById(R.id.zhuanjia_ProgressBarLVText);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
         if (position == 0) {
-            holder.numberIv.setImageResource(R.drawable.top1);
+            holder.numberIv.setText("1");
             holder.numberTv.setVisibility(View.INVISIBLE);
             holder.numberIv.setVisibility(View.VISIBLE);
         } else if (position == 1) {
-            holder.numberIv.setImageResource(R.drawable.top2);
+            holder.numberIv.setText("2");
             holder.numberTv.setVisibility(View.INVISIBLE);
             holder.numberIv.setVisibility(View.VISIBLE);
         } else if (position == 2) {
-            holder.numberIv.setImageResource(R.drawable.top3);
+            holder.numberIv.setText("3");
             holder.numberTv.setVisibility(View.INVISIBLE);
             holder.numberIv.setVisibility(View.VISIBLE);
         } else {
@@ -107,9 +109,17 @@ public class ZJRankingAdapter extends BaseAdapter {
             holder.numberIv.setVisibility(View.INVISIBLE);
             holder.numberTv.setVisibility(View.VISIBLE);
         }
+        if(_type == 4 || _type==5){
+            holder.mLV_Layout.setVisibility(View.VISIBLE);
+            holder.mProgressBar.setVisibility(View.GONE);
+        }else {
+            holder.mLV_Layout.setVisibility(View.GONE);
+            holder.mProgressBar.setVisibility(View.VISIBLE);
+        }
         if (_type == 4) {
             holder.mJCDay7HintLayout.setVisibility(View.VISIBLE);
             holder.mDay7HintLayout.setVisibility(View.GONE);
+            holder.mLVText.setText(zhuanjia.getDay7Yinglilv()+"%");
             if (zhuanjia != null) {
                 if (zhuanjia.getDays7() != null && !zhuanjia.getDays7().isEmpty()) {
                     String[] day7 = zhuanjia.getDays7().split(",");
@@ -142,6 +152,9 @@ public class ZJRankingAdapter extends BaseAdapter {
             } else if (_type == 3) {
                 holder.mDay7HintLayout.setVisibility(View.GONE);
                 holder.mProgressBar.setProgress((int) Double.parseDouble(zhuanjia.getDay7_dx_sl()));
+            }else if(_type==5){
+                holder.mDay7HintLayout.setVisibility(View.GONE);
+                holder.mLVText.setText(zhuanjia.getDay7_single_yl()+"%");
             }
         }
         xUtilsImageUtils.display(holder.head, zhuanjia.getAvatar(), R.drawable.defaultpic, true);
@@ -154,7 +167,7 @@ public class ZJRankingAdapter extends BaseAdapter {
         public ShapedImageView head;
         public TextView name;
 
-        public ImageView numberIv;
+        public TextView numberIv;
         public TextView numberTv;
         public TextView statename;
         public TextView state;
@@ -173,5 +186,7 @@ public class ZJRankingAdapter extends BaseAdapter {
         private TextView mC2;
         private TextView mC3;
         private TextView mC4;
+        private LinearLayout mLV_Layout;//
+        private TextView mLVText;//
     }
 }

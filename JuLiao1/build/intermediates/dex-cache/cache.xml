@@ -20,15 +20,6 @@
         <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\pre-dexed\release\jsoup-1.7.1_8020d126fc7b8735c89086ee4525448591996714.jar" />
     </item>
     <item
-        is-multidex="false"
-        jar="F:\GitPro\JuLW\JuLiao1\JuLiao\libs\jpush-android-3.1.2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.3"
-        sha1="58c972bc91dae7b05686353ea1a35881c01f7e23">
-        <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\pre-dexed\release\jpush-android-3.1.2_173713ebc941301a565be67d8442214b9dd03614.jar" />
-    </item>
-    <item
         is-multidex="true"
         jar="F:\GitPro\JuLW\JuLiao1\JuLiao\libs\jcore-android-1.2.0.jar"
         jumboMode="true"
@@ -39,12 +30,30 @@
     </item>
     <item
         is-multidex="false"
+        jar="F:\GitPro\JuLW\JuLiao1\JuLiao\libs\jpush-android-3.1.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="58c972bc91dae7b05686353ea1a35881c01f7e23">
+        <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\pre-dexed\release\jpush-android-3.1.2_173713ebc941301a565be67d8442214b9dd03614.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="F:\GitPro\JuLW\JuLiao1\JuLiao\libs\jcore-android-1.2.0.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.3"
         sha1="b03b2ddbf065222493c976e74e3612e0ea2a7a35">
         <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\pre-dexed\release\jcore-android-1.2.0_207bb9e47b59902e8aaddd0f9588dc0df5eb0257.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\SDK\AndroidStudioSDK\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.2_b62ee93bd15a8604fba3a9f8a876992a05db8ba4.jar" />
     </item>
     <item
         is-multidex="false"
@@ -101,6 +110,15 @@
         <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\pre-dexed\release\libammsdk_3371d9fc72110903a451ae3a19ab24fec64649a1.jar" />
     </item>
     <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\71583db2035fe4075e00a0d57913f19a87411200\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\pre-dexed\debug\classes_88e3d9230eb1a0c79b1f7e78a9df1664ea273678.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="F:\GitPro\JuLW\JuLiao1\JuLiao\libs\eventbus-2.4.0.jar"
         jumboMode="true"
@@ -115,7 +133,7 @@
         jumboMode="true"
         optimize="true"
         revision="26.0.3"
-        sha1="136ca81025b08f66901d4374638ac5ddf9cdb057">
+        sha1="bd7a8b3ff74e6c0fb4d392d3862ebd45d19c2fe6">
         <dex dex="F:\GitPro\JuLW\JuLiao1\JuLiao\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_5998d517f050103068aa151d787d8060f6bea928\classes.dex" />
     </item>
     <item

@@ -2,4 +2,6 @@
 <resources>
     <item type="id" name="tag_first"></item>
     <item type="id" name="tag_second"></item>
+    <item type="id" name="attention_first"></item>
+    <item type="id" name="attention_second"></item>
 </resources>

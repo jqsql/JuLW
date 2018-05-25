@@ -19,6 +19,7 @@ import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -33,7 +34,7 @@ import de.greenrobot.event.EventBus;
 public class MainPersonalCenterFragment extends Fragment implements OnClickListener, SwipeRefreshLayout.OnRefreshListener {
     private ImageView namePic;
     private TextView name,welcome;
-    private PersonalItemView order, favourite, send, invitecode, kefu, set, money, recharge, kefutx, recharge_List;
+    private PersonalItemView order, favourite, send, invitecode, kefu, set, money, recharge, kefutx, recharge_List,mHelp;
     private VerticalSwipeRefreshLayout mSwipeLayout;
 
     @Override
@@ -53,7 +54,8 @@ public class MainPersonalCenterFragment extends Fragment implements OnClickListe
 
         kefutx = view.findViewById(R.id.kefutx);
         kefutx.setOnClickListener(this);
-
+        mHelp = view.findViewById(R.id.help);
+        mHelp.setOnClickListener(this);
         namePic =  view.findViewById(R.id.name_im);
         namePic.setOnClickListener(this);
         name = view.findViewById(R.id.name_tv);
@@ -146,6 +148,9 @@ public class MainPersonalCenterFragment extends Fragment implements OnClickListe
             case R.id.set:
                 startActivity(new Intent(getActivity(), SettingActivity.class));
                 break;
+            case R.id.help:
+                startActivity(new Intent(getActivity(), HelpActivity.class));
+                break;
             default:
                 break;
         }
@@ -153,6 +158,7 @@ public class MainPersonalCenterFragment extends Fragment implements OnClickListe
 
     private void updateUserInfo() {
         User user = MyDbUtils.getCurrentUser();
+        Log.e("文档=",""+user.getToken());
         if (user != null && PreferenceUtil.getBoolean(getActivity(), "hasLogin")) {
             String url = MyDbUtils.getCurrentUser().getAvatar();
             xUtilsImageUtils.display(namePic, url, R.drawable.defaultpic);

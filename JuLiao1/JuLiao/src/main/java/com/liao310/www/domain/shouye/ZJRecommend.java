@@ -6,10 +6,11 @@ package com.liao310.www.domain.shouye;
 
 public class ZJRecommend {
     private int id;//专家id
-    private String username;//用户名
+    private String nickname;//用户名
     private int role;//角色 2精选，11竞彩
     private String if_recom;//是否推荐+推荐排序 0不推荐，1-n推荐+排序
     private String re_tag;//推荐标签
+    private String re_tag_color;//推荐颜色标签
     private String avatar;//头像地址
 
     public int getId() {
@@ -20,12 +21,20 @@ public class ZJRecommend {
         this.id = id;
     }
 
+    public String getRe_tag_color() {
+        return re_tag_color;
+    }
+
+    public void setRe_tag_color(String re_tag_color) {
+        this.re_tag_color = re_tag_color;
+    }
+
     public String getUsername() {
-        return username;
+        return nickname;
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        this.nickname = username;
     }
 
     public int getRole() {

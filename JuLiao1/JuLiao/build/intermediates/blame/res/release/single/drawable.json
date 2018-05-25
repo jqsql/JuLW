@@ -8,12 +8,12 @@
         "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\drawable\\shape_grey_4.xml"
     },
     {
-        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_check_material.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\drawable\\abc_btn_check_material.xml"
-    },
-    {
         "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\release\\drawable\\cornerfulllinefull_greenline_whitefull.xml",
         "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\drawable\\cornerfulllinefull_greenline_whitefull.xml"
+    },
+    {
+        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
         "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\release\\drawable\\abc_item_background_holo_light.xml",
@@ -270,6 +270,10 @@
     {
         "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\release\\drawable\\abc_cab_background_internal_bg.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\release\\drawable\\shape_trap_6.xml",
+        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\drawable\\shape_trap_6.xml"
     },
     {
         "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\release\\drawable\\custom_progress.xml",

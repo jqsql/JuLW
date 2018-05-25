@@ -94,7 +94,8 @@ public class ServiceZhuanJia   extends ServiceABase {
 				new BaseHttpsCallback<String>() {  
 
 			@Override  
-			public void onSuccess(String result) {  
+			public void onSuccess(String result) {
+				Log.e("文章详情",result);
 				int errMsg;
 				String msg = null;
 				try {
@@ -228,12 +229,13 @@ public class ServiceZhuanJia   extends ServiceABase {
 			token = user.getToken();
 		}
 		//Log.e("专家竞猜id=",""+rid);
-		String url = ConstantsBase.IP+"index.php/expert/index/uid/"+rid+"/p/"+page;
+		String url = ConstantsBase.IP+"index.php/expert/index/uid/"+rid+"/p/"+page+"/verson/21";
 		BaseHttps.getInstance().getHttpRequest(context,GetCommonParamNoActionHead(url,token),
 				new BaseHttpsCallback<String>() {  
 
 			@Override  
-			public void onSuccess(String result) {  
+			public void onSuccess(String result) {
+				//Log.e("专家详情=",""+result);
 				int errMsg;
 				String msg = null;
 				try {

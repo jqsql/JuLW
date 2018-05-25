@@ -60,6 +60,19 @@ public class ZhuanJiaRankingAdapter extends BaseAdapter {
         return position;
     }
 
+    @Override
+    public int getItemViewType(int position) {
+        if(_type==4){
+            return 1;
+        }
+        return 0;
+    }
+
+    @Override
+    public int getViewTypeCount() {
+        return 2;
+    }
+
     @SuppressLint({"ViewHolder", "ResourceAsColor"})
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -67,7 +80,7 @@ public class ZhuanJiaRankingAdapter extends BaseAdapter {
         final ViewHolder holder;
         if (convertView == null) {
             holder = new ViewHolder();
-            if(_type==4){
+            if(getItemViewType(position)==1){
                 convertView = LayoutInflater.from(_this).inflate(R.layout.main_attention_child, parent, false);
                 holder.name = convertView.findViewById(R.id.ZJ_JX_NickName);
                 holder.mZJ_JX_Ying = convertView.findViewById(R.id.ZJ_JX_Ying);
@@ -77,10 +90,11 @@ public class ZhuanJiaRankingAdapter extends BaseAdapter {
                 holder.mZJ_JX_ShuBan = convertView.findViewById(R.id.ZJ_JX_ShuBan);
                 holder.mNumber = convertView.findViewById(R.id.ZJ_JX_MsgHintText);
                 holder.head = convertView.findViewById(R.id.ZJ_JX_Head);
+                convertView.setTag(R.id.attention_first,holder);
             }else {
                 convertView = LayoutInflater.from(_this).inflate(R.layout.zhuanjia_simple_item, parent, false);
                 holder.numberTv = (TextView) convertView.findViewById(R.id.number_tx);
-                holder.numberIv = (ImageView) convertView.findViewById(R.id.number_im);
+                holder.numberIv =  convertView.findViewById(R.id.number_im);
                 holder.statename = (TextView) convertView.findViewById(R.id.statename);
                 holder.state = (TextView) convertView.findViewById(R.id.state);
                 holder.mProgressBar = convertView.findViewById(R.id.zhuanjia_ProgressBar);
@@ -93,10 +107,15 @@ public class ZhuanJiaRankingAdapter extends BaseAdapter {
                 holder.mC2 = convertView.findViewById(R.id.ZJ_PH_Zou);
                 holder.mC3 = convertView.findViewById(R.id.ZJ_PH_YingBan);
                 holder.mC4 = convertView.findViewById(R.id.ZJ_PH_Ying);
+                convertView.setTag(R.id.attention_second,holder);
             }
-            convertView.setTag(holder);
+
         } else {
-            holder = (ViewHolder) convertView.getTag();
+            if(getItemViewType(position)==1){
+                holder = (ViewHolder) convertView.getTag(R.id.attention_first);
+            }else {
+                holder = (ViewHolder) convertView.getTag(R.id.attention_second);
+            }
         }
         if (_type == 4) {
             if (zhuanjia != null) {
@@ -110,15 +129,15 @@ public class ZhuanJiaRankingAdapter extends BaseAdapter {
 
         }else {
             if (position == 0) {
-                holder.numberIv.setImageResource(R.drawable.top1);
+                holder.numberIv.setText("1");
                 holder.numberTv.setVisibility(View.INVISIBLE);
                 holder.numberIv.setVisibility(View.VISIBLE);
             } else if (position == 1) {
-                holder.numberIv.setImageResource(R.drawable.top2);
+                holder.numberIv.setText("2");
                 holder.numberTv.setVisibility(View.INVISIBLE);
                 holder.numberIv.setVisibility(View.VISIBLE);
             } else if (position == 2) {
-                holder.numberIv.setImageResource(R.drawable.top3);
+                holder.numberIv.setText("3");
                 holder.numberTv.setVisibility(View.INVISIBLE);
                 holder.numberIv.setVisibility(View.VISIBLE);
             } else {
@@ -150,7 +169,7 @@ public class ZhuanJiaRankingAdapter extends BaseAdapter {
         public ShapedImageView head;
         public TextView name;
 
-        public ImageView numberIv;
+        public TextView numberIv;
         public TextView numberTv;
         public TextView statename;
         public TextView state;

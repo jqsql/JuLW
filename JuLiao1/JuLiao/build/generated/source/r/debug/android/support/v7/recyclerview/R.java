@@ -8,15 +8,15 @@ package android.support.v7.recyclerview;
 
 public final class R {
     public static final class attr {
-        public static final int fastScrollEnabled = 0x7f01010a;
-        public static final int fastScrollHorizontalThumbDrawable = 0x7f01010d;
-        public static final int fastScrollHorizontalTrackDrawable = 0x7f01010e;
-        public static final int fastScrollVerticalThumbDrawable = 0x7f01010b;
-        public static final int fastScrollVerticalTrackDrawable = 0x7f01010c;
-        public static final int layoutManager = 0x7f010106;
-        public static final int reverseLayout = 0x7f010108;
-        public static final int spanCount = 0x7f010107;
-        public static final int stackFromEnd = 0x7f010109;
+        public static final int fastScrollEnabled = 0x7f010136;
+        public static final int fastScrollHorizontalThumbDrawable = 0x7f010139;
+        public static final int fastScrollHorizontalTrackDrawable = 0x7f01013a;
+        public static final int fastScrollVerticalThumbDrawable = 0x7f010137;
+        public static final int fastScrollVerticalTrackDrawable = 0x7f010138;
+        public static final int layoutManager = 0x7f010132;
+        public static final int reverseLayout = 0x7f010134;
+        public static final int spanCount = 0x7f010133;
+        public static final int stackFromEnd = 0x7f010135;
     }
     public static final class dimen {
         public static final int fastscroll_default_thickness = 0x7f08007a;
@@ -27,10 +27,10 @@ public final class R {
         public static final int item_touch_helper_swipe_escape_velocity = 0x7f080086;
     }
     public static final class id {
-        public static final int item_touch_helper_previous_elevation = 0x7f0d0005;
+        public static final int item_touch_helper_previous_elevation = 0x7f0d0007;
     }
     public static final class styleable {
-        public static final int[] RecyclerView = { 0x010100c4, 0x010100f1, 0x7f010106, 0x7f010107, 0x7f010108, 0x7f010109, 0x7f01010a, 0x7f01010b, 0x7f01010c, 0x7f01010d, 0x7f01010e };
+        public static final int[] RecyclerView = { 0x010100c4, 0x010100f1, 0x7f010132, 0x7f010133, 0x7f010134, 0x7f010135, 0x7f010136, 0x7f010137, 0x7f010138, 0x7f010139, 0x7f01013a };
         public static final int RecyclerView_android_descendantFocusability = 1;
         public static final int RecyclerView_android_orientation = 0;
         public static final int RecyclerView_fastScrollEnabled = 6;

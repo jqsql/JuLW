@@ -224,6 +224,10 @@
         "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\drawable\\ball_lineblue_lightbluefull.xml"
     },
     {
+        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_color_4.xml",
+        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\drawable\\shape_color_4.xml"
+    },
+    {
         "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\cd36716511a4a791822bba9a7c95fdf267d24812\\output\\res\\drawable\\abc_btn_colored_material.xml"
     },
@@ -238,6 +242,10 @@
     {
         "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\drawable\\cornerfullgrey.xml",
         "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\drawable\\cornerfullgrey.xml"
+    },
+    {
+        "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\drawable\\corner_main_greenline_whitefull.xml",
+        "source": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\src\\main\\res\\drawable\\corner_main_greenline_whitefull.xml"
     },
     {
         "merged": "F:\\GitPro\\JuLW\\JuLiao1\\JuLiao\\build\\intermediates\\res\\merged\\debug\\drawable\\cornerfullgrey15dp.xml",

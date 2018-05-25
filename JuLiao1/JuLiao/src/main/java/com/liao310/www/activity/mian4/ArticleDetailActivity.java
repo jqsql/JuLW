@@ -45,6 +45,8 @@ import java.io.InputStream;
 import java.lang.ref.WeakReference;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 @SuppressLint("ResourceAsColor")
 public class ArticleDetailActivity extends BaseActivity {
@@ -56,7 +58,7 @@ public class ArticleDetailActivity extends BaseActivity {
     private TextView title, name, fensi, wenzhang;
     private TextView guanzhu;
 
-    public TextView time, biaoqian1, biaoqian2, titleTx;
+    public TextView time, biaoqian1, biaoqian2, biaoqian3, biaoqian4, titleTx;
     private LinearLayout contentView;
     private View favourite, share;
     private ImageView favourite_im;
@@ -137,6 +139,8 @@ public class ArticleDetailActivity extends BaseActivity {
         time = (TextView) findViewById(R.id.time);
         biaoqian1 = (TextView) findViewById(R.id.biaoqian1);
         biaoqian2 = (TextView) findViewById(R.id.biaoqian2);
+        biaoqian3 = (TextView) findViewById(R.id.biaoqian3);
+        biaoqian4 = (TextView) findViewById(R.id.biaoqian4);
         titleTx = (TextView) findViewById(R.id.title);
         contentView = (LinearLayout) findViewById(R.id.content);
         favourite = findViewById(R.id.favourite);
@@ -218,56 +222,53 @@ public class ArticleDetailActivity extends BaseActivity {
     public void setArticleData(boolean isHaveCard) {
         if (article.getFavorite_status() == 0) {
             hasFavourite = false;
-            favourite_im.setBackgroundResource(R.drawable.shoucang);
+            favourite_im.setImageResource(R.drawable.shoucang);
         } else {
             hasFavourite = true;
-            favourite_im.setBackgroundResource(R.drawable.shoucanged);
+            favourite_im.setImageResource(R.drawable.shoucanged);
         }
         time.setText("发布于：" + article.getPublish_time());
         String biaoqian = article.getType_text();
         if (TextUtils.isEmpty(biaoqian)) {
             biaoqian1.setVisibility(View.GONE);
             biaoqian2.setVisibility(View.GONE);
+            biaoqian3.setVisibility(View.GONE);
+            biaoqian4.setVisibility(View.GONE);
         } else {
-            if (biaoqian.contains("</span> <span class=\"t-tag-i\">")) {
-                String[] biaoqians = biaoqian.split("</span> <span class=\"t-tag-i\">");
-                try {
-                    if (biaoqians.length >= 2) {
-                        String bq1 = biaoqians[0].substring(biaoqians[0].indexOf(">") + 1, biaoqians[0].length()).trim();
-                        if (bq1.trim().length() > 7) {
-                            biaoqian1.setText(bq1.substring(0, 7) + "...");
-                        } else {
-                            biaoqian1.setText(bq1);
-                        }
-                        biaoqian1.setVisibility(View.VISIBLE);
+            String[] tagDatas = biaoqian.split("<span class=\"t-tag-i\">");
+            List<String> TagList = new ArrayList<>();
+            for (int i = 0; i < tagDatas.length; i++) {
+                if (!tagDatas[i].isEmpty())
+                    TagList.add(tagDatas[i].substring(0, tagDatas[i].indexOf("</span>")));
 
-                        String bq2 = biaoqians[1].replace("</span>", "").trim();
-                        if (bq2.trim().length() > 7) {
-                            biaoqian2.setText(bq2.substring(0, 7) + "...");
-                        } else {
-                            biaoqian2.setText(bq2);
-                        }
-                        biaoqian2.setVisibility(View.VISIBLE);
-                    }
-
-
-                } catch (Exception e) {
-                    e.printStackTrace();
+            }
+            if (TagList.size() != 0) {
+                if (TagList.size() >= 4) {
+                    biaoqian1.setText(TagList.get(0));
+                    biaoqian2.setText(TagList.get(1));
+                    biaoqian3.setText(TagList.get(2));
+                    biaoqian4.setText(TagList.get(3));
+                } else if (TagList.size() >= 3) {
+                    biaoqian1.setText(TagList.get(0));
+                    biaoqian2.setText(TagList.get(1));
+                    biaoqian3.setText(TagList.get(2));
+                    biaoqian4.setVisibility(View.GONE);
+                } else if (TagList.size() >= 2) {
+                    biaoqian1.setText(TagList.get(0));
+                    biaoqian2.setText(TagList.get(1));
+                    biaoqian3.setVisibility(View.GONE);
+                    biaoqian4.setVisibility(View.GONE);
+                } else if (TagList.size() >= 1) {
+                    biaoqian1.setText(TagList.get(0));
+                    biaoqian2.setVisibility(View.GONE);
+                    biaoqian3.setVisibility(View.GONE);
+                    biaoqian4.setVisibility(View.GONE);
                 }
             } else {
-                try {
-                    biaoqian = biaoqian.replace("</span>", "");
-                    biaoqian = biaoqian.substring(biaoqian.indexOf(">") + 1, biaoqian.length()).trim();
-                    if (biaoqian.trim().length() > 7) {
-                        biaoqian1.setText(biaoqian.substring(0, 7) + "...");
-                    } else {
-                        biaoqian1.setText(biaoqian);
-                    }
-                    biaoqian1.setVisibility(View.VISIBLE);
-                    biaoqian2.setVisibility(View.GONE);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+                biaoqian1.setVisibility(View.GONE);
+                biaoqian2.setVisibility(View.GONE);
+                biaoqian3.setVisibility(View.GONE);
+                biaoqian4.setVisibility(View.GONE);
             }
 
         }
@@ -324,7 +325,7 @@ public class ArticleDetailActivity extends BaseActivity {
             }
 
             View shouqi = jx.findViewById(R.id.shouqi);
-            if(article.getMatch().get(0).isIf_roback()){
+            if (article.getMatch().get(0).isIf_roback()) {
                 (jx.findViewById(R.id.ArticleDetail_jx_Fan)).setVisibility(View.VISIBLE);
             }
             if (article.isShow()) {
@@ -387,39 +388,55 @@ public class ArticleDetailActivity extends BaseActivity {
             contentView.addView(jx);
         }
         if (article.getArt_type() == 1) {//竞彩可见
-            if (article.getMatch().size() < 2) {
-                return;
-            }
             jc = View.inflate(_this, R.layout.articledetail_jc, null);
             ((TextView) jc.findViewById(R.id.time1)).setText(article.getMatch().get(0).getSc_time());
             ((TextView) jc.findViewById(R.id.matchkey1)).setText(article.getMatch().get(0).getMatchKey());
             ((TextView) jc.findViewById(R.id.gamename1)).setText(article.getMatch().get(0).getLs_cname());
             ((TextView) jc.findViewById(R.id.hostteamname1)).setText(article.getMatch().get(0).getZhuname());
             ((TextView) jc.findViewById(R.id.gustteamname1)).setText(article.getMatch().get(0).getKename());
-            ((TextView) jc.findViewById(R.id.time2)).setText(article.getMatch().get(1).getSc_time());
-            ((TextView) jc.findViewById(R.id.matchkey2)).setText(article.getMatch().get(1).getMatchKey());
-            ((TextView) jc.findViewById(R.id.gamename2)).setText(article.getMatch().get(1).getLs_cname());
-            ((TextView) jc.findViewById(R.id.hostteamname2)).setText(article.getMatch().get(1).getZhuname());
-            ((TextView) jc.findViewById(R.id.gustteamname2)).setText(article.getMatch().get(1).getKename());
             if (article.getMatch().get(0).getGameresult() != -1) {
                 ((TextView) jc.findViewById(R.id.vs1)).setText(article.getMatch().get(0).getZhunamescore()
                         + " - "
                         + article.getMatch().get(0).getKenamescore());
             }
 
-            if (article.getMatch().get(1).getGameresult() != -1) {
-                ((TextView) jc.findViewById(R.id.vs2)).setText(article.getMatch().get(1).getZhunamescore()
-                        + " - "
-                        + article.getMatch().get(1).getKenamescore());
-            }
             View shouqi1 = jc.findViewById(R.id.shouqi1);
             View shouqi2 = jc.findViewById(R.id.shouqi2);
-            if(article.getMatch().get(0).isIf_roback()){
-                (jx.findViewById(R.id.ActicleDetail_Jc_Fan1)).setVisibility(View.VISIBLE);
+            if (article.getMatch().get(0).getGameresult() == -1) {
+                (jc.findViewById(R.id.ActicleDetail_Jc_Fan1)).setVisibility(View.GONE);
+            } else {
+                if (article.getMatch().get(0).getGameresult() == 5 || article.getMatch().get(0).getGameresult() == 7) {
+                    ((ImageView) jc.findViewById(R.id.ActicleDetail_Jc_Fan1)).setImageResource(R.drawable.zhongyi);
+                } else {
+                    ((ImageView) jc.findViewById(R.id.ActicleDetail_Jc_Fan1)).setImageResource(R.drawable.zhongwei);
+                }
+                (jc.findViewById(R.id.ActicleDetail_Jc_Fan1)).setVisibility(View.VISIBLE);
             }
-            if(article.getMatch().get(1).isIf_roback()){
-                (jx.findViewById(R.id.ActicleDetail_Jc_Fan2)).setVisibility(View.VISIBLE);
+            if (article.getMatch().size() < 2) {
+                (jc.findViewById(R.id.The_Second_Layout)).setVisibility(View.GONE);
+            } else {
+                ((TextView) jc.findViewById(R.id.time2)).setText(article.getMatch().get(1).getSc_time());
+                ((TextView) jc.findViewById(R.id.matchkey2)).setText(article.getMatch().get(1).getMatchKey());
+                ((TextView) jc.findViewById(R.id.gamename2)).setText(article.getMatch().get(1).getLs_cname());
+                ((TextView) jc.findViewById(R.id.hostteamname2)).setText(article.getMatch().get(1).getZhuname());
+                ((TextView) jc.findViewById(R.id.gustteamname2)).setText(article.getMatch().get(1).getKename());
+                if (article.getMatch().get(1).getGameresult() != -1) {
+                    ((TextView) jc.findViewById(R.id.vs2)).setText(article.getMatch().get(1).getZhunamescore()
+                            + " - "
+                            + article.getMatch().get(1).getKenamescore());
+                }
+                if (article.getMatch().get(1).getGameresult() == -1) {
+                    (jc.findViewById(R.id.ActicleDetail_Jc_Fan2)).setVisibility(View.GONE);
+                } else {
+                    (jc.findViewById(R.id.ActicleDetail_Jc_Fan2)).setVisibility(View.VISIBLE);
+                    if (article.getMatch().get(1).getGameresult() == 5 || article.getMatch().get(1).getGameresult() == 7) {
+                        ((ImageView) jc.findViewById(R.id.ActicleDetail_Jc_Fan2)).setImageResource(R.drawable.zhongyi);
+                    } else {
+                        ((ImageView) jc.findViewById(R.id.ActicleDetail_Jc_Fan2)).setImageResource(R.drawable.zhongwei);
+                    }
+                }
             }
+
             if (article.isShow()) {
                 ((TextView) jc.findViewById(R.id.wanfa1)).setText(article.getMatch().get(0).getWanfa());
                 ((TextView) jc.findViewById(R.id.wanfa_num1)).setText(article.getMatch().get(0).getWanfa_num());
@@ -429,8 +446,7 @@ public class ArticleDetailActivity extends BaseActivity {
                         jc.findViewById(R.id.shengview1),
                         (TextView) jc.findViewById(R.id.sheng1),
                         (TextView) jc.findViewById(R.id.shenglv1),
-                        (ImageView) jc.findViewById(R.id.resultsheng1),
-                        (ImageView) jc.findViewById(R.id.resultsheng1_));
+                        (ImageView) jc.findViewById(R.id.resultsheng1));
 
                 setSigleView(article.getMatch().get(0).getLv3(),
                         article.getMatch().get(0).isChoose3(),
@@ -438,16 +454,7 @@ public class ArticleDetailActivity extends BaseActivity {
                         jc.findViewById(R.id.fuview1),
                         (TextView) jc.findViewById(R.id.fu1),
                         (TextView) jc.findViewById(R.id.fulv1),
-                        (ImageView) jc.findViewById(R.id.resultfu1),
-                        (ImageView) jc.findViewById(R.id.resultfu1_));
-               /* if (article.getMatch().get(0).getGameresult() == 5) {//命中
-                    ((ImageView) jc.findViewById(R.id.resultsheng1_)).setImageResource(R.drawable.zhongyi);
-                    jc.findViewById(R.id.resultsheng1_).setVisibility(View.VISIBLE);
-                }
-                if (article.getMatch().get(0).getGameresult() == 6) {//未中
-                    ((ImageView) jc.findViewById(R.id.resultzhong1)).setImageResource(R.drawable.zhongwei);
-                    jc.findViewById(R.id.resultzhong1).setVisibility(View.VISIBLE);
-                }*/
+                        (ImageView) jc.findViewById(R.id.resultfu1));
 
                 if ("让球".equals(article.getMatch().get(0).getWanfa())) {
                     ((TextView) jc.findViewById(R.id.sheng1)).setText("主胜");
@@ -460,8 +467,7 @@ public class ArticleDetailActivity extends BaseActivity {
                             jc.findViewById(R.id.pingview1),
                             (TextView) jc.findViewById(R.id.ping1),
                             (TextView) jc.findViewById(R.id.pinglv1),
-                            (ImageView) jc.findViewById(R.id.resultping1),
-                            (ImageView) jc.findViewById(R.id.resultping1_));
+                            (ImageView) jc.findViewById(R.id.resultping1));
 
                 } else {
                     jc.findViewById(R.id.pingview1).setVisibility(View.GONE);
@@ -474,58 +480,51 @@ public class ArticleDetailActivity extends BaseActivity {
                     }
                 }
 
-                ((TextView) jc.findViewById(R.id.wanfa2)).setText(article.getMatch().get(1).getWanfa());
-                ((TextView) jc.findViewById(R.id.wanfa_num2)).setText(article.getMatch().get(1).getWanfa_num());
+                if (article.getMatch().size() >= 2) {
+                    ((TextView) jc.findViewById(R.id.wanfa2)).setText(article.getMatch().get(1).getWanfa());
+                    ((TextView) jc.findViewById(R.id.wanfa_num2)).setText(article.getMatch().get(1).getWanfa_num());
 
-                setSigleView(article.getMatch().get(1).getLv1(),
-                        article.getMatch().get(1).isChoose1(),
-                        article.getMatch().get(1).isResult1(),
-                        jc.findViewById(R.id.shengview2),
-                        (TextView) jc.findViewById(R.id.sheng2),
-                        (TextView) jc.findViewById(R.id.shenglv2),
-                        (ImageView) jc.findViewById(R.id.resultsheng2),
-                        (ImageView) jc.findViewById(R.id.resultsheng2_));
+                    setSigleView(article.getMatch().get(1).getLv1(),
+                            article.getMatch().get(1).isChoose1(),
+                            article.getMatch().get(1).isResult1(),
+                            jc.findViewById(R.id.shengview2),
+                            (TextView) jc.findViewById(R.id.sheng2),
+                            (TextView) jc.findViewById(R.id.shenglv2),
+                            (ImageView) jc.findViewById(R.id.resultsheng2));
 
-                setSigleView(article.getMatch().get(1).getLv3(),
-                        article.getMatch().get(1).isChoose3(),
-                        article.getMatch().get(1).isResult3(),
-                        jc.findViewById(R.id.fuview2),
-                        (TextView) jc.findViewById(R.id.fu2),
-                        (TextView) jc.findViewById(R.id.fulv2),
-                        (ImageView) jc.findViewById(R.id.resultfu2),
-                        (ImageView) jc.findViewById(R.id.resultfu2_));
-               /* if (article.getMatch().get(1).getGameresult() == 5) {
-                    ((ImageView) jc.findViewById(R.id.resultzhong2)).setImageResource(R.drawable.zhongyi);
-                    jc.findViewById(R.id.resultzhong2).setVisibility(View.VISIBLE);
-                }
-                if (article.getMatch().get(1).getGameresult() == 6) {
-                    ((ImageView) jc.findViewById(R.id.resultzhong2)).setImageResource(R.drawable.zhongwei);
-                    jc.findViewById(R.id.resultzhong2).setVisibility(View.VISIBLE);
-                }*/
-                if ("让球".equals(article.getMatch().get(1).getWanfa())) {
-                    ((TextView) jc.findViewById(R.id.sheng2)).setText("主胜");
-                    ((TextView) jc.findViewById(R.id.ping2)).setText("平局");
-                    ((TextView) jc.findViewById(R.id.fu2)).setText("主负");
-                    jc.findViewById(R.id.pingview2).setVisibility(View.VISIBLE);
-                    setSigleView(article.getMatch().get(1).getLv2(),
-                            article.getMatch().get(1).isChoose2(),
-                            article.getMatch().get(1).isResult2(),
-                            jc.findViewById(R.id.pingview2),
-                            (TextView) jc.findViewById(R.id.ping2),
-                            (TextView) jc.findViewById(R.id.pinglv2),
-                            (ImageView) jc.findViewById(R.id.resultping2),
-                            (ImageView) jc.findViewById(R.id.resultping2_));
+                    setSigleView(article.getMatch().get(1).getLv3(),
+                            article.getMatch().get(1).isChoose3(),
+                            article.getMatch().get(1).isResult3(),
+                            jc.findViewById(R.id.fuview2),
+                            (TextView) jc.findViewById(R.id.fu2),
+                            (TextView) jc.findViewById(R.id.fulv2),
+                            (ImageView) jc.findViewById(R.id.resultfu2));
 
-                } else {
-                    jc.findViewById(R.id.pingview2).setVisibility(View.GONE);
-                    if ("让分".equals(article.getMatch().get(1).getWanfa())) {
+                    if ("让球".equals(article.getMatch().get(1).getWanfa())) {
                         ((TextView) jc.findViewById(R.id.sheng2)).setText("主胜");
+                        ((TextView) jc.findViewById(R.id.ping2)).setText("平局");
                         ((TextView) jc.findViewById(R.id.fu2)).setText("主负");
-                    } else if ("大小分".equals(article.getMatch().get(1).getWanfa())) {
-                        ((TextView) jc.findViewById(R.id.sheng2)).setText("大分");
-                        ((TextView) jc.findViewById(R.id.fu2)).setText("小分");
+                        jc.findViewById(R.id.pingview2).setVisibility(View.VISIBLE);
+                        setSigleView(article.getMatch().get(1).getLv2(),
+                                article.getMatch().get(1).isChoose2(),
+                                article.getMatch().get(1).isResult2(),
+                                jc.findViewById(R.id.pingview2),
+                                (TextView) jc.findViewById(R.id.ping2),
+                                (TextView) jc.findViewById(R.id.pinglv2),
+                                (ImageView) jc.findViewById(R.id.resultping2));
+
+                    } else {
+                        jc.findViewById(R.id.pingview2).setVisibility(View.GONE);
+                        if ("让分".equals(article.getMatch().get(1).getWanfa())) {
+                            ((TextView) jc.findViewById(R.id.sheng2)).setText("主胜");
+                            ((TextView) jc.findViewById(R.id.fu2)).setText("主负");
+                        } else if ("大小分".equals(article.getMatch().get(1).getWanfa())) {
+                            ((TextView) jc.findViewById(R.id.sheng2)).setText("大分");
+                            ((TextView) jc.findViewById(R.id.fu2)).setText("小分");
+                        }
                     }
                 }
+
 
                 jc.findViewById(R.id.free1).setVisibility(View.VISIBLE);
                 jc.findViewById(R.id.free2).setVisibility(View.VISIBLE);
@@ -649,31 +648,25 @@ public class ArticleDetailActivity extends BaseActivity {
     }
 
     public void setSigleView(String lv, boolean choose, boolean result, View view, TextView tv,
-                             TextView tvlv, ImageView resultView, ImageView resultView_r) {
+                             TextView tvlv, ImageView resultView) {
         tvlv.setText(lv);
         if (choose) {
             //用户选择了这个
             resultView.setVisibility(View.VISIBLE);
-            resultView_r.setVisibility(View.VISIBLE);
-            //view.setBackgroundResource(R.drawable.cornerfullgreen);
             if (result) {
                 //这个是结果
-                tvlv.setTextColor(Color.BLACK);
+                tvlv.setTextColor(getResources().getColor(R.color.black));
                 tvlv.setBackgroundColor(getResources().getColor(R.color.textgreen));
                 resultView.setImageResource(R.drawable.zhongwhite);
-                resultView_r.setImageResource(R.drawable.zhongyi);
             } else {
                 resultView.setImageResource(R.drawable.zhonggreen);
-                resultView_r.setImageResource(R.drawable.zhongwei);
             }
         } else {
             //用户没有选择了这个
             resultView.setVisibility(View.GONE);
-            resultView_r.setVisibility(View.GONE);
             if (result) {
                 //这个是结果
-                //view.setBackgroundResource(R.drawable.cornerfullgrey);
-                tvlv.setTextColor(Color.BLACK);
+                tvlv.setTextColor(getResources().getColor(R.color.black));
                 tvlv.setBackgroundColor(getResources().getColor(R.color.textgreen));
             }
         }
@@ -734,12 +727,12 @@ public class ArticleDetailActivity extends BaseActivity {
                             if (1 == t.getData().getFavorite_status()) {
                                 ToastUtils.showShort(_this, "已收藏");
                                 hasFavourite = true;
-                                favourite_im.setBackgroundResource(R.drawable.shoucanged);
+                                favourite_im.setImageResource(R.drawable.shoucanged);
                             }
                             if (0 == t.getData().getFavorite_status()) {
                                 hasFavourite = false;
                                 ToastUtils.showShort(_this, "取消收藏");
-                                favourite_im.setBackgroundResource(R.drawable.shoucang);
+                                favourite_im.setImageResource(R.drawable.shoucang);
                             }
                         }
 
@@ -768,7 +761,6 @@ public class ArticleDetailActivity extends BaseActivity {
             }
         }
         final String htmlfin = html;
-        //Log.e("Html文本=","htmlfin="+htmlfin);
         Thread thread = new Thread(new Runnable() {
             Message msg = Message.obtain();
 

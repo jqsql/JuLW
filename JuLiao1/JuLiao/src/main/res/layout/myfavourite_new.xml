@@ -82,8 +82,8 @@
         android:layout_height="match_parent"
         android:layout_below="@id/MyFavourite_TopLayout"
         android:background="@color/ListBackGround"
+        android:divider="@null"
         android:cacheColorHint="@null"
-        android:dividerHeight="0dip"
         android:overScrollMode="never"
         android:scrollbars="none"/>
 

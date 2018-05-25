@@ -54,7 +54,7 @@
                     android:visibility="gone"/>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@id/head"
                     android:layout_marginLeft="5dp"
@@ -78,13 +78,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
-                        android:background="@drawable/cornerfulllinefull_yellowline_whitefull"
+                        android:background="@drawable/cornerfulllinefull_greenline_whitefull"
                         android:paddingBottom="2dp"
                         android:paddingLeft="4dp"
                         android:paddingRight="4dp"
                         android:paddingTop="2dp"
                         android:text="周命中"
-                        android:textColor="@color/Yellow"
+                        android:textColor="@color/textgreen"
                         android:textSize="12dp"/>
 
                     <TextView
@@ -92,15 +92,31 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
-                        android:background="@drawable/cornerfulllinefull_redline_whitefull"
+                        android:background="@drawable/cornerfulllinefull_greenline_whitefull"
                         android:paddingBottom="2dp"
                         android:paddingLeft="4dp"
                         android:paddingRight="4dp"
                         android:paddingTop="2dp"
                         android:text="周命中"
-                        android:textColor="@color/BorderRed"
+                        android:textColor="@color/textgreen"
                         android:textSize="12dp"
-                        android:visibility="gone"/>
+                        />
+                    <TextView
+                        android:id="@+id/biaoqian4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/cornerfulllinefull_greenline_whitefull"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:paddingTop="2dp"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:text="周命中"
+                        android:textColor="@color/textgreen"
+                        android:textSize="12dp"
+                        />
                 </LinearLayout>
 
 
@@ -138,7 +154,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
-                android:padding="10dp"
+                android:layout_below="@id/head_view"
+                android:paddingBottom="10dp"
+                android:paddingRight="10dp"
                 android:gravity="right"
                 android:orientation="vertical">
 

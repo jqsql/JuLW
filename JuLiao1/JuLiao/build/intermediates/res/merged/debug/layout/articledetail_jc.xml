@@ -102,8 +102,8 @@
 
             <ImageView
                 android:id="@+id/ActicleDetail_Jc_Fan1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_alignParentRight="true"
                 android:src="@drawable/fan"
                 android:visibility="gone"/>
@@ -147,7 +147,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
-                android:background="@color/black"/>
+                android:background="@color/BorderBlack"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -174,7 +174,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
                         android:layout_below="@id/sheng1"
-                        android:background="@color/black"/>
+                        android:background="@color/BorderBlack"/>
 
                     <TextView
                         android:id="@+id/shenglv1"
@@ -196,19 +196,19 @@
                         android:src="@drawable/zhonggreen"
 
                         />
-                    <ImageView
+                    <!--<ImageView
                         android:id="@+id/resultsheng1_"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_alignParentRight="true"
                         android:src="@drawable/zhongyi"
-                        android:visibility="gone"/>
+                        android:visibility="gone"/>-->
                 </RelativeLayout>
 
                 <View
                     android:layout_width="0.5dp"
                     android:layout_height="match_parent"
-                    android:background="@color/black"/>
+                    android:background="@color/BorderBlack"/>
 
                 <RelativeLayout
                     android:id="@+id/pingview1"
@@ -230,7 +230,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
                         android:layout_below="@id/ping1"
-                        android:background="@color/black"/>
+                        android:background="@color/BorderBlack"/>
 
                     <TextView
                         android:id="@+id/pinglv1"
@@ -252,19 +252,19 @@
                         android:layout_margin="6dp"
                         android:src="@drawable/zhonggreen"
                         android:visibility="gone"/>
-                    <ImageView
+                    <!--<ImageView
                         android:id="@+id/resultping1_"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_alignParentRight="true"
                         android:src="@drawable/zhongyi"
-                        android:visibility="gone"/>
+                        android:visibility="gone"/>-->
                 </RelativeLayout>
 
                 <View
                     android:layout_width="0.5dp"
                     android:layout_height="match_parent"
-                    android:background="@color/black"/>
+                    android:background="@color/BorderBlack"/>
 
                 <RelativeLayout
                     android:id="@+id/fuview1"
@@ -286,7 +286,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
                         android:layout_below="@id/fu1"
-                        android:background="@color/black"/>
+                        android:background="@color/BorderBlack"/>
 
                     <TextView
                         android:id="@+id/fulv1"
@@ -309,13 +309,13 @@
                         android:src="@drawable/zhonggreen"
                         android:visibility="gone"/>
 
-                    <ImageView
+                    <!--<ImageView
                         android:id="@+id/resultfu1_"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_alignParentRight="true"
                         android:src="@drawable/zhongyi"
-                        android:visibility="gone"/>
+                        android:visibility="gone"/>-->
                 </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
@@ -323,6 +323,7 @@
 
     <!--第二部分-->
     <LinearLayout
+        android:id="@+id/The_Second_Layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -419,8 +420,8 @@
 
             <ImageView
                 android:id="@+id/ActicleDetail_Jc_Fan2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_alignParentRight="true"
                 android:src="@drawable/fan"
                 android:visibility="gone"/>
@@ -463,7 +464,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
-                android:background="@color/black"/>
+                android:background="@color/BorderBlack"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -491,7 +492,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
                         android:layout_below="@id/sheng2"
-                        android:background="@color/black"/>
+                        android:background="@color/BorderBlack"/>
 
                     <TextView
                         android:id="@+id/shenglv2"
@@ -513,19 +514,19 @@
                         android:layout_margin="6dp"
                         android:src="@drawable/zhonggreen"
                         android:visibility="gone"/>
-                    <ImageView
+                   <!-- <ImageView
                         android:id="@+id/resultsheng2_"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_alignParentRight="true"
                         android:src="@drawable/zhongyi"
-                        android:visibility="gone"/>
+                        android:visibility="gone"/>-->
                 </RelativeLayout>
 
                 <View
                     android:layout_width="0.5dp"
                     android:layout_height="match_parent"
-                    android:background="@color/black"/>
+                    android:background="@color/BorderBlack"/>
 
                 <RelativeLayout
                     android:id="@+id/pingview2"
@@ -547,7 +548,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
                         android:layout_below="@id/ping2"
-                        android:background="@color/black"/>
+                        android:background="@color/BorderBlack"/>
 
                     <TextView
                         android:id="@+id/pinglv2"
@@ -569,19 +570,19 @@
                         android:layout_margin="6dp"
                         android:src="@drawable/zhonggreen"
                         android:visibility="gone"/>
-                    <ImageView
+                    <!--<ImageView
                         android:id="@+id/resultping2_"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_alignParentRight="true"
                         android:src="@drawable/zhongyi"
-                        android:visibility="gone"/>
+                        android:visibility="gone"/>-->
                 </RelativeLayout>
 
                 <View
                     android:layout_width="0.5dp"
                     android:layout_height="match_parent"
-                    android:background="@color/black"/>
+                    android:background="@color/BorderBlack"/>
 
                 <RelativeLayout
                     android:id="@+id/fuview2"
@@ -603,7 +604,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
                         android:layout_below="@id/fu2"
-                        android:background="@color/black"/>
+                        android:background="@color/BorderBlack"/>
 
                     <TextView
                         android:id="@+id/fulv2"
@@ -626,13 +627,13 @@
                         android:src="@drawable/zhonggreen"
                         android:visibility="gone"/>
 
-                    <ImageView
+                    <!--<ImageView
                         android:id="@+id/resultfu2_"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_alignParentRight="true"
                         android:src="@drawable/zhongyi"
-                        android:visibility="gone"/>
+                        android:visibility="gone"/>-->
                 </RelativeLayout>
             </LinearLayout>
         </LinearLayout>

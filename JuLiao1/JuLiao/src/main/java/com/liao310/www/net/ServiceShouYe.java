@@ -169,13 +169,11 @@ public class ServiceShouYe  extends ServiceABase {
 			return;
 		}
 		String url =  ConstantsBase.IP+"index.php/article/articles2/p/"+page+"/type/"+type;
-		Log.e("首页文章列表",""+url);
 		BaseHttps.getInstance().getHttpRequest(context,GetCommonParamNoAction(url),
 				new BaseHttpsCallback<String>() {  
 
 			@Override  
 			public void onSuccess(String result) {
-				Log.e("首页文章列表",""+result);
 				int errMsg;
 				String msg = null;
 				try {
@@ -297,14 +295,14 @@ public class ServiceShouYe  extends ServiceABase {
 			callBack.onFailure(new ErrorMsg("-1", "当前网络信号较差，请检查网络设置"));
 			return;
 		}
-		String url =  ConstantsBase.IP+"index.php/article/freeart/p/"+page;
+		String url =  ConstantsBase.IP+"index.php/article/freeart2/p/"+page;
 		BaseHttps.getInstance().getHttpRequest(context,GetCommonParamNoAction(url),
 				new BaseHttpsCallback<String>() {  
 
 			@Override  
-			public void onSuccess(String result) {  
+			public void onSuccess(String result) {
 				int errMsg;
-				String msg = null;
+				String msg;
 				try {
 					JSONObject jsonObject = new JSONObject(result);
 					errMsg = jsonObject.getInt("errno");

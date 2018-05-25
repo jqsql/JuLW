@@ -105,9 +105,9 @@ public class ExpandableAdapter extends BaseExpandableListAdapter {
             if (data != null) {
                 textView.setText(data.getNickname());
                 xUtilsImageUtils.display(head, R.drawable.defaultpic, data.getAvatar());
-                if(data.getWeikaishi()!=0){
+                if(data.getQipao()!=0){
                     number.setVisibility(View.VISIBLE);
-                    number.setText(data.getWeikaishi()+"");
+                    number.setText(data.getQipao()+"");
                 }else {
                     number.setVisibility(View.GONE);
                 }
@@ -133,9 +133,9 @@ public class ExpandableAdapter extends BaseExpandableListAdapter {
             if (data != null) {
                 name.setText(data.getNickname());
                 xUtilsImageUtils.display(head, R.drawable.defaultpic, data.getAvatar());
-                if(data.getWeikaishi()!=0){
+                if(data.getQipao()!=0){
                     number.setVisibility(View.VISIBLE);
-                    number.setText(data.getWeikaishi()+"");
+                    number.setText(data.getQipao()+"");
                 }else {
                     number.setVisibility(View.GONE);
                 }

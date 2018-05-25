@@ -25,7 +25,7 @@ import java.util.List;
 public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<BaseViewHolder> {
     public static final int TYPE_COMMON_VIEW = 100001;//普通布局标志
     public static final int TYPE_FOOT_VIEW = 100002;//最后一条item布局标志
-    private List<T> mList;
+    private List<T> mList = new ArrayList<>();
     private int mLayoutID;
     private Context mContext;
     private boolean IsUpScroll = true;//是否是上滑操作
@@ -185,7 +185,10 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<BaseVi
 
     @Override
     public int getItemCount() {
-        return mList.size() + getFooterViewCount();
+        if (mList != null)
+            return mList.size() + getFooterViewCount();
+        else
+            return getFooterViewCount();
     }
 
     @Override
@@ -218,7 +221,7 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<BaseVi
                     if (newState == 0) {
                         isPeople = false;//回归初始状态
                         if (mScrollViewListener != null)
-                        mScrollViewListener.onSrcollState(isPeople);
+                            mScrollViewListener.onSrcollState(isPeople);
                     } else {
                         isPeople = true;
                     }
@@ -239,7 +242,7 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<BaseVi
                                     .findFirstVisibleItemPosition();
                         }
                         if (mScrollViewListener != null)
-                        mScrollViewListener.onSrcoll(Position, isPeople);
+                            mScrollViewListener.onSrcoll(Position, isPeople);
 
                     }
                 }
@@ -360,7 +363,10 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<BaseVi
      * @return
      */
     public int getFooterViewCount() {
-        return IsOpenLoadMore && !mList.isEmpty() ? 1 : 0;
+        if (mList != null)
+            return IsOpenLoadMore && !mList.isEmpty() ? 1 : 0;
+        else
+            return 0;
     }
 
 

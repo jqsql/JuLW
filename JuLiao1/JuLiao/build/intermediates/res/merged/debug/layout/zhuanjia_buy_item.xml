@@ -27,7 +27,7 @@
             android:background="@drawable/shape_trap_6"
             android:padding="6dp">
 
-            <com.liao310.www.widget.ShapedImageView
+           <!-- <com.liao310.www.widget.ShapedImageView
                 android:id="@+id/head"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
@@ -43,31 +43,30 @@
                 android:layout_marginLeft="5dp"
                 android:text="昵称"
                 android:textColor="@color/white"
-                android:textSize="12dp"/>
-            <LinearLayout
+                android:textSize="12dp"/>-->
+            <TextView
+                android:id="@+id/LianSai_Biaoqian"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_toRightOf="@id/head"
-                android:layout_alignBottom="@id/head">
+                android:background="@drawable/cornerfulllinefull_greenline_whitefull"
+                android:paddingBottom="2dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="2dp"
+                android:text="大小球"
+                android:textColor="@color/textgreen"
+                android:textSize="10dp"/>
+            <LinearLayout
+                android:id="@+id/LianSai_TimeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/LianSai_Biaoqian">
 
-                <TextView
-                    android:id="@+id/LianSai_Biaoqian"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/cornerfulllinefull_greenline_whitefull"
-                    android:paddingBottom="2dp"
-                    android:paddingLeft="4dp"
-                    android:paddingRight="4dp"
-                    android:paddingTop="2dp"
-                    android:text="大小球"
-                    android:textColor="@color/textgreen"
-                    android:textSize="10dp"/>
                 <TextView
                     android:id="@+id/LianSai_Name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
                     android:textSize="10dp"
                     android:textColor="@color/white"
                     android:text="英超"/>
@@ -113,7 +112,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/head"
+                android:layout_below="@id/LianSai_TimeLayout"
                 android:layout_toLeftOf="@id/BottomLayout"
                 android:layout_marginTop="10dp">
                 <TextView

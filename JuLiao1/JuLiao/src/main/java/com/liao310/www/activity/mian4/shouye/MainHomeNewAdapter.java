@@ -2,6 +2,8 @@ package com.liao310.www.activity.mian4.shouye;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +22,7 @@ import com.liao310.www.utils.BaseRecyclerAdapterUtils.BaseTypeRecyclerAdapter;
 import com.liao310.www.utils.BaseRecyclerAdapterUtils.BaseViewHolder;
 import com.liao310.www.widget.ShapedImageView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -28,7 +31,7 @@ import java.util.List;
 
 public class MainHomeNewAdapter extends BaseRecyclerAdapter<Article> {
     private Context _this;
-    private int _type;//0精选，1竞彩,2竞猜,3 混合
+    private int _type;//0精选，1竞彩,2免费,3 混合
     private int _typeFovourite;//0显示下面两个时间，显示盈利率等1显示上面1个时间,2像是两个时间，不显示盈利率等
 
     public MainHomeNewAdapter(Context context, int layoutID, List list) {
@@ -54,6 +57,7 @@ public class MainHomeNewAdapter extends BaseRecyclerAdapter<Article> {
         TextView biaoqian1 = (TextView) holder.getView(R.id.biaoqian1);
         TextView biaoqian2 = (TextView) holder.getView(R.id.biaoqian2);
         TextView biaoqian3 = (TextView) holder.getView(R.id.biaoqian3);
+        TextView biaoqian4 = (TextView) holder.getView(R.id.biaoqian4);
         TextView shenglvtx = (TextView) holder.getView(R.id.shenglvtx);
         TextView shenglv = (TextView) holder.getView(R.id.shenglv);
 
@@ -66,55 +70,158 @@ public class MainHomeNewAdapter extends BaseRecyclerAdapter<Article> {
         LinearLayout matchview = holder.getView(R.id.matchview);
         RelativeLayout bottom = holder.getView(R.id.bottom);
         TextView sendtime = (TextView) holder.getView(R.id.sendtime);
-        String biaoqian = article.getType_text();
-        if (TextUtils.isEmpty(biaoqian)) {
-            biaoqian1.setVisibility(View.GONE);
-            biaoqian2.setVisibility(View.GONE);
-            biaoqian3.setVisibility(View.GONE);
-        } else {
-            if (biaoqian.contains("</span> <span class=\"t-tag-i\">")) {
+        List<Article.ColorData> biaoqianList = article.getType_texts();
 
-                String[] biaoqians = biaoqian.split("</span> <span class=\"t-tag-i\">");
-                try {
-                    if (biaoqians.length >= 2) {
-                        String biaoqian1Text = biaoqians[0].substring(biaoqians[0].indexOf(">") + 1, biaoqians[0].length()).trim();
-                        if (biaoqian1Text.trim().length() > 7) {
-                            biaoqian1.setText(biaoqian1Text.substring(0, 7) + "...");
-                        } else {
-                            biaoqian1.setText(biaoqian1Text);
-                        }
-                        biaoqian1.setVisibility(View.VISIBLE);
+        //初始化标签颜色
+        biaoqian1.setBackgroundResource(R.drawable.corner_main_greenline_whitefull);
+        biaoqian2.setBackgroundResource(R.drawable.corner_main_greenline_whitefull);
+        biaoqian3.setBackgroundResource(R.drawable.corner_main_greenline_whitefull);
+        biaoqian4.setBackgroundResource(R.drawable.corner_main_greenline_whitefull);
+        GradientDrawable gd1 = (GradientDrawable) biaoqian1.getBackground();
+        GradientDrawable gd2 = (GradientDrawable) biaoqian2.getBackground();
+        GradientDrawable gd3 = (GradientDrawable) biaoqian3.getBackground();
+        GradientDrawable gd4 = (GradientDrawable) biaoqian4.getBackground();
+        gd1.setStroke(1,_this.getResources().getColor(R.color.textgreen));
+        gd2.setStroke(1,_this.getResources().getColor(R.color.textgreen));
+        gd3.setStroke(1,_this.getResources().getColor(R.color.textgreen));
+        gd4.setStroke(1,_this.getResources().getColor(R.color.textgreen));
+        biaoqian1.setTextColor(_this.getResources().getColor(R.color.textgreen));
+        biaoqian2.setTextColor(_this.getResources().getColor(R.color.textgreen));
+        biaoqian3.setTextColor(_this.getResources().getColor(R.color.textgreen));
+        biaoqian4.setTextColor(_this.getResources().getColor(R.color.textgreen));
+        if(_type==2) {//关注
+            String biaoqians = article.getType_text();
+            if (TextUtils.isEmpty(biaoqians)) {
+                biaoqian1.setVisibility(View.GONE);
+                biaoqian2.setVisibility(View.GONE);
+                biaoqian3.setVisibility(View.GONE);
+                biaoqian4.setVisibility(View.GONE);
+            } else {
+                String[] tagDatas = biaoqians.split("<span class=\"t-tag-i\">");
+                List<String> TagList = new ArrayList<>();
+                for (int i = 0; i < tagDatas.length; i++) {
+                    if (!tagDatas[i].isEmpty())
+                        TagList.add(tagDatas[i].substring(0, tagDatas[i].indexOf("</span>")));
+                }
+                if (TagList.size() != 0) {
+                    biaoqian1.setVisibility(View.VISIBLE);
+                    biaoqian2.setVisibility(View.VISIBLE);
+                    biaoqian3.setVisibility(View.VISIBLE);
+                    biaoqian4.setVisibility(View.VISIBLE);
+                    if (TagList.size() >= 4) {
+                        biaoqian1.setText(TagList.get(0));
+                        biaoqian2.setText(TagList.get(1));
+                        biaoqian3.setText(TagList.get(2));
+                        biaoqian4.setText(TagList.get(3));
+                    } else if (TagList.size() >= 3) {
+                        biaoqian1.setText(TagList.get(0));
+                        biaoqian2.setText(TagList.get(1));
+                        biaoqian3.setText(TagList.get(2));
+                        biaoqian4.setVisibility(View.GONE);
+                    } else if (TagList.size() >= 2) {
+                        biaoqian1.setText(TagList.get(0));
+                        biaoqian2.setText(TagList.get(1));
+                        biaoqian3.setVisibility(View.GONE);
+                        biaoqian4.setVisibility(View.GONE);
+                    } else if (TagList.size() >= 1) {
+                        biaoqian1.setText(TagList.get(0));
+                        biaoqian2.setVisibility(View.GONE);
+                        biaoqian3.setVisibility(View.GONE);
+                        biaoqian4.setVisibility(View.GONE);
+                    }
+                } else {
+                    biaoqian1.setVisibility(View.GONE);
+                    biaoqian2.setVisibility(View.GONE);
+                    biaoqian3.setVisibility(View.GONE);
+                    biaoqian4.setVisibility(View.GONE);
+                }
 
-                        String biaoqian2Text = biaoqians[1].replace("</span>", "").trim();
-                        if (biaoqian2Text.trim().length() > 7) {
-                            biaoqian2.setText(biaoqian2Text.substring(0, 7) + "...");
-                        } else {
-                            biaoqian2.setText(biaoqian2Text);
-                        }
-                        biaoqian2.setVisibility(View.VISIBLE);
+            }
+        }else if (biaoqianList != null) {
+            try {
+                if (biaoqianList.size() == 1) {
+                    biaoqian1.setVisibility(View.VISIBLE);
+                    biaoqian1.setText(biaoqianList.get(0).getLab().replace("<span class=\"t-tag-i\">", "").replace("</span>", ""));
+                    if (biaoqianList.get(0).getColor() != null && !biaoqianList.get(0).getColor().isEmpty()) {
+                        gd1.setStroke(1, Color.parseColor(biaoqianList.get(0).getColor()));
+                        biaoqian1.setTextColor(Color.parseColor(biaoqianList.get(0).getColor()));
                     }
 
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            } else {
-                try {
-                    biaoqian = biaoqian.replace("</span>", "");
-                    biaoqian = biaoqian.substring(biaoqian.indexOf(">") + 1, biaoqian.length()).trim();
-                    if (biaoqian.trim().length() > 7) {
-                        biaoqian1.setText(biaoqian.substring(0, 7) + "...");
-                    } else {
-                        biaoqian1.setText(biaoqian);
+                    biaoqian2.setVisibility(View.GONE);
+                    biaoqian3.setVisibility(View.GONE);
+                    biaoqian4.setVisibility(View.GONE);
+                } else if (biaoqianList.size() == 2) {
+                    biaoqian1.setText(biaoqianList.get(0).getLab().replace("<span class=\"t-tag-i\">", "").replace("</span>", ""));
+                    biaoqian2.setText(biaoqianList.get(1).getLab().replace("<span class=\"t-tag-i\">", "").replace("</span>", ""));
+                    if (biaoqianList.get(0).getColor() != null && !biaoqianList.get(0).getColor().isEmpty()) {
+                        gd1.setStroke(1, Color.parseColor(biaoqianList.get(0).getColor()));
+                        biaoqian1.setTextColor(Color.parseColor(biaoqianList.get(0).getColor()));
+                    }
+                    if (biaoqianList.get(1).getColor() != null && !biaoqianList.get(1).getColor().isEmpty()) {
+                        gd2.setStroke(1, Color.parseColor(biaoqianList.get(1).getColor()));
+                        biaoqian2.setTextColor(Color.parseColor(biaoqianList.get(1).getColor()));
                     }
                     biaoqian1.setVisibility(View.VISIBLE);
+                    biaoqian2.setVisibility(View.VISIBLE);
+                    biaoqian3.setVisibility(View.GONE);
+                    biaoqian4.setVisibility(View.GONE);
+                } else if (biaoqianList.size() == 3) {
+                    biaoqian1.setText(biaoqianList.get(0).getLab().replace("<span class=\"t-tag-i\">", "").replace("</span>", ""));
+                    biaoqian2.setText(biaoqianList.get(1).getLab().replace("<span class=\"t-tag-i\">", "").replace("</span>", ""));
+                    biaoqian3.setText(biaoqianList.get(2).getLab().replace("<span class=\"t-tag-i\">", "").replace("</span>", ""));
+                    if (biaoqianList.get(0).getColor() != null && !biaoqianList.get(0).getColor().isEmpty()) {
+                        gd1.setStroke(1, Color.parseColor(biaoqianList.get(0).getColor()));
+                        biaoqian1.setTextColor(Color.parseColor(biaoqianList.get(0).getColor()));
+                    }
+                    if (biaoqianList.get(1).getColor() != null && !biaoqianList.get(1).getColor().isEmpty()) {
+                        gd2.setStroke(1, Color.parseColor(biaoqianList.get(1).getColor()));
+                        biaoqian2.setTextColor(Color.parseColor(biaoqianList.get(1).getColor()));
+                    }
+                    if (biaoqianList.get(2).getColor() != null && !biaoqianList.get(2).getColor().isEmpty()) {
+                        gd3.setStroke(1, Color.parseColor(biaoqianList.get(2).getColor()));
+                        biaoqian3.setTextColor(Color.parseColor(biaoqianList.get(2).getColor()));
+                    }
+                    biaoqian1.setVisibility(View.VISIBLE);
+                    biaoqian2.setVisibility(View.VISIBLE);
+                    biaoqian3.setVisibility(View.VISIBLE);
+                    biaoqian4.setVisibility(View.GONE);
+                } else if (biaoqianList.size() >= 4) {
+                    biaoqian1.setText(biaoqianList.get(0).getLab().replace("<span class=\"t-tag-i\">", "").replace("</span>", ""));
+                    biaoqian2.setText(biaoqianList.get(1).getLab().replace("<span class=\"t-tag-i\">", "").replace("</span>", ""));
+                    biaoqian3.setText(biaoqianList.get(2).getLab().replace("<span class=\"t-tag-i\">", "").replace("</span>", ""));
+                    biaoqian4.setText(biaoqianList.get(3).getLab().replace("<span class=\"t-tag-i\">", "").replace("</span>", ""));
+                    if (biaoqianList.get(0).getColor() != null && !biaoqianList.get(0).getColor().isEmpty()) {
+                        gd1.setStroke(1, Color.parseColor(biaoqianList.get(0).getColor()));
+                        biaoqian1.setTextColor(Color.parseColor(biaoqianList.get(0).getColor()));
+                    }
+                    if (biaoqianList.get(1).getColor() != null && !biaoqianList.get(1).getColor().isEmpty()) {
+                        gd2.setStroke(1, Color.parseColor(biaoqianList.get(1).getColor()));
+                        biaoqian2.setTextColor(Color.parseColor(biaoqianList.get(1).getColor()));
+                    }
+                    if (biaoqianList.get(2).getColor() != null && !biaoqianList.get(2).getColor().isEmpty()) {
+                        gd3.setStroke(1, Color.parseColor(biaoqianList.get(2).getColor()));
+                        biaoqian3.setTextColor(Color.parseColor(biaoqianList.get(2).getColor()));
+                    }
+                    if (biaoqianList.get(3).getColor() != null && !biaoqianList.get(3).getColor().isEmpty()) {
+                        gd4.setStroke(1, Color.parseColor(biaoqianList.get(3).getColor()));
+                        biaoqian4.setTextColor(Color.parseColor(biaoqianList.get(3).getColor()));
+                    }
+                    biaoqian1.setVisibility(View.VISIBLE);
+                    biaoqian2.setVisibility(View.VISIBLE);
+                    biaoqian3.setVisibility(View.VISIBLE);
+                    biaoqian4.setVisibility(View.VISIBLE);
+                } else {
+                    biaoqian1.setVisibility(View.GONE);
                     biaoqian2.setVisibility(View.GONE);
-                } catch (Exception e) {
-                    e.printStackTrace();
+                    biaoqian3.setVisibility(View.GONE);
+                    biaoqian4.setVisibility(View.GONE);
                 }
+            }catch (IllegalArgumentException e){
+                //抛出颜色异常
             }
 
         }
+
         if (article.getMatch() != null &&
                 article.getMatch().size() > 0) {
             String matchKey = article.getMatch().get(0).getMatchKey();
@@ -148,9 +255,9 @@ public class MainHomeNewAdapter extends BaseRecyclerAdapter<Article> {
             }
         }
 
-        if(article.isIf_roback()==1){
+        if (article.isIf_roback() == 1) {
             holder.getView(R.id.result_Fan).setVisibility(View.VISIBLE);
-        }else {
+        } else {
             holder.getView(R.id.result_Fan).setVisibility(View.GONE);
         }
         if (_typeFovourite == 0) {
@@ -215,8 +322,7 @@ public class MainHomeNewAdapter extends BaseRecyclerAdapter<Article> {
         }
         xUtilsImageUtils.display((ImageView) holder.getView(R.id.head), article.getAvatar(), R.drawable.defaultpic, true);
         name.setText(article.getNickname());
-        if ("0".equals(article.getPrice()))
-        {
+        if ("0".equals(article.getPrice())) {
             money.setText("免费");
         } else {
             money.setText(article.getPrice() + "金币");
@@ -232,14 +338,14 @@ public class MainHomeNewAdapter extends BaseRecyclerAdapter<Article> {
 
         holder.getView(R.id.head).setOnClickListener(new View.OnClickListener() {
 
-                    @Override
-                    public void onClick(View v) {
-                        // TODO Auto-generated method stub
-                        Intent intent = new Intent(_this, ZhuanJiaDetailActivity.class);
-                        intent.putExtra("uid", article.getUid());
-                        _this.startActivity(intent);
-                    }
-                });
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent intent = new Intent(_this, ZhuanJiaDetailActivity.class);
+                intent.putExtra("uid", article.getUid());
+                _this.startActivity(intent);
+            }
+        });
 
     }
 

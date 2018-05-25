@@ -8,6 +8,7 @@ import com.liao310.www.base.ConstantsBase;
 import com.liao310.www.db.MyDbUtils;
 import com.liao310.www.domain.login.User;
 import com.liao310.www.domain.pay.PayBack;
+import com.liao310.www.domain.pay.RechargeBack;
 import com.liao310.www.domain.version.ErrorMsg;
 import com.liao310.www.net.https.BaseHttps;
 import com.liao310.www.net.https.BaseHttpsCallback;
@@ -168,7 +169,7 @@ public class ServicePay  extends ServiceABase {
 		});  
 	}
 	//金币购买
-	public  void getRechagePay(Context context,final CallBack<PayBack> callBack) {
+	public  void getRechagePay(Context context,final CallBack<RechargeBack> callBack) {
 		if (!NetWorkUtil.isNetworkAvailable(context)) {
 			callBack.onFailure(new ErrorMsg("-1", "当前网络信号较差，请检查网络设置"));
 			return;
@@ -187,14 +188,16 @@ public class ServicePay  extends ServiceABase {
 						Log.e("支付金额=",""+result);
 						int errMsg;
 						String msg = null;
+						String data = null;
 						try {
 							JSONObject jsonObject = new JSONObject(result);
 							errMsg = jsonObject.getInt("errno");
 							msg = jsonObject.getString("msg");
+							data = jsonObject.getString("data");
 							if ( errMsg == 0&&"success".equals(msg)) {
 								Gson gson = new Gson();
-								PayBack mResult = gson.fromJson(
-										result,PayBack.class);
+								RechargeBack mResult = gson.fromJson(
+										data,RechargeBack.class);
 								callBack.onSuccess(mResult);
 							} else {
 								callBack.onFailure(new ErrorMsg("-1", getWrongBack(msg)));

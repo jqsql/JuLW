@@ -85,7 +85,7 @@ public class ServicePersonal  extends ServiceABase {
 		if(user!=null) {
 			token = user.getToken();
 		}
- 		String url =  ConstantsBase.IP+"index.php/user/myfavorite/p/"+page;
+ 		String url =  ConstantsBase.IP+"index.php/user/myfavorite2/p/"+page;
 		BaseHttps.getInstance().getHttpRequest(context,GetCommonParamNoActionHead(url,token),
 				new BaseHttpsCallback<String>() {  
 

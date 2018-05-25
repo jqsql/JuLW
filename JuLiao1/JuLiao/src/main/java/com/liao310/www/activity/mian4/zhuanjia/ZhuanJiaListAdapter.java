@@ -61,7 +61,7 @@ public class ZhuanJiaListAdapter   extends BaseAdapter{
 			holder = new ViewHolder();  
 			convertView = LayoutInflater.from(_this).inflate(R.layout.zhuanjia_simple_item, parent, false);
 			holder.numberTv = (TextView) convertView.findViewById(R.id.number_tx);
-			holder.numberIv = (ImageView) convertView.findViewById(R.id.number_im);
+			holder.numberIv = convertView.findViewById(R.id.number_im);
 			holder.statename = (TextView) convertView.findViewById(R.id.statename);
 			holder.state = (TextView) convertView.findViewById(R.id.state);
 			holder.mProgressBar = convertView.findViewById(R.id.zhuanjia_ProgressBar);
@@ -73,15 +73,15 @@ public class ZhuanJiaListAdapter   extends BaseAdapter{
 			holder = (ViewHolder)convertView.getTag(); 
 		}	
 		if(position == 0){
-			holder.numberIv.setImageResource(R.drawable.top1);
+			holder.numberIv.setText("1");
 			holder.numberTv.setVisibility(View.INVISIBLE);
 			holder.numberIv.setVisibility(View.VISIBLE);
 		}else if(position == 1){
-			holder.numberIv.setImageResource(R.drawable.top2);
+			holder.numberIv.setText("2");
 			holder.numberTv.setVisibility(View.INVISIBLE);
 			holder.numberIv.setVisibility(View.VISIBLE);
 		}else if(position == 2){
-			holder.numberIv.setImageResource(R.drawable.top3);
+			holder.numberIv.setText("3");
 			holder.numberTv.setVisibility(View.INVISIBLE);
 			holder.numberIv.setVisibility(View.VISIBLE);
 		}else{
@@ -158,7 +158,7 @@ public class ZhuanJiaListAdapter   extends BaseAdapter{
 		public ShapedImageView head;
 		public TextView name;
 
-		public ImageView numberIv;
+		public TextView numberIv;
 		public TextView numberTv;
 		public TextView statename;
 		public TextView state;

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <RelativeLayout
+        style="@style/payMoney_tvback_style02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp">
+
+
+        <TextView
+            android:id="@+id/ReCharge_Money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="¥188.00"
+            android:textColor="@color/textgreen50"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/tv_value6_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="80dp"
+            android:text="获取 "
+            android:textColor="@color/white"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/ReCharge_CanGetMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_value6_0"
+            android:text="188"
+            android:textColor="@color/textgreen"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/ReCharge_CanGetMoney"
+            android:text=" 金币"
+            android:textColor="@color/white"
+            android:textSize="12dp"/>
+
+        <ImageView
+            android:id="@+id/ReCharge_CanGetMoneyState"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/useaccountno"/>
+    </RelativeLayout>
+</LinearLayout>

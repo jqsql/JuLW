@@ -1,6 +1,7 @@
 package com.liao310.www.activity.mian4.zhuanjia.detail;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.liao310.www.R;
 import com.liao310.www.activity.mian4.match.MatchDetailActivity;
@@ -89,6 +90,8 @@ public class ZhuanJiaDetailListAdapter extends BaseAdapter {
                     //holder.state = (TextView) convertView.findViewById(R.id.state);
                     holder.biaoqian1 = (TextView) convertView.findViewById(R.id.biaoqian1);
                     holder.biaoqian2 = (TextView) convertView.findViewById(R.id.biaoqian2);
+                    holder.biaoqian3 = (TextView) convertView.findViewById(R.id.biaoqian3);
+                    holder.biaoqian4 = (TextView) convertView.findViewById(R.id.biaoqian4);
                     holder.content = (TextView) convertView.findViewById(R.id.content);
                     holder.match = convertView.findViewById(R.id.match);
                     holder.matchkey = (TextView) convertView.findViewById(R.id.matchkey);
@@ -100,6 +103,8 @@ public class ZhuanJiaDetailListAdapter extends BaseAdapter {
                     convertView = LayoutInflater.from(_this).inflate(R.layout.zhuanjia_jc3_new_item, parent, false);
                     holder.biaoqian1 = (TextView) convertView.findViewById(R.id.biaoqian1);
                     holder.biaoqian2 = (TextView) convertView.findViewById(R.id.biaoqian2);
+                    holder.biaoqian3 = (TextView) convertView.findViewById(R.id.biaoqian3);
+                    holder.biaoqian4 = (TextView) convertView.findViewById(R.id.biaoqian4);
                     holder.content = (TextView) convertView.findViewById(R.id.content);
                     holder.match1 = convertView.findViewById(R.id.match1);
                     holder.matchkey1 = (TextView) convertView.findViewById(R.id.matchkey1);
@@ -125,8 +130,8 @@ public class ZhuanJiaDetailListAdapter extends BaseAdapter {
                     holder.gamename = (TextView) convertView.findViewById(R.id.gamename);
                     holder.hostteamname = (TextView) convertView.findViewById(R.id.hostteamname);
                     holder.gustteamname = (TextView) convertView.findViewById(R.id.gustteamname);*/
-                    holder.mHead = (ShapedImageView) convertView.findViewById(R.id.head);
-                    holder.mName = (TextView) convertView.findViewById(R.id.name);
+                    //holder.mHead = (ShapedImageView) convertView.findViewById(R.id.head);
+                    //holder.mName = (TextView) convertView.findViewById(R.id.name);
                     holder.mBiaoqian=convertView.findViewById(R.id.LianSai_Biaoqian);
                     holder.mLianSai_Name=convertView.findViewById(R.id.LianSai_Name);
                     holder.mLianSai_Time=convertView.findViewById(R.id.LianSai_Time);
@@ -322,77 +327,9 @@ public class ZhuanJiaDetailListAdapter extends BaseAdapter {
                 break;
 
             case 2:
-               /* if (favourite.getMatch() != null &&
-                        favourite.getMatch().size() > 0) {
-                    holder.gamename.setText(favourite.getMatch().get(0).getLs_cname());
-                    holder.hostteamname.setText(setSpliteMessage(favourite.getMatch().get(0).getZhuname()));
-                    holder.gustteamname.setText(setSpliteMessage(favourite.getMatch().get(0).getKename()));
-                }
-
-
-                String gameresult = "";
-                int color = _this.getResources().getColor(R.color.textred);
-                switch (favourite.getArticlresult()) {
-                    case -1:
-                        gameresult = "";
-                        break;
-                    case 0:
-                        gameresult = "输";
-                        color = _this.getResources().getColor(R.color.textlightgrey);
-                        break;
-                    case 1:
-                        gameresult = "输半 ";
-                        color = _this.getResources().getColor(R.color.textlightgrey);
-                        break;
-                    case 2:
-                        gameresult = "走 ";
-                        color = _this.getResources().getColor(R.color.textlightlightgrey);
-                        break;
-                    case 3:
-                        gameresult = "赢半";
-                        color = _this.getResources().getColor(R.color.textred);
-                        break;
-                    case 4:
-                        gameresult = "赢";
-                        color = _this.getResources().getColor(R.color.textred);
-                        break;
-                    case 5:
-                        gameresult = "命中";
-                        color = _this.getResources().getColor(R.color.textred);
-                        break;
-                    case 6:
-                        gameresult = "未中";
-                        color = _this.getResources().getColor(R.color.textlightlightgrey);
-                        break;
-                    case 7:
-                        gameresult = "二中一";
-                        color = _this.getResources().getColor(R.color.textred);
-                        break;
-                    default:
-                        break;
-                }
-                holder.state.setTextColor(color);
-                holder.state.setText(gameresult);
-
-                if (favourite.getMatch() != null && favourite.getMatch().size() > 0) {
-                    holder.endtime.setText(favourite.getMatch().get(0).getSc_time() + "");
-                    holder.wanfa.setText(favourite.getMatch().get(0).getWanfa() + "");
-                    holder.pankou.setText(favourite.getMatch().get(0).getPankou() + "");
-                    if (favourite.getArticlresult() != -1) {
-                        String zhuS = favourite.getMatch().get(0).getZhunamescore();
-                        String KeS = favourite.getMatch().get(0).getKenamescore();
-                        if (TextUtils.isEmpty(zhuS) || TextUtils.isEmpty(KeS)) {
-                            holder.vs.setText("VS");
-                        } else {
-                            holder.vs.setText(zhuS + " - " + KeS);
-                        }
-                    }else {
-                      holder.vs.setText("VS");
-                    }
-                }*/
                 if(favourite!=null) {
-                    xUtilsImageUtils.display(holder.mHead, favourite.getAvatar(), R.drawable.defaultpic, true);
-                    holder.mName.setText(favourite.getNickname());
+                    /*xUtilsImageUtils.display(holder.mHead, favourite.getAvatar(), R.drawable.defaultpic, true);
+                    holder.mName.setText(favourite.getNickname());*/
                     if(favourite.getMatch()!=null && favourite.getMatch().size()>0) {
                         holder.mBiaoqian.setText(favourite.getMatch().get(0).getWanfa());
 
@@ -471,8 +408,48 @@ public class ZhuanJiaDetailListAdapter extends BaseAdapter {
         if (TextUtils.isEmpty(biaoqian)) {
             holder.biaoqian1.setVisibility(View.GONE);
             holder.biaoqian2.setVisibility(View.GONE);
+            holder.biaoqian3.setVisibility(View.GONE);
+            holder.biaoqian4.setVisibility(View.GONE);
         } else {
-            if (biaoqian.contains("</span> <span class=\"t-tag-i\">")) {
+            String[] tagDatas = biaoqian.split("<span class=\"t-tag-i\">");
+            List<String> TagList = new ArrayList<>();
+            for (int i = 0; i < tagDatas.length; i++) {
+                if (!tagDatas[i].isEmpty())
+                    TagList.add(tagDatas[i].substring(0, tagDatas[i].indexOf("</span>")));
+            }
+            if (TagList.size() != 0) {
+                holder.biaoqian1.setVisibility(View.VISIBLE);
+                holder.biaoqian2.setVisibility(View.VISIBLE);
+                holder.biaoqian3.setVisibility(View.VISIBLE);
+                holder.biaoqian4.setVisibility(View.VISIBLE);
+                if (TagList.size() >= 4) {
+                    holder.biaoqian1.setText(TagList.get(0));
+                    holder.biaoqian2.setText(TagList.get(1));
+                    holder.biaoqian3.setText(TagList.get(2));
+                    holder.biaoqian4.setText(TagList.get(3));
+                } else if (TagList.size() >= 3) {
+                    holder.biaoqian1.setText(TagList.get(0));
+                    holder.biaoqian2.setText(TagList.get(1));
+                    holder.biaoqian3.setText(TagList.get(2));
+                    holder.biaoqian4.setVisibility(View.GONE);
+                } else if (TagList.size() >= 2) {
+                    holder.biaoqian1.setText(TagList.get(0));
+                    holder.biaoqian2.setText(TagList.get(1));
+                    holder.biaoqian3.setVisibility(View.GONE);
+                    holder.biaoqian4.setVisibility(View.GONE);
+                } else if (TagList.size() >= 1) {
+                    holder.biaoqian1.setText(TagList.get(0));
+                    holder.biaoqian2.setVisibility(View.GONE);
+                    holder.biaoqian3.setVisibility(View.GONE);
+                    holder.biaoqian4.setVisibility(View.GONE);
+                }
+            } else {
+                holder.biaoqian1.setVisibility(View.GONE);
+                holder.biaoqian2.setVisibility(View.GONE);
+                holder.biaoqian3.setVisibility(View.GONE);
+                holder.biaoqian4.setVisibility(View.GONE);
+            }
+            /*if (biaoqian.contains("</span> <span class=\"t-tag-i\">")) {
 
                 String[] biaoqians = biaoqian.split("</span> <span class=\"t-tag-i\">");
                 try {
@@ -512,7 +489,7 @@ public class ZhuanJiaDetailListAdapter extends BaseAdapter {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-            }
+            }*/
         }
         holder.date.setText(favourite.getRecom_date());
         holder.time.setText(favourite.getRecom_time());
@@ -526,6 +503,8 @@ public class ZhuanJiaDetailListAdapter extends BaseAdapter {
 
         public TextView biaoqian1;
         public TextView biaoqian2;
+        public TextView biaoqian3;
+        public TextView biaoqian4;
         public TextView money;
         public TextView content;
 
@@ -552,8 +531,6 @@ public class ZhuanJiaDetailListAdapter extends BaseAdapter {
         private ImageView mFan;//‘返’  标志
 
         //竞猜
-        private ShapedImageView mHead;
-        private TextView mName;
         private TextView mBiaoqian;
         private TextView mLianSai_Name;
         private TextView mLianSai_Time;

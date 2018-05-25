@@ -98,7 +98,7 @@
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
     <color name="textdarkgreen">#2F5527</color>
-    <color name="textgreen">#02DB84</color>
+    <color name="textgreen">#44e49e</color>
     <color name="textgrey">#333333</color>
     <color name="textlightgreen">#5B9546</color>
     <color name="textlightgrey">#666666</color>
@@ -658,11 +658,11 @@
         <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
     </style>
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
-        <!-- API 11 theme customizations can go here. -->
+        
         <item name="android:windowBackground">@drawable/bg_gradual_change</item>
     </style>
     <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        
     </style>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>

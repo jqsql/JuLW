@@ -27,13 +27,40 @@ public class ZhuanJia {
 	private String day7_dc_sl;//单场胜率
 	private String day7_dx_sl;//大小球胜率
 	private String day7_single_yl;//单关盈利率
+	private int jc_lian_win;//连盈数
+	private int jc_max_win;//最高连盈数
+	private int qipao;//未结算文章数
 
 
 	//关注专家列表时使用
 	private String days7;//逗号分割 — 精选：赢，赢半，走，输半，输 ； 竞彩： 总场数，命中场数，盈利率
 
+	public int getQipao() {
+		return qipao;
+	}
+
+	public void setQipao(int qipao) {
+		this.qipao = qipao;
+	}
+
 	public String getDays7() {
 		return days7;
+	}
+
+	public int getJc_lian_win() {
+		return jc_lian_win;
+	}
+
+	public void setJc_lian_win(int jc_lian_win) {
+		this.jc_lian_win = jc_lian_win;
+	}
+
+	public int getJc_max_win() {
+		return jc_max_win;
+	}
+
+	public void setJc_max_win(int jc_max_win) {
+		this.jc_max_win = jc_max_win;
 	}
 
 	public void setDays7(String days7) {

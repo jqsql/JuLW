@@ -2,6 +2,8 @@ package com.liao310.www.activity.mian4.adapter;
 
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +22,7 @@ import java.util.List;
 public class ZJTuiJianViewAdapter extends BaseAdapter {
     private List<ZJRecommend> mDatas;
     private LayoutInflater inflater;
+    private Context mContext;
     /**
      * 页数下标,从0开始(当前是第几页)
      */
@@ -30,6 +33,7 @@ public class ZJTuiJianViewAdapter extends BaseAdapter {
     private int pageSize;
 
     public ZJTuiJianViewAdapter(Context context, List<ZJRecommend> mDatas, int curIndex, int pageSize) {
+        mContext=context;
         inflater = LayoutInflater.from(context);
         this.mDatas = mDatas;
         this.curIndex = curIndex;
@@ -77,11 +81,17 @@ public class ZJTuiJianViewAdapter extends BaseAdapter {
         }else {
             viewHolder.msg.setVisibility(View.VISIBLE);
         }
-        if(user.getRole()==2){
-            viewHolder.msg.setBackgroundResource(R.drawable.shape_app_4);
-        }else {
-            viewHolder.msg.setBackgroundResource(R.drawable.shape_red_4);
+        try {
+            GradientDrawable gd = (GradientDrawable) viewHolder.msg.getBackground();
+            if (user.getRe_tag_color() != null && !user.getRe_tag_color().isEmpty()) {
+                gd.setColor(Color.parseColor(user.getRe_tag_color()));
+            } else {
+                gd.setColor(mContext.getResources().getColor(R.color.textgreen));
+            }
+        }catch (IllegalArgumentException e){
+            //抛出颜色异常
         }
+
         xUtilsImageUtils.display(viewHolder.head, user.getAvatar(), R.drawable.defaultpic, true);
         return convertView;
     }

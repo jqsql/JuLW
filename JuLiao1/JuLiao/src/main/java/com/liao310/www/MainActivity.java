@@ -12,6 +12,8 @@ import com.liao310.www.utils.StatusBarColor;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.KeyEvent;
@@ -21,6 +23,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.lang.ref.WeakReference;
+
 import cn.jpush.android.api.JPushInterface;
 
 public class MainActivity extends BaseActivity implements OnClickListener,MatchMainNewFragment.GetMainActivity {
@@ -33,8 +38,6 @@ public class MainActivity extends BaseActivity implements OnClickListener,MatchM
 	private MatchMainNewFragment mTab03;
 	private MainPersonalCenterFragment mTab04;
 
-	TextView share,message;
-	EditText messageEd;
 	private long firstTime = 0;
 	FragmentManager fm;
 	Bundle savedInstanceState;

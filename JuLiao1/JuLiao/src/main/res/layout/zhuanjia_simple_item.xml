@@ -9,223 +9,257 @@
     android:orientation="vertical">
 
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_trap_6"
+        android:padding="6dp">
+
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/shape_trap_6"
-            android:padding="6dp">
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
 
-            <RelativeLayout
-                android:id="@+id/number"
+            <TextView
+                android:id="@+id/number_tx"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true">
+                android:layout_centerInParent="true"
+                android:text="1"
+                android:textColor="@color/textlightlightgrey"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
 
-                <TextView
-                    android:id="@+id/number_tx"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="1"
-                    android:textColor="@color/textlightlightgrey"
-                    android:textSize="15dp"
-                    android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/number_im"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/jiangzhang"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+        </RelativeLayout>
 
-                <ImageView
-                    android:id="@+id/number_im"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/top1"/>
-            </RelativeLayout>
+        <com.liao310.www.widget.ShapedImageView
+            android:id="@+id/head"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/number"
+            android:background="@drawable/defaultpic"
+            android:scaleType="centerCrop"
+            wxq:shape_mode="circle"/>
 
-            <com.liao310.www.widget.ShapedImageView
-                android:id="@+id/head"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_centerVertical="true"
-                android:layout_margin="5dp"
-                android:layout_toRightOf="@id/number"
-                android:background="@drawable/defaultpic"
-                android:scaleType="centerCrop"
-                wxq:shape_mode="circle"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/head"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="昵称"
+                android:textColor="@color/white"
+                android:textSize="12dp"/>
 
             <LinearLayout
+                android:id="@+id/ZJ_PH_JCHintLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="5dp"
-                android:layout_toRightOf="@id/head"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="昵称"
-                    android:textColor="@color/white"
-                    android:textSize="12dp"/>
-                <LinearLayout
-                    android:id="@+id/ZJ_PH_JCHintLayout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:visibility="gone">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="近7日:"
-                        android:textColor="@color/white"
-                        android:textSize="10dp"/>
-
-                    <TextView
-                        android:id="@+id/ZJ_JC_Day7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:text="0中0"
-                        android:textColor="@color/BorderRed"
-                        android:textSize="10dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:text="近7日总命中率:"
-                        android:textColor="@color/white"
-                        android:textSize="10dp"/>
-
-                    <TextView
-                        android:id="@+id/ZJ_JC_Day7Y"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:text="0%"
-                        android:textColor="@color/textgreen"
-                        android:textSize="10dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/ZJ_PH_YingHintLayout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:visibility="gone">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="近7日:"
-                        android:textColor="@color/white"
-                        android:textSize="10dp"/>
-
-                    <TextView
-                        android:id="@+id/ZJ_PH_Ying"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:text="0赢"
-                        android:textColor="@color/BorderRed"
-                        android:textSize="10dp"/>
-
-                    <TextView
-                        android:id="@+id/ZJ_PH_YingBan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:text="0赢半"
-                        android:textColor="@color/BorderRed"
-                        android:textSize="10dp"/>
-
-                    <TextView
-                        android:id="@+id/ZJ_PH_Zou"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:text="0走"
-                        android:textColor="@color/Yellow"
-                        android:textSize="10dp"/>
-
-                    <TextView
-                        android:id="@+id/ZJ_PH_Shu"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:text="0输"
-                        android:textColor="@color/textgreen"
-                        android:textSize="10dp"/>
-
-                    <TextView
-                        android:id="@+id/ZJ_PH_ShuBan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:text="0输半"
-                        android:textColor="@color/textgreen"
-                        android:textSize="10dp"/>
-                </LinearLayout>
-            </LinearLayout>
-
-            <ImageView
-                android:id="@+id/zhuanjia_GoTO"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/fanhui"/>
-
-            <com.liao310.www.widget.RoundProgressBar
-                android:id="@+id/zhuanjia_ProgressBar"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="5dp"
-                android:layout_toLeftOf="@id/zhuanjia_GoTO"
-                round:innerRoundColor="@color/touming"
-                round:roundColor="@color/textgrey"
-                round:roundProgressColor="@color/textgreen"
-                round:roundWidth="3dp"
-                round:textColor="@color/white"
-                round:textSize="11dp"
-
-                />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="5dp"
-                android:layout_toLeftOf="@id/zhuanjia_GoTO"
-                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
                 android:visibility="gone">
 
                 <TextView
-                    android:id="@+id/statename"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="有推荐"
-                    android:textColor="@color/textred"
+                    android:text="近7日:"
+                    android:textColor="@color/white"
                     android:textSize="10dp"/>
 
                 <TextView
-                    android:id="@+id/state"
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="100"
-                    android:textColor="@color/textred"
-                    android:textSize="20dp"
-                    android:textStyle="bold"/>
-
-                <TextView
-                    android:id="@+id/statetail"
+                    android:id="@+id/ZJ_JC_Day7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="%"
-                    android:textColor="@color/textred"
+                    android:layout_marginLeft="5dp"
+                    android:text="0中0"
+                    android:textColor="@color/BorderRed"
+                    android:textSize="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="近7日总命中率:"
+                    android:textColor="@color/white"
+                    android:textSize="10dp"/>
+
+                <TextView
+                    android:id="@+id/ZJ_JC_Day7Y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="0%"
+                    android:textColor="@color/textgreen"
                     android:textSize="10dp"/>
             </LinearLayout>
-        </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ZJ_PH_YingHintLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="近7日:"
+                    android:textColor="@color/white"
+                    android:textSize="10dp"/>
+
+                <TextView
+                    android:id="@+id/ZJ_PH_Ying"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="0赢"
+                    android:textColor="@color/BorderRed"
+                    android:textSize="10dp"/>
+
+                <TextView
+                    android:id="@+id/ZJ_PH_YingBan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="0赢半"
+                    android:textColor="@color/BorderRed"
+                    android:textSize="10dp"/>
+
+                <TextView
+                    android:id="@+id/ZJ_PH_Zou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="0走"
+                    android:textColor="@color/Yellow"
+                    android:textSize="10dp"/>
+
+                <TextView
+                    android:id="@+id/ZJ_PH_Shu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="0输"
+                    android:textColor="@color/textgreen"
+                    android:textSize="10dp"/>
+
+                <TextView
+                    android:id="@+id/ZJ_PH_ShuBan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="0输半"
+                    android:textColor="@color/textgreen"
+                    android:textSize="10dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/zhuanjia_GoTO"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/fanhui"/>
+
+        <com.liao310.www.widget.RoundProgressBar
+            android:id="@+id/zhuanjia_ProgressBar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/zhuanjia_GoTO"
+            round:innerRoundColor="@color/touming"
+            round:roundColor="@color/textgrey"
+            round:roundProgressColor="@color/textgreen"
+            round:roundWidth="3dp"
+            round:textColor="@color/white"
+            round:textSize="11dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/zhuanjia_ProgressBarLV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/zhuanjia_GoTO"
+           android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/zj_top"/>
+            <TextView
+                android:id="@+id/zhuanjia_ProgressBarLVText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="11dp"
+                android:text="0%"/>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/zj_bottom"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/zhuanjia_GoTO"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/statename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="有推荐"
+                android:textColor="@color/textred"
+                android:textSize="10dp"/>
+
+            <TextView
+                android:id="@+id/state"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="100"
+                android:textColor="@color/textred"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/statetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:textColor="@color/textred"
+                android:textSize="10dp"/>
+        </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>

@@ -17,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -131,6 +132,7 @@ public class ArticleListAdapter extends BaseAdapter {
                     holder.biaoqian1 = (TextView) convertView.findViewById(R.id.biaoqian1);
                     holder.biaoqian2 = (TextView) convertView.findViewById(R.id.biaoqian2);
                     holder.biaoqian3 = (TextView) convertView.findViewById(R.id.biaoqian3);
+                    holder.biaoqian4 = (TextView) convertView.findViewById(R.id.biaoqian4);
                     holder.shenglvtx = (TextView) convertView.findViewById(R.id.shenglvtx);
                     holder.shenglv = (TextView) convertView.findViewById(R.id.shenglv);
 
@@ -138,11 +140,12 @@ public class ArticleListAdapter extends BaseAdapter {
                     holder.match1 = convertView.findViewById(R.id.match1);
                     holder.macthkey1 = (TextView) convertView.findViewById(R.id.macthkey1);
 
-                    holder.lasttime = (TextView) convertView.findViewById(R.id.lasttime);
+                    //holder.lasttime = (TextView) convertView.findViewById(R.id.lasttime);
                     holder.content = (TextView) convertView.findViewById(R.id.content);
                     holder.matchview = convertView.findViewById(R.id.matchview);
                     holder.bottom = convertView.findViewById(R.id.bottom);
-                    holder.sendtime = (TextView) convertView.findViewById(R.id.sendtime);
+                    holder.mFan = convertView.findViewById(R.id.result_Fan);
+                    //holder.sendtime = (TextView) convertView.findViewById(R.id.sendtime);
                     convertView.setTag(R.id.tag_second, holder);
                     break;
             }
@@ -223,13 +226,17 @@ public class ArticleListAdapter extends BaseAdapter {
 
                 break;
             case 1:
-
                 String biaoqian = article.getType_text();
-                if (TextUtils.isEmpty(biaoqian)) {
-                    holder.biaoqian1.setVisibility(View.GONE);
-                    holder.biaoqian2.setVisibility(View.GONE);
-                    holder.biaoqian3.setVisibility(View.GONE);
-                } else {
+                holder.biaoqian1.setVisibility(View.GONE);
+                holder.biaoqian2.setVisibility(View.GONE);
+                holder.biaoqian3.setVisibility(View.GONE);
+                holder.biaoqian4.setVisibility(View.GONE);
+                if(article.isIf_roback()==1){
+                    holder.mFan.setVisibility(View.VISIBLE);
+                }else {
+                    holder.mFan.setVisibility(View.GONE);
+                }
+                if (!TextUtils.isEmpty(biaoqian)) {
                     if (biaoqian.contains("</span> <span class=\"t-tag-i\">")) {
 
                         String[] biaoqians = biaoqian.split("</span> <span class=\"t-tag-i\">");
@@ -307,11 +314,11 @@ public class ArticleListAdapter extends BaseAdapter {
                 }
 
                 if (_typeFovourite == 0) {
-                    holder.sendtime.setText(article.getPublish_time() + "");
+                    //holder.sendtime.setText(article.getPublish_time() + "");
                     holder.bottom.setVisibility(View.VISIBLE);
                     holder.matchview.setVisibility(View.VISIBLE);
                     holder.content.setVisibility(View.GONE);
-                    holder.lasttime.setVisibility(View.GONE);
+                    //holder.lasttime.setVisibility(View.GONE);
                     if (_type == 1) {
                         holder.endtime.setVisibility(View.GONE);
                         setLv(holder.shenglvtx, holder.shenglv, "盈利率", article.getYinglilv());
@@ -348,22 +355,22 @@ public class ArticleListAdapter extends BaseAdapter {
                             holder.endtime.setVisibility(View.GONE);
                         }
                     }
-                    holder.sendtime.setText(article.getPublish_time() + "");
+                    //holder.sendtime.setText(article.getPublish_time() + "");
                     holder.bottom.setVisibility(View.VISIBLE);
                     holder.matchview.setVisibility(View.VISIBLE);
                     holder.shenglvtx.setVisibility(View.GONE);
                     holder.shenglv.setVisibility(View.GONE);
                     holder.content.setVisibility(View.GONE);
-                    holder.lasttime.setVisibility(View.GONE);
+                    //holder.lasttime.setVisibility(View.GONE);
                 }
                 if (_typeFovourite == 1) {
                     holder.shenglvtx.setVisibility(View.GONE);
                     holder.shenglv.setVisibility(View.GONE);
-                    holder.lasttime.setText(article.getPublish_time());
+                    //holder.lasttime.setText(article.getPublish_time());
                     holder.content.setText(article.getContent());
                     holder.bottom.setVisibility(View.GONE);
                     holder.matchview.setVisibility(View.GONE);
-                    holder.lasttime.setVisibility(View.VISIBLE);
+                    //holder.lasttime.setVisibility(View.VISIBLE);
                     holder.content.setVisibility(View.VISIBLE);
                 }
 
@@ -417,15 +424,17 @@ public class ArticleListAdapter extends BaseAdapter {
         public TextView biaoqian1;
         public TextView biaoqian2;
         public TextView biaoqian3;
+        public TextView biaoqian4;
         public TextView shenglvtx, shenglv;
         public LinearLayout matchs;
         public View match1;
         public TextView macthkey1;
         public TextView content;
-        public TextView lasttime;
+        //public TextView lasttime;
 
         public View matchview;
         public View bottom;
-        public TextView sendtime;
+        public ImageView mFan;
+        //public TextView sendtime;
     }
 }

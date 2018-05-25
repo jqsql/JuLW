@@ -67,6 +67,36 @@
                 android:text="周命中"
                 android:textColor="@color/textgreen"
                 android:textSize="12dp"/>
+            <TextView
+                android:id="@+id/biaoqian3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/biaoqian2"
+                android:background="@drawable/cornerfulllinefull_greenline_whitefull"
+                android:paddingBottom="2dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="2dp"
+                android:text="周命中"
+                android:textColor="@color/textgreen"
+                android:textSize="12dp"/>
+            <TextView
+                android:id="@+id/biaoqian4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/biaoqian3"
+                android:background="@drawable/cornerfulllinefull_greenline_whitefull"
+                android:paddingBottom="2dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="2dp"
+                android:text="周命中"
+                android:textColor="@color/textgreen"
+                android:textSize="12dp"/>
             <LinearLayout
                 android:id="@+id/BottomLayout"
                 android:layout_width="wrap_content"
@@ -128,7 +158,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginRight="10dp"
                     android:text="周四008"
-                    android:textColor="@color/textgreen"
+                    android:textColor="@color/textgreen50"
                     android:textSize="11dp"/>
 
 
@@ -139,7 +169,7 @@
                     android:ellipsize="end"
                     android:singleLine="true"
                     android:text="南非杯"
-                    android:textColor="@color/textgreen"
+                    android:textColor="@color/textgreen50"
                     android:textSize="11dp"/>
             </LinearLayout>
 
@@ -161,7 +191,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginRight="10dp"
                     android:text="周四008"
-                    android:textColor="@color/textgreen"
+                    android:textColor="@color/textgreen50"
                     android:textSize="11dp"/>
 
 
@@ -172,7 +202,7 @@
                     android:ellipsize="end"
                     android:singleLine="true"
                     android:text="南非杯"
-                    android:textColor="@color/textgreen"
+                    android:textColor="@color/textgreen50"
                     android:textSize="11dp"/>
             </LinearLayout>
 

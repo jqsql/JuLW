@@ -2,7 +2,8 @@
 <resources>
     <color name="titlegreen">#43852B</color>
     <color name="textdarkgreen">#2F5527</color>
-    <color name="textgreen">#02DB84</color><!--#43872F-->
+    <color name="textgreen">#44e49e</color><!--#43872F-->
+    <color name="textgreen50">#8044e49e</color><!--#43872F-->
     <color name="textlightgreen">#5B9546</color>
     <color name="textgrey">#333333</color>
     <color name="textlightgrey">#666666</color>
@@ -11,7 +12,7 @@
     
     <color name="mainback">#3C3E3B</color><!--F2F2F2-->
     <color name="APPColor">#3C3E3B</color><!--F2F2F2-->
-    <color name="black">#000000</color>
+    <color name="black">#3c3e3b</color>
     <color name="white">#ffffff</color>
     <color name="whiteGrey">#949594</color>
     <color name="touming">#00ffffff</color>

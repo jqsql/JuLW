@@ -2,6 +2,7 @@ package com.liao310.www.domain.shouye;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 import com.liao310.www.domain.match.Match;
 
@@ -17,6 +18,7 @@ public class Article  implements Serializable{
 	String  content; //文章摘要内容
 	String price;//文章价格
 	String type_text;//文章标签
+	List<ColorData> type_texts;//文章标签
 	int art_type;//0精选，1竞彩，2竞猜
 	String  contenttx; //分析内容
 	boolean  isShow;//是否显示分析结果
@@ -37,7 +39,37 @@ public class Article  implements Serializable{
 	//5命中， 6未中，7 二中一-----竞彩
 	ArrayList<Match> match = new  ArrayList<>();
 
+	public class ColorData{
+		private String lab;//标签内容
+		private String color;//颜色16进制颜色
+
+		public String getLab() {
+			return lab;
+		}
+
+		public void setLab(String lab) {
+			this.lab = lab;
+		}
+
+		public String getColor() {
+			return color;
+		}
+
+		public void setColor(String color) {
+			this.color = color;
+		}
+	}
+
 	private static final long serialVersionUID = 1L;
+
+	public List<ColorData> getType_texts() {
+		return type_texts;
+	}
+
+	public void setType_texts(List<ColorData> type_texts) {
+		this.type_texts = type_texts;
+	}
+
 	public int getArticlresult() {
 		return articlresult;
 	}
